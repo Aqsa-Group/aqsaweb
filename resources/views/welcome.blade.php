@@ -1527,19 +1527,19 @@
     </style>
 </head>
 
-<body>
+<body style="font-family: 'Rosario';">
     @include('layouts.Navbar')
     <div
-        class="bg-cyan-700 text-white w-full h-auto pt-16  md:pt-24  felx flex-col justify-center text-center  mx-auto ">
-        <h2 class="text-md  md:text-xl mt-6">
+        class=" text-white w-full h-auto pt-16  md:pt-24  felx flex-col justify-center text-center  mx-auto bg-cover bg-no-repeat" style="background-image: url('{{ asset('images/bannerBg.jpg') }}'); ">
+        <h2 class="text-md  md:text-xl mt-6" >
             WELCOME TO AQSA GROUP
         </h2>
-        <h1 class=" text-4xl md:text-7xl leading-none mt-4">
-            Aqsa Group 
+        <h1 class=" text-4xl md:text-7xl leading-none mt-4" style="font-family: 'M PLUS Rounded 1c';">
+            Aqsa Group<br>
+            From Vision To Reality 
+            
         </h1>
-        <h1 class="my-1 md:my-4 text-4xl md:text-7xl "> 
-            From Vision To Reality
-        </h1>
+        
         <p class="mx-10 sm:mx-32 md:mx-40 lg:mx-96 text-justify md:text-center text-md  md:text-xl my-4 md:my-6 ">At AQSA Group,
             we specialize in delivering innovative IT solutions tailored to help businesses grow, transform, and succeed
             in the digital world With expert support and a commitment to quality, we turn your ideas into powerfull
@@ -1548,18 +1548,18 @@
         <div class="flex flex-row justify-center mx-auto gap-4 py-4 text-black">
             <a href="#">
                 <button
-                    class="bg-white px-6 md:px-8 py-1.5 hover:text-white hover:bg-cyan-600 border-1 border-transparent rounded-2xl cursor-pointer">
+                    class="bg-white px-6 md:px-8 py-1.5 hover:text-white hover:bg-transparent hover:border-white border-1 border-transparent rounded-2xl cursor-pointer">
                     View More
                 </button>
             </a>
             <a href="#">
                 <button
-                    class="py-1.5 px-4  md:px-7 bg-transparent text-white hover:bg-white hover:text-black rounded-2xl border-1 border-white hover:border-cyan-700 cursor-pointer">
+                    class="py-1.5 px-4  md:px-7 bg-transparent text-white hover:bg-white hover:text-black rounded-2xl border-1 border-white hover:[#235F7F] cursor-pointer">
                     Contact Now
                 </button>
             </a>
         </div>
-        <div class="mx-8 sm:mx-40 md:mx-80 py-2 sm:py-2 md:py-4 flex flex-row">
+        <div class="mx-8 sm:mx-40 md:mx-80 py-10 sm:py-2 md:py-10 flex flex-row ">
             <input class=" w-full justify-center mx-auto px-8  py-2 bg-white rounded-full ">
         </div>
 
@@ -1568,36 +1568,35 @@
     <!-- Home page contents -->
     <!-- Section 1 -->
 
-    <div class="mt-10 mx-10   text-center">
+    <div class="mt-10 mx-16   text-center">
         <h1 class="text-center  text-2xl">Our Services</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 ">
-
             <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full ">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-xl">Security</h2>
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500">
+                <img src="{{ asset('images/security.jpg') }}" alt="Security" class="h-1/2 w-full object-cover" />
+                <h2 class="text-lg md:text-2xl">Security</h2>
+                <p class="text-sm md:text-md font-medium  px-2 md:px-4 lg:px-6 my-4 text-gray-500">
                     AQSA Group offers expert securitly camera installation to ensure safety and reliable monitoring for
                     property.
                 </p>
             </div>
             <div class="flex flex-col items-center  rounded-lg shadow overflow-hidden w-full">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-xl">Web Development Team</h2>
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 py-2 text-gray-500">
+                <img src="{{ asset('images/developmentImage.jpg') }}"  alt="Web Development" class="h-1/2 w-full object-cover" />
+                <h2 class="text-lg md:text-2xl">Web Development Team</h2>
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 py-2 text-gray-500">
                     AQSA Group builds modern, responsive websites tailored to your business needs.
                 </p>
             </div>
-            <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-xl">Mobile Development Team</h2>
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
+            <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full ">
+                <img src="{{ asset('images/mobile.jpg') }}" alt="Mobile Development" class="h-1/2 w-full object-contain" />
+                <h2 class="text-lg md:text-2xl">Mobile Development Team</h2>
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
                     AQSA Group designs and develops high-quality mobile applications for Android and iOS.
                 </p>
             </div>
-            <div class="flex flex-col items-center  rounded-lg shadow overflow-hidden w-full">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-xl">Graphic & UI/UX Team</h2>
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
+            <div class="flex flex-col items-center  rounded-lg shadow overflow-hidden w-full ">
+                <img src="{{ asset('images/graphic.jpg') }}" alt="Graphic & UI/UX Team" class="h-1/2 w-full object-cover" />
+                <h2 class="text-lg md:text-2xl">Graphic & UI/UX Team</h2>
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
                     AQSA Group's graphic and UI/UX design team creates visually engaging and user-centerd designs.
                 </p>
             </div>
@@ -1605,87 +1604,122 @@
     </div>
 
     <!-- Section 2 -->
-    <div class="mt-10 mx-10   text-center">
+    <div class="mt-10 mx-16   text-center">
         <h1 class="text-center  text-2xl">Our Projects</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 p-5 ">
-    
-            <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full p-2">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
+            <div class="relative flex flex-col items-center  h-auto rounded-lg shadow overflow-hidden w-full p-1">
+                <img src="{{ asset('images/hospitalWeb.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
                 <h2 class="text-lg md:text-xl">
                     Hospital Web Development
                 </h2>
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-justify">
+                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-justify">
                     The hospital website project was designed and developed to provide online services, quick....
                 </p>
-                <button class="bg-[#1e6961] py-1.5 w-full text-center text-white rounded-xl"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1   bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
             </div>
-            <div class="flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-2">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-xl">
+            <div class="relative flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-1">
+                <img src="{{ asset('images/graphic.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
+                <h2 class="text-lg md:text-2xl">
                     Food Ordering App
                 </h2>
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 py-2 text-gray-500 text-justify" >
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 py-2 text-gray-500 text-justify" >
                     The Food Ordering App makes it easy to browse menus, order food and fast mobile experience.....
                 </p>
-                <button class="bg-[#1e6961] py-1.5 w-full text-center text-white rounded-xl"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5   text-center text-white rounded-md"> View More</button>
             </div>
-            <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full p-2">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-xl">
+            <div class="relative flex flex-col items-center rounded-lg shadow overflow-hidden w-full p-1">
+                <img src="{{ asset('images/bank.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
+                <h2 class="text-lg md:text-2xl">
                     Bank System Database
                 </h2>   
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 text-justify">
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 text-justify">
                     The Bank System Database securely stores customer data, account details and transaction.....
                 </p>
-                <button class="bg-[#1e6961] py-1.5 w-full text-center text-white rounded-xl"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
             </div>
-            <div class="flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-2">
-                <img src="{{ asset('assets/cards/') }}" alt="" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-xl">
+            <div class="relative flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-1 h-auto">
+                <img src="{{ asset('images/graphic.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
+                <h2 class="text-lg md:text-2xl">
                     Advertising Brochure
                 </h2>
-                <p class="text-sm font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
                     An advertising brochure is a marketing tool designed to promote products or services.....
                 </p>
-                <button class="bg-[#1e6961] py-1.5 w-full text-center text-white rounded-xl"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
             </div>
         </div>
     </div>
 
-    <!-- Section 2 -->
-    <div class="mt-10 mx-10   text-center">
+    <!-- Section 3 -->
+    <div class="mt-10 mx-16   text-center">
         <h1 class="text-center  text-2xl ">
             Why Aqsa Group
         </h1>
         <div class=" grid grid-cols-1 md:grid-cols-3  gap-8 md:px-5 ">
             <div class="flex flex-row items-center   overflow-hidden w-full md:p-2 ">
-                <h2 class="text-[#21776e]  text-xl font-bold">01</h2>
+                <h2 class="text-[#235F7F]  text-xl font-bold">01</h2>
                 <div class="h-[1px] md:h-[2px] w-20  md:w-32  mt-5 bg-black"></div>
                 <div class="grid grid-rows-1 pt-20 sm:pt-[36px] md:pt-16 text-left px-1">
-                    <h1 class="text-xl   ">High Quality</h1>
-                    <p class="text-gray-600 text-md">AQSA Group delivers high-quality digital solutions with precision, reliability, and a focus on user experince.</p>
+                    <h1 class="text-xl   ">
+                        High Quality
+                        </h1>
+                    <p class="text-gray-600 text-md">
+                        AQSA Group delivers high-quality digital solutions with precision, reliability, and a focus on user experince.
+                    </p>
                 </div>
             </div>
             <div class="flex flex-row items-center   overflow-hidden w-full md:p-2 ">
-                <h2 class="text-[#21776e]  text-xl font-bold">02</h2>
+                <h2 class="text-[#235F7F]  text-xl font-bold">02</h2>
                 <div class="h-[1px] md:h-[2px] w-20  md:w-32  mt-5 bg-black"></div>
                 <div class="grid grid-rows-1 pt-20 sm:pt-[36px] md:pt-16 text-left px-1">
-                    <h1 class="text-xl   ">High Quality</h1>
-                    <p class="text-gray-600 text-md">AQSA Group delivers high-quality digital solutions with precision, reliability,
-                        and a focus on user experince.</p>
+                    <h1 class="text-xl">
+                        Agile & Fast Working
+                    </h1>
+                    <p class="text-gray-600 text-md">
+                        AQSA Group follows an agile and fast-working approach to deliver 
+                        efficient results, adapt quickly, and meet.
+                    </p>
                 </div>
             </div>
             <div class="flex flex-row items-center   overflow-hidden w-full md:p-2 ">
-                <h2 class="text-[#21776e]  text-xl font-bold">03</h2>
+                <h2 class="text-[#235F7F]  text-xl font-bold">03</h2>
                 <div class="h-[1px] md:h-[2px] w-20  md:w-32  mt-5 bg-black"></div>
                 <div class="grid grid-rows-1 pt-20 sm:pt-[36px] md:pt-16 text-left px-1">
-                    <h1 class="text-xl   ">High Quality</h1>
-                    <p class="text-gray-600 text-md">AQSA Group delivers high-quality digital solutions with precision, reliability,
-                        and a focus on user experince.</p>
+                    <h1 class="text-xl ">
+                        High Level Of Usability
+                    </h1>
+                    <p class="text-gray-600 text-md">
+                        AQSA Group designs products with AQSA Group designs products
+                        with a high level of usability, ensuring simpley.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--section 4-->
+    <div class="mt-10 mx-10   text-center">
+        <h1 class="text-center  text-2xl ">
+            Our Valued & Verified Clients
+        </h1>
+        <div class=" grid grid-cols-1 md:grid-cols-3  gap-8 md:px-5 ">
+            <div></div>
+        </div>
+    </div>
+
+    <!--section 5-->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-5 mx-16">
+        <div class=" rounded-lg shadow-md overflow-hidden ">
+            <img src="{{ asset('images/logo (2).jpg') }}" alt="logo" class="rounded-lg w-full object-cover" />
+        </div>
+        <div class=" rounded-lg shadow-md overflow-hidden">
+            <img src="{{ asset('images/logo (1).jpg') }}" alt="logo" class="rounded-lg w-full object-cover" />
+        </div>
+        <div class=" rounded-lg shadow-md overflow-hidden">
+            <img src="{{ asset('images/logo (3).jpg') }}" alt="logo" class="rounded-lg w-full object-cover" />
+        </div>
+    </div>
+        
     @include('layouts.Footer')
 
 </body>

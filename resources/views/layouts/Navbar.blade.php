@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width, initial-scale=1.0">
     <title>Navbar</title>
+    // font M PLUS Rounded 1c
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
+    // font Rosario
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="bg-white fixed top-0 left-0 right-0 z-50 shadow-md">
@@ -11,7 +17,7 @@
 
             <!-- Logo Section -->
             <div class="flex items-center space-x-4">
-                <h1 class="text-2xl md:text-4xl ">AQSA Group</h1>
+                <h1 class="text-2xl md:text-4xl " style="font-family: 'Rosario';">AQSA Group</h1>
             </div>
             
             <!-- Navigation Links (Desktop) -->
@@ -26,10 +32,10 @@
             <!-- Login and Register Section -->
             <div class="hidden md:flex items-center gap-2 font-bold " >
                 <a href="#">
-                    <button class="bg-golden px-6 py-1.5  hover:bg-cyan-600 hover:text-white hover:scale-105 border-1 border-cyan-700 rounded-full cursor-pointer">Sign Up</button>
+                    <button class="bg-golden px-6 py-1.5  hover:bg-[#235F7F] hover:text-white hover:scale-105 border-1 border-[#235F7F] rounded-full cursor-pointer">Sign Up</button>
                 </a>
                 <a href="#">
-                    <button class="py-1.5   px-7 bg-cyan-600 text-white hover:bg-white hover:text-black rounded-full border-1 border-transparent hover:border-cyan-700 cursor-pointer">Log In</button>
+                    <button class="py-1.5   px-7 bg-[#235F7F] text-white hover:bg-white hover:text-black rounded-full border-1 border-transparent hover:border-[#235F7F] cursor-pointer">Log In</button>
                 </a>
             </div>
 

@@ -1,10 +1,18 @@
 <!-- Footer  -->
-<div class="bg-[#1e6961] mt-24 w-full text-white" >
+<div class="bg-[#235F7F] mt-24 w-full text-white" >
     <div class="flex flex-col-reverse md:flex-row md:gap-12">
         <!-- Left Section (Brand Description & Socials) -->
-        <div class=" flex flex-col  p-5 w-full md:w-1/3 md:ml-8 text-center">
-            <div class="bg-white h-auto rounded-lg md:rounded-xl px-12 py-1">
-                <h1 class="text-black text-3xl sm:text-2xl lg:text-4xl md:text-4xl text-center p-2">AQSA GROUP</h1>
+        <div class=" flex flex-col  p-5 w-full md:w-1/3 md:ml-8 text-center ">
+            <div class="bg-white h-auto rounded-lg md:rounded-xl px-12 py-1 md:mt-4">
+                <div class="flex flex-col">
+                <h1 class="text-black text-3xl sm:text-2xl lg:text-4xl md:text-4xl text-center p-2">
+                    AQSA GROUP
+                </h1>
+                <div class="w-full h-0.5 bg-black"></div>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
             </div>
             <p class=" text-justify mt-2 text-sm md:text-md">
                 AQSA Group is a leading provider of innovative IT solutions, dedicated to empowering businesses though modern
