@@ -1530,22 +1530,24 @@
 <body style="font-family: 'Rosario';">
     @include('layouts.Navbar')
     <div
-        class=" text-white w-full h-auto pt-16  md:pt-24  felx flex-col justify-center text-center  mx-auto bg-cover bg-no-repeat" style="background-image: url('{{ asset('images/bannerBg.jpg') }}'); ">
-        <h2 class="text-md  md:text-xl mt-6" >
+        class="relative text-white w-full h-auto mt-10  md:mt-[50px]  flex flex-col justify-center text-center  mx-auto bg-cover bg-no-repeat" style="background-image: url('{{ asset('images/bannerBg.jpg') }}'); ">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <h2 class="text-md z-10 md:text-xl  mt-6  md:mt-12" >
             WELCOME TO AQSA GROUP
         </h2>
-        <h1 class=" text-4xl md:text-7xl leading-none mt-4" style="font-family: 'M PLUS Rounded 1c';">
+        <h1 class="z-10 text-3xl md:text-7xl leading-none  my-6" style="font-family: 'M PLUS Rounded 1c';">
             Aqsa Group<br>
             From Vision To Reality 
             
         </h1>
-        
-        <p class="mx-10 sm:mx-32 md:mx-40 lg:mx-96 text-justify md:text-center text-md  md:text-xl my-4 md:my-6 ">At AQSA Group,
+        <div class= "z-10 flex justify-center mx-auto w-96 md:w-1/2 md:px-2">
+        <p class="text-center text-md px-6  md:text-["24px"] my-6 md:my-8 ">At AQSA Group,
             we specialize in delivering innovative IT solutions tailored to help businesses grow, transform, and succeed
             in the digital world With expert support and a commitment to quality, we turn your ideas into powerfull
             digital experiences
         </p>
-        <div class="flex flex-row justify-center mx-auto gap-4 py-4 text-black">
+        </div>
+        <div class="z-10 flex flex-row justify-center mx-auto gap-4 my-4 mt-10 text-black">
             <a href="#">
                 <button
                     class="bg-white px-6 md:px-8 py-1.5 hover:text-white hover:bg-transparent hover:border-white border-1 border-transparent rounded-2xl cursor-pointer">
@@ -1559,16 +1561,35 @@
                 </button>
             </a>
         </div>
-        <div class="mx-8 sm:mx-40 md:mx-80 py-10 sm:py-2 md:py-10 flex flex-row ">
-            <input class=" w-full justify-center mx-auto px-8  py-2 bg-white rounded-full ">
+        <div class="z-10 mx-8 sm:mx-40 md:mx-96 pb-10 md:pb-32 sm:py-2 mt-2 md:mt-10 flex flex-row ">
+            <form class="w-full max-w-3xl px-4">
+                <label for="search" class="sr-only">Search</label>
+                <div
+                    class="flex flex-row-reverse items-center gap-3 rounded-full bg-white backdrop-blur px-2 md:px-2 py-1  ">
+                    <!-- button -->
+                    <button type="submit"
+                        class="grid w-11 h-10 md:h-12 md:w-14 place-items-center rounded-full bg-[#235F7F] text-white   hover:scale-105  "
+                        aria-label="Search">
+                        <!-- search icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+            
+                    <!-- input -->
+                    <input id="search" type="text" placeholder="Search your keyboard here..."
+                        class="peer pl-4 w-full bg-transparent outline-none text-slate-800 placeholder-slate-500" />
+                </div>
+            </form>
         </div>
-
     </div>
 
     <!-- Home page contents -->
     <!-- Section 1 -->
 
-    <div class="mt-10 mx-16   text-center">
+    <div class="mt-10 md:mx-16   text-center">
         <h1 class="text-center  text-2xl">Our Services</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 ">
             <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full ">
@@ -1604,58 +1625,58 @@
     </div>
 
     <!-- Section 2 -->
-    <div class="mt-10 mx-16   text-center">
+    <div class="mt-10 md:mx-16   text-center">
         <h1 class="text-center  text-2xl">Our Projects</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 p-5 ">
-            <div class="relative flex flex-col items-center  h-auto rounded-lg shadow overflow-hidden w-full p-1">
+            <div class="relative flex flex-col items-center  h-['490px'] rounded-lg shadow overflow-hidden w-full p-1">
                 <img src="{{ asset('images/hospitalWeb.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
                 <h2 class="text-lg md:text-xl">
                     Hospital Web Development
                 </h2>
-                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-justify">
+                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-justify ">
                     The hospital website project was designed and developed to provide online services, quick....
                 </p>
-                <button class="absolute bottom-1 left-1 right-1   bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1  hover:scale-95 bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
             </div>
-            <div class="relative flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-1">
-                <img src="{{ asset('images/graphic.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
+            <div class="relative flex flex-col items-center  h-['490px'] rounded-lg shadow overflow-hidden w-full p-1">
+                <img src="{{ asset('images/foodOrder.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
                 <h2 class="text-lg md:text-2xl">
                     Food Ordering App
                 </h2>
-                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 py-2 text-gray-500 text-justify" >
+                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-justify " >
                     The Food Ordering App makes it easy to browse menus, order food and fast mobile experience.....
                 </p>
-                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5   text-center text-white rounded-md"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] hover:scale-95 py-1.5   text-center text-white rounded-md"> View More</button>
             </div>
-            <div class="relative flex flex-col items-center rounded-lg shadow overflow-hidden w-full p-1">
+            <div class="relative flex flex-col h-['490px'] items-center rounded-lg shadow overflow-hidden w-full p-1">
                 <img src="{{ asset('images/bank.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
                 <h2 class="text-lg md:text-2xl">
                     Bank System Database
                 </h2>   
-                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 text-justify">
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 text-justify ">
                     The Bank System Database securely stores customer data, account details and transaction.....
                 </p>
-                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5  text-center text-white rounded-md hover:scale-95"> View More</button>
             </div>
-            <div class="relative flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-1 h-auto">
+            <div class="relative flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-1 h-['490px']">
                 <img src="{{ asset('images/graphic.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
                 <h2 class="text-lg md:text-2xl">
                     Advertising Brochure
                 </h2>
-                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 ">
                     An advertising brochure is a marketing tool designed to promote products or services.....
                 </p>
-                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
+                <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5  text-center text-white rounded-md hover:scale-95"> View More</button>
             </div>
         </div>
     </div>
 
     <!-- Section 3 -->
-    <div class="mt-10 mx-16   text-center">
+    <div class="mt-10  mx-10  md:mx-16   text-center ">
         <h1 class="text-center  text-2xl ">
             Why Aqsa Group
         </h1>
-        <div class=" grid grid-cols-1 md:grid-cols-3  gap-8 md:px-5 ">
+        <div class=" grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 md:px-5 ">
             <div class="flex flex-row items-center   overflow-hidden w-full md:p-2 ">
                 <h2 class="text-[#235F7F]  text-xl font-bold">01</h2>
                 <div class="h-[1px] md:h-[2px] w-20  md:w-32  mt-5 bg-black"></div>
@@ -1698,17 +1719,10 @@
     </div>
 
     <!--section 4-->
-    <div class="mt-10 mx-10   text-center">
-        <h1 class="text-center  text-2xl ">
-            Our Valued & Verified Clients
-        </h1>
-        <div class=" grid grid-cols-1 md:grid-cols-3  gap-8 md:px-5 ">
-            <div></div>
-        </div>
-    </div>
-
-    <!--section 5-->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-5 mx-16">
+    <h1 class=" text-center  text-2xl mt-10 md:mt-20">
+        Our Valued & Verified Clients
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-5  md:mx-16 mt-6">
         <div class=" rounded-lg shadow-md overflow-hidden ">
             <img src="{{ asset('images/logo (2).jpg') }}" alt="logo" class="rounded-lg w-full object-cover" />
         </div>

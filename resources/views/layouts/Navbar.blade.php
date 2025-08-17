@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width, initial-scale=1.0">
     <title>Navbar</title>
-    // font M PLUS Rounded 1c
+    
+    <!-- Font M PLUS Rounded 1c-->
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 
-    // font Rosario
+    <!-- Font Rosario -->
     <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@400;700&display=swap" rel="stylesheet">
-
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="bg-white fixed top-0 left-0 right-0 z-50 shadow-md">
