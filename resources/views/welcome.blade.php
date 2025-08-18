@@ -1594,7 +1594,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 ">
             <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full ">
                 <img src="{{ asset('images/security.jpg') }}" alt="Security" class="h-1/2 w-full object-cover" />
-                <h2 class="text-lg md:text-2xl">Security</h2>
+                <h2 class="text-lg md:text-2xl  mt-2">Security</h2>
                 <p class="text-sm md:text-md font-medium  px-2 md:px-4 lg:px-6 my-4 text-gray-500">
                     AQSA Group offers expert securitly camera installation to ensure safety and reliable monitoring for
                     property.
@@ -1602,21 +1602,21 @@
             </div>
             <div class="flex flex-col items-center  rounded-lg shadow overflow-hidden w-full">
                 <img src="{{ asset('images/developmentImage.jpg') }}"  alt="Web Development" class="h-1/2 w-full object-cover" />
-                <h2 class="text-lg md:text-2xl">Web Development Team</h2>
+                <h2 class="text-lg md:text-2xl  mt-2">Web Development Team</h2>
                 <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 py-2 text-gray-500">
                     AQSA Group builds modern, responsive websites tailored to your business needs.
                 </p>
             </div>
             <div class="flex flex-col items-center rounded-lg shadow overflow-hidden w-full ">
                 <img src="{{ asset('images/mobile.jpg') }}" alt="Mobile Development" class="h-1/2 w-full object-contain" />
-                <h2 class="text-lg md:text-2xl">Mobile Development Team</h2>
+                <h2 class="text-lg md:text-2xl mt-2">Mobile Development Team</h2>
                 <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
                     AQSA Group designs and develops high-quality mobile applications for Android and iOS.
                 </p>
             </div>
             <div class="flex flex-col items-center  rounded-lg shadow overflow-hidden w-full ">
                 <img src="{{ asset('images/graphic.jpg') }}" alt="Graphic & UI/UX Team" class="h-1/2 w-full object-cover" />
-                <h2 class="text-lg md:text-2xl">Graphic & UI/UX Team</h2>
+                <h2 class="text-lg md:text-2xl mt-2">Graphic & UI/UX Team</h2>
                 <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500">
                     AQSA Group's graphic and UI/UX design team creates visually engaging and user-centerd designs.
                 </p>
@@ -1630,37 +1630,37 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 p-5 ">
             <div class="relative flex flex-col items-center  h-['490px'] rounded-lg shadow overflow-hidden w-full p-1">
                 <img src="{{ asset('images/hospitalWeb.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
-                <h2 class="text-lg md:text-xl">
+                <h2 class="text-lg md:text-xl mt-2">
                     Hospital Web Development
                 </h2>
-                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-justify ">
+                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-center ">
                     The hospital website project was designed and developed to provide online services, quick....
                 </p>
                 <button class="absolute bottom-1 left-1 right-1  hover:scale-95 bg-[#235F7F] py-1.5  text-center text-white rounded-md"> View More</button>
             </div>
             <div class="relative flex flex-col items-center  h-['490px'] rounded-lg shadow overflow-hidden w-full p-1">
                 <img src="{{ asset('images/foodOrder.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
-                <h2 class="text-lg md:text-2xl">
+                <h2 class="text-lg md:text-2xl mt-2">
                     Food Ordering App
                 </h2>
-                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-justify " >
+                <p class=" text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-4 text-gray-500 text-center " >
                     The Food Ordering App makes it easy to browse menus, order food and fast mobile experience.....
                 </p>
                 <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] hover:scale-95 py-1.5   text-center text-white rounded-md"> View More</button>
             </div>
             <div class="relative flex flex-col h-['490px'] items-center rounded-lg shadow overflow-hidden w-full p-1">
                 <img src="{{ asset('images/bank.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
-                <h2 class="text-lg md:text-2xl">
+                <h2 class="text-lg md:text-2xl mt-2">
                     Bank System Database
                 </h2>   
-                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 text-justify ">
+                <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 text-center ">
                     The Bank System Database securely stores customer data, account details and transaction.....
                 </p>
                 <button class="absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1.5  text-center text-white rounded-md hover:scale-95"> View More</button>
             </div>
             <div class="relative flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-1 h-['490px']">
                 <img src="{{ asset('images/graphic.jpg') }}" alt="" class="h-1/2 w-full object-cover rounded-md" />
-                <h2 class="text-lg md:text-2xl">
+                <h2 class="text-lg md:text-2xl mt-2">
                     Advertising Brochure
                 </h2>
                 <p class="text-sm md:text-md font-medium px-2 md:px-4 lg:px-6 my-2 text-gray-500 ">
@@ -1733,7 +1733,9 @@
             <img src="{{ asset('images/logo (3).jpg') }}" alt="logo" class="rounded-lg w-full object-cover" />
         </div>
     </div>
-        
+       
+    
+    
     @include('layouts.Footer')
 
 </body>
