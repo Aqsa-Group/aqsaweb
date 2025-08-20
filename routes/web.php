@@ -4,7 +4,31 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})-> name('home');;
+Route::get('/register', function () {
+    return view('forms.register'); })
+    -> name('register');
+
+Route::get('/login', function () {
+    return view('forms.login'); })
+    -> name('login');
+
+Route::get('/services', function () {
+    return view('services'); })
+    -> name('services');
+
+Route::get('/aboutUs', function () {
+    return view('aboutUs'); })
+    -> name('aboutUs');
+
+Route::get('/blog', function () {
+    return view('blog'); })
+    -> name('blog');
+
+Route::get('/contact', function () {
+    return view('contact'); })
+    -> name('contact');
+
 Route::get('/register', function () {
     return view('forms.register'); })
     -> name('register');
