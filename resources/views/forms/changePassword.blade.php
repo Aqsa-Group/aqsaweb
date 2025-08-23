@@ -39,14 +39,16 @@
 
         <!-- Right Side (Form) -->
         <div class="w-1/2 bg-white flex flex-col justify-center px-10">
-            <h1 class="font-bold text-2xl text-[#292D32] text-center">
-                Sign In FORM
+            <h1 class="font-bold text-2xl text-[#292D32] text-center uppercase">
+                Change password
             </h1>
-
+            <span class="text-md mt-4">
+                To reset your account password, enter the code we just sent to aqsa@gmail.com
+            </span>
             <!-- Full Name -->
             <!-- Email -->
-            <div class="mt-4">
-                <label class="text-md text-[#292D32]">Email</label>
+            <div class="mt-2">
+                <label class="text-md text-[#292D32]">Enter your email</label>
                 <div class="relative">
                     <svg class="absolute left-3 top-3.5" width="21" height="22" fill="none" stroke="#292D32"
                         stroke-width="1.5" viewBox="0 0 24 24">
@@ -58,34 +60,30 @@
                 </div>
             </div>
 
-            <!-- Password -->
-            <div class="mt-4 relative">
-                <div  class="flex flex-row justify-between ">
-                    <div>
-                        <label class="text-md text-[#292D32] relative">Password</label>
-                        <svg class="absolute left-3 top-9" width="21" height="22" viewBox="0 0 29 36" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7 14.25V8.625C7 4.48125 10.3562 1.125 14.5 1.125C18.6438 1.125 22 4.48125 22 8.625V14.25M14.5 23.625C14.9973 23.625 15.4742 23.4275 15.8258 23.0758C16.1775 22.7242 16.375 22.2473 16.375 21.75C16.375 21.2527 16.1775 20.7758 15.8258 20.4242C15.4742 20.0725 14.9973 19.875 14.5 19.875C14.0027 19.875 13.5258 20.0725 13.1742 20.4242C12.8225 20.7758 12.625 21.2527 12.625 21.75C12.625 22.2473 12.8225 22.7242 13.1742 23.0758C13.5258 23.4275 14.0027 23.625 14.5 23.625ZM14.5 23.625V29.25M4.375 14.25H24.625C26.275 14.25 27.625 15.6 27.625 17.25V30.375C27.625 32.85 25.6 34.875 23.125 34.875H5.875C3.4 34.875 1.375 32.85 1.375 30.375V17.25C1.375 15.6 2.725 14.25 4.375 14.25Z"
-                                stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div>
-                        <a href="{{ route('forgetPassword')}}">Forget Password?</a>
-                    </div>
-                </div>
-                <input type="password"
-                    class="pl-10 py-2 mt-1 bg-transparent w-full rounded-md border-2 border-gray-200 focus:border-[#185277] focus:outline-none" />
+            <!-- code -->
+            <div class="mt-4 ">
+                <label class="text-md text-[#292D32] ">Enter your code</label>
+                <input type="text"
+                    class=" py-2 mt-1 bg-transparent w-full rounded-md border-2 border-gray-200 focus:border-[#185277] focus:outline-none" />
             </div>
+
+            <!--New Password -->
+            <div class="mt-4 relative">
+                <label class="text-md text-[#292D32] relative">New Password</label>
+                <svg class="absolute left-3 top-8" width="20" height="21" viewBox="0 0 29 36" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7 14.25V8.625C7 4.48125 10.3562 1.125 14.5 1.125C18.6438 1.125 22 4.48125 22 8.625V14.25M14.5 23.625C14.9973 23.625 15.4742 23.4275 15.8258 23.0758C16.1775 22.7242 16.375 22.2473 16.375 21.75C16.375 21.2527 16.1775 20.7758 15.8258 20.4242C15.4742 20.0725 14.9973 19.875 14.5 19.875C14.0027 19.875 13.5258 20.0725 13.1742 20.4242C12.8225 20.7758 12.625 21.2527 12.625 21.75C12.625 22.2473 12.8225 22.7242 13.1742 23.0758C13.5258 23.4275 14.0027 23.625 14.5 23.625ZM14.5 23.625V29.25M4.375 14.25H24.625C26.275 14.25 27.625 15.6 27.625 17.25V30.375C27.625 32.85 25.6 34.875 23.125 34.875H5.875C3.4 34.875 1.375 32.85 1.375 30.375V17.25C1.375 15.6 2.725 14.25 4.375 14.25Z"
+                        stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <input type="password"
+                    class="pl-10 py-2 bg-transparent w-full rounded-md border-2 border-gray-200 focus:border-[#185277] focus:outline-none" />
+            </div>
+
             <!-- Button -->
-            <button class="mt-6 py-2.5 rounded-md bg-gradient-to-r from-[#235F7F] to-[#3FABE5] w-full text-white">
-                Sign In
+            <button class="mt-6 py-2.5 md:text-lg rounded-md bg-gradient-to-r from-[#235F7F] to-[#3FABE5] w-full text-white">
+                Continue
             </button>
-            <a  href="{{ route('register')}}"
-                class="flex justify-center text-center mx-auto text-[16px] mt-2 text-[#185277] hover:underline cursor-pointer">
-                Don't have an account? Sign Up
-            </a>
         </div>
     </div>
 

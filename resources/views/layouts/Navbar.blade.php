@@ -1538,7 +1538,7 @@
 </head>
 
 <body>
-    <div class=" bg-transparent md:bg-white md:fixed top-0 left-0 right-0 z-50 md:shadow-md " >
+    <div class=" bg-transparent md:bg-white  md:fixed absolute top-0 left-0 right-0 z-50 md:shadow-md " >
         <nav class="container mx-auto flex justify-between items-center p-4">
 
             <!-- Logo Section -->
@@ -1557,7 +1557,7 @@
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-black">
+                <button id="mobile-menu-button" class="text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -1568,13 +1568,13 @@
             <div class="ml-5 md:ml-7 flex items-center gap-1 md:gap-2 font-bold ">
                 <a href="{{ route('register')}}">
                     <button
-                        class="text-xs  md:text-lg  px-2 md:px-6 py-1 md:py-1.5  hover:bg-[#235F7F] hover:text-white  border border-[#235F7F] rounded-full cursor-pointer">
+                        class="text-xs  md:text-lg  px-2 md:px-6 py-1 md:py-1.5  hover:bg-white  md:hover:bg-[#235F7F]  hover:text-black md:hover:text-white  text-white md:text-black  border md:border-[#235F7F] rounded-full cursor-pointer">
                         Sign Up
                     </button>
                 </a>
                 <a href="{{ route('login')}}">
                     <button
-                        class="text-xs md:text-lg px-3 md:px-7 py-1 md:py-1.5 bg-[#235F7F] text-white hover:bg-white hover:text-black rounded-full  border-transparent border hover:border-[#235F7F] cursor-pointer">
+                        class="text-xs md:text-lg px-3 md:px-7 py-1 md:py-1.5  bg-white md:bg-[#235F7F]  text-black md:text-white  md:hover:text-black hover:bg-transparent hover:text-white rounded-full  border-transparent   border  hover:border-white  md:hover:border-[#235F7F] cursor-pointer">
                         Log In
                     </button>
                 </a>

@@ -32,3 +32,35 @@ Route::get('/contact', function () {
 Route::get('/register', function () {
     return view('forms.register'); })
     -> name('register');
+
+Route::get('/virificationCode', function () {
+    return view('forms.virificationCode'); })
+    -> name('virificationCode');
+
+Route::get('/forgetPassword', function () {
+    return view('forms.forgetPassword'); })
+    -> name('forgetPassword');
+
+Route::get('/changePassword', function () {
+    return view('forms.changePassword'); })
+    -> name('changePassword');
+
+Route::get('/webService', function () {
+    return view('services.webService'); })
+    -> name('webService');
+
+Route::get('/GraphicDesign', function () {
+    return view('services.GraphicDesign'); })
+    -> name('GraphicDesign');
+
+Route::get('/MobileService', function () {
+    return view('services.MobileService'); })
+    -> name('MobileService');
+
+Route::get('/databaseService', function () {
+    return view('services.databaseService'); })
+    -> name('databaseService');
+
+
+
+    

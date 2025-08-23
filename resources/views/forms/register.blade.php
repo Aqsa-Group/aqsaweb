@@ -95,14 +95,15 @@
                         stroke-linejoin="round" />
                 </svg>
                 <input type="password"
-                    class="pl-10 py-1 bg-transparent w-full rounded-md border-2 border-gray-200 focus:border-[#185277] focus:outline-none" />
+                    class="pl-10 py-2 bg-transparent w-full rounded-md border-2 border-gray-200 focus:border-[#185277] focus:outline-none" />
             </div>
         
             <!-- Button -->
-            <button class="mt-6 py-2 rounded-md bg-gradient-to-r from-[#235F7F] to-[#3FABE5] w-full text-white">
+            <button class="mt-6 py-2.5 rounded-md bg-gradient-to-r from-[#235F7F] to-[#3FABE5] w-full text-white">
                 Sign Up
             </button>
-            <a class="flex justify-center text-center mx-auto text-[16px] mt-2 text-[#185277] hover:underline cursor-pointer">
+            <a  href="{{ route('login')}}"
+                class="flex justify-center text-center mx-auto text-[16px] mt-2 text-[#185277] hover:underline cursor-pointer">
                 Already have an account? Sign In
             </a>
         </div>

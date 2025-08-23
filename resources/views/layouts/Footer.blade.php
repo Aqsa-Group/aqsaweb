@@ -1,5 +1,5 @@
 <!-- Footer  -->
-<div class="bg-[#235F7F] mt-24 w-full text-white absolute " >
+<div class="bg-[#235F7F] mt-6 md:mt-16 w-full text-white absolute " >
     <div class="flex flex-col-reverse md:flex-row md:gap-12 pb-4">
         <!-- Left Section (Brand Description & Socials) -->
         <div class=" flex flex-col p-5 w-full md:w-1/3 md:ml-8 text-center">
