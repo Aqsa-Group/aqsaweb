@@ -1537,7 +1537,7 @@
     </style>
 </head>
 
-<body>
+<body >
     <div class=" bg-transparent md:bg-white  md:fixed absolute top-0 left-0 right-0 z-50 md:shadow-md " >
         <nav class="container mx-auto flex justify-between items-center p-4">
 
@@ -1556,14 +1556,13 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <div class="md:hidden">
+            <div class="md:hidden ">
                 <button id="mobile-menu-button" class="text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
             </div>
-
             <!-- Login and Register Section -->
             <div class="ml-5 md:ml-7 flex items-center gap-1 md:gap-2 font-bold ">
                 <a href="{{ route('register')}}">
@@ -1582,17 +1581,21 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
-            <div class="flex flex-col space-y-2 text-left" style="font-family: 'Shabnam-Bold'; color: black;">
-                <a href="{{ route('home')}}" class="text-md hover:text-cyan-600 cursor-pointer">Home</a>
-                <hr>
-                <a href="{{ route('services')}}" class="text-md hover:text-cyan-600 cursor-pointer">Serices</a>
-                <hr>
-                <a href="{{ route('aboutUs')}}" class="text-md hover:text-cyan-600 cursor-pointer">About Us</a>
-                <hr>
-                <a href="{{ route('blog')}}" class="text-md hover:text-cyan-600 cursor-pointer">Blog</a>
-                <hr>
-                <a href="{{ route('contact')}}" class="text-md hover:text-cyan-600 cursor-pointer">Contact Us</a>
+        <div id="mobile-menu" class="hidden md:hidden fixed   top-0 left-0 right-0 bg-white p-4 shadow-md">
+            <div class="relative">
+                <!--close btn-->
+                <button  id="closeBtn"   class="closeBtn text-2xl absolute top-2 left-2">X</button>
+                <div class="flex flex-col space-y-4 text-left py-10 pt-12">
+                    <a href="{{ route('home')}}" class="text-md hover:text-cyan-600 cursor-pointer">Home</a>
+                    <hr>
+                    <a href="{{ route('services')}}" class="text-md hover:text-cyan-600 cursor-pointer">Serices</a>
+                    <hr>
+                    <a href="{{ route('aboutUs')}}" class="text-md hover:text-cyan-600 cursor-pointer">About Us</a>
+                    <hr>
+                    <a href="{{ route('blog')}}" class="text-md hover:text-cyan-600 cursor-pointer">Blog</a>
+                    <hr>
+                    <a href="{{ route('contact')}}" class="text-md hover:text-cyan-600 cursor-pointer">Contact Us</a>
+                </div>
             </div>
         </div>
         </nav>
@@ -1603,7 +1606,11 @@
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('closeBtn');
 
+        closeBtn.addEventListener('click' , () =>{
+            mobileMenu.classList.add('hidden');
+        })
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });

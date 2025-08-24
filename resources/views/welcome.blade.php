@@ -1589,11 +1589,11 @@
     <!-- Home page contents -->
     <!-- Section 1 -->
 
-    <div class="mt-10 md:mx-6   text-center">
+    <div class="mt-10   text-center">
         <h1 class="text-center text-xl  md:text-3xl">
             Our Services
         </h1>
-        <div class=" grid grid-cols-2 lg:grid-cols-4  gap-2  md:gap-6   p-2 md:p-5 ">
+        <div class=" grid grid-cols-2 lg:grid-cols-4  gap-2  md:gap-3   p-2 md:p-5 ">
             <div class="relative pb-3 flex flex-col items-center rounded-lg shadow overflow-hidden w-full ">
                 <img src="{{ asset('images/security.jpg') }}" alt="Security" class="h-28 md:h-1/2 w-full object-cover" />
                 <h2 class="text-lg md:text-2xl  mt-1  ">Security</h2>
@@ -1650,21 +1650,18 @@
     </div>
 
     <!-- Section 2 -->
-    <div class="mt-6  md:mt-10 md:mx-6   text-center">
+    <div class="mt-10    text-center">
         <h1 class="text-center  text-xl  md:text-3xl">
             Our Projects
         </h1>
-        <div class="grid grid-cols-2 md:grid-cols-4  gap-2  md:gap-8 p-5 ">
+        <div class="grid grid-cols-2 md:grid-cols-4  gap-2  md:gap-3 p-2 md:p-5 ">
             <div class=" relative flex flex-col items-center  rounded-lg shadow overflow-hidden w-full p-1 ">
                 <img src="{{ asset('images/hospitalWeb.jpg') }}" alt="" class="h-28 md:h-1/2 w-full object-cover rounded-md" />
                 <h2 class="text-lg md:text-xl  mt-1 md:mt-2  leading-5 md:leading-none">
                     Hospital Web Development
                 </h2>
-                <p class="hidden md:block  text-lg font-medium px-4  my-2 text-gray-500 text-center ">
+                <p class="text-sm   md:text-lg font-medium  mb-10  md:mb-0  px-1  md:px-4  my-1 md:my-2 text-gray-500 text-center ">
                     The hospital website project was designed and developed to provide online services, quick....
-                </p>
-                <p class=" block md:hidden text-sm  font-medium px-1 mb-10   my-1  text-gray-500 text-center ">
-                    The hospital website project was design....
                 </p>
                 <button class="text-sm    md:text-lg  absolute bottom-1 left-1 right-1   bg-[#235F7F] border border-[#235F7F]  py-1  md:py-1.5  text-center text-white rounded-md"> 
                     View More
@@ -1675,11 +1672,8 @@
                 <h2 class="text-lg md:text-2xl md:mt-2 leading-4 mt-1">
                     Food Ordering App
                 </h2>
-                <p class="hidden md:block text-lg font-medium px-4  my-2 text-gray-500 text-center ">
+                <p class="text-sm   md:text-lg font-medium  mb-10  md:mb-0  px-1  md:px-4  my-1 md:my-2 text-gray-500 text-center">
                     The Food Ordering App makes it easy to browse menus, order food and fast mobile experience.....
-                </p>
-                <p class=" block md:hidden text-sm  font-medium px-1  mb-10 my-1  text-gray-500 text-center ">
-                    The Food Ordering App makes it easy....
                 </p>
                 <button class="text-sm  md:text-lg  absolute bottom-1 left-1 right-1 bg-[#235F7F]  py-1  md:py-1.5   text-center text-white border rounded-md"> View More</button>
             </div>
@@ -1688,11 +1682,8 @@
                 <h2 class="text-lg md:text-2xl mt-1 md:mt-2 leading-5 md:leading-none">
                     Bank System Database
                 </h2>   
-                <p class="hidden md:block text-lg font-medium px-4  my-2 text-gray-500 text-center ">
+                <p class="text-sm   md:text-lg font-medium  mb-10  md:mb-0  px-1  md:px-4  my-1 md:my-2 text-gray-500 text-center ">
                     The Bank System Database securely stores customer data, account details and transaction.....
-                </p>
-                <p class=" block md:hidden text-sm  font-medium px-1   my-1  text-gray-500 text-center ">
-                    The Bank System Database securely.....
                 </p>
                 <button class="text-sm  md:text-lg absolute bottom-1 left-1 right-1 bg-[#235F7F]  py-1 md:py-1.5  text-center text-white border rounded-md"> View More</button>
             </div>
@@ -1701,11 +1692,8 @@
                 <h2 class="text-lg md:text-2xl mt-1 md:mt-2  leading-5 md:leading-none">
                     Advertising Brochure
                 </h2>
-                <p class="hidden md:block text-lg font-medium px-4  my-2 text-gray-500 text-center ">
+                <p class="text-sm   md:text-lg font-medium  mb-10  md:mb-0  px-1  md:px-4  my-1 md:my-2 text-gray-500 text-center ">
                     An advertising brochure is a marketing tool designed to promote products or services.....
-                </p>
-                <p class=" block md:hidden text-sm  font-medium px-1  mb-10  my-1  text-gray-500 text-center ">
-                    An advertising brochure is a marketing tool....
                 </p>
                 <button class="text-sm  md:text-lg  absolute bottom-1 left-1 right-1 bg-[#235F7F] py-1 md:py-1.5  text-center border text-white rounded-md"> View More</button>
             </div>
@@ -1713,11 +1701,11 @@
     </div>
 
     <!-- Section 3 -->
-    <div class="mt-4  md:mt-10  mx-10  md:mx-6   text-center ">
+    <div class="mt-4  md:mt-10  mx-10  md:mx-6    text-center ">
         <h1 class=" text-center  text-2xl  md:text-3xl md:pr-6 ">
             Why Aqsa Group
         </h1>
-        <div class="mt-5 md:mt-8  grid grid-cols-1 md:grid-cols-3 gap-8 md:px-5 ">
+        <div class="mt-5 md:mt-8  grid grid-cols-1 md:grid-cols-4 gap-8 md:px-5 ">
             <div class="flex flex-row items-start   overflow-hidden w-full md:p-2 ">
                 <h2 class=" text-[#235F7F] mt-2 text-xl  align-top  font-bold">01</h2>
                 <div class="h-[2px]  w-32  mt-8 bg-black"></div>

@@ -46,15 +46,15 @@
                 </div>
                 <div class="flex md:flex-row md:gap-4 relative ">
                     <div class="border border-dashed absolute md:relative left-0 top-1 md:top-0 text-gray-400 py-1 px-3 md:py-1.5 md:px-3.5 border-[#235F7F]  items-center text-center rounded-full">3</div>
-                    <span class="text-sm md:text-lg pl-12 md:pl-0 md:pt-2"> Designing intuitive and user-friendly interfaces </span>
+                    <span class="text-sm md:text-lg pl-12 md:pl-0 pt-1 md:pt-2"> Designing intuitive and user-friendly interfaces </span>
                 </div>
                 <div class="flex md:flex-row md:gap-4 relative ">
                     <div class="border border-dashed absolute md:relative left-0 top-1 md:top-0 text-gray-400 py-1 px-3 md:py-1.5 md:px-3.5 border-[#235F7F]  items-center text-center rounded-full">4</div>
-                    <span class="text-sm md:text-lg pl-12 md:pl-0 md:pt-2"> Continuous feedback, iteration, and optimization </span>
+                    <span class="text-sm md:text-lg pl-12 md:pl-0 pt-2"> Continuous feedback, iteration, and optimization </span>
                 </div>
                 <div class="flex md:flex-row md:gap-4 relative ">
-                    <div class="border border-dashed absolute md:relative left-0 top-1 md:top-0 text-gray-400 py-1 px-3 md:py-1.5 md:px-3.5 border-[#235F7F]  items-center text-center rounded-full">5</div>
-                    <span class="text-sm md:text-lg pl-12 md:pl-0 md:pt-2"> Consistent visual identity across platforms</span>
+                    <div class="border border-dashed absolute md:relative left-0 md:top-1 md:top-0 text-gray-400 py-1 px-3 md:py-1.5 md:px-3.5 border-[#235F7F]  items-center text-center rounded-full">5</div>
+                    <span class="text-sm md:text-lg pl-12 md:pl-0 pt-2 "> Consistent visual identity across platforms</span>
                 </div>
             </div>
             <hr class="text-[#00000033] block md:hidden mt-8">
