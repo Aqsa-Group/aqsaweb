@@ -1705,7 +1705,7 @@
         <h1 class=" text-center  text-2xl  md:text-3xl md:pr-6 ">
             Why Aqsa Group
         </h1>
-        <div class="mt-5 md:mt-8  grid grid-cols-1 md:grid-cols-4 gap-8 md:px-5 ">
+        <div class="mt-5 md:mt-8  grid grid-cols-1 md:grid-cols-3 gap-8 md:px-5 ">
             <div class="flex flex-row items-start   overflow-hidden w-full md:p-2 ">
                 <h2 class=" text-[#235F7F] mt-2 text-xl  align-top  font-bold">01</h2>
                 <div class="h-[2px]  w-32  mt-8 bg-black"></div>
