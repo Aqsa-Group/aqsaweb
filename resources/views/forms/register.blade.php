@@ -14,22 +14,22 @@
     <div class="md:hidden text-white  w-full h-auto   pt-12 md:pt-4 md:mt-[60px] flex flex-col justify-center text-center  mx-auto bg-cover bg-no-repeat"
         style="background-image: url('{{ asset('images/bannerBg.jpg') }}'); ">
         <h2 class="text-xl z-10 md:text-4xl  mt-6  md:mt-8 pb-8">
-            virification Code
+            Register Form
         </h2>
     </div>
     
     <!-- Form Section -->
     <div
-        class="flex flex-col-reverse md:flex-row w-full md:w-[900px] md:h-[450px] rounded-lg shadow-md overflow-hidden mx-auto mt-10 md:mt-32">
+        class="flex flex-col-reverse md:flex-row w-full md:w-[900px] md:h-[490px] rounded-lg shadow-md overflow-hidden mx-auto mt-10 md:mt-28">
     
         <!-- Left Side (Image) -->
         <div class=" md:w-1/2 mt-4 md:mt-0 pb-8 md:pb-0 mx-2 md:mx-0 relative bg-cover bg-center bg-no-repeat rounded-md flex flex-col justify-center items-center"
             style="background-image: url('{{ asset('images/bannerBg.jpg') }}'); font-family: 'Rosario';">
     
-            <!-- لایه سیاه -->
+            <!--Black cover -->
             <div class="md:absolute inset-0 bg-black/55 w-full h-full"></div>
     
-            <!-- متن و لوگو -->
+            <!-- Logo and text -->
             <div class="text-center md:absolute inset-0 pt-10 md:pt-28 relative z-10">
                 <img src="{{ asset('images/LOGO.png') }}" alt="logo" class=" w-32 md:w-[200px] h-auto mx-auto">
                 <h1
