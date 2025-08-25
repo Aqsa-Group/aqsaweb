@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Form</title>
+    <title>Login Form</title>
 
 </head>
 
@@ -15,7 +15,7 @@
     <div class="md:hidden text-white  w-full h-auto   pt-12 md:pt-4 md:mt-[60px] flex flex-col justify-center text-center  mx-auto bg-cover bg-no-repeat"
         style="background-image: url('{{ asset('images/bannerBg.jpg') }}'); ">
         <h2 class="text-xl z-10 md:text-4xl  mt-6  md:mt-8 pb-8">
-            virification Code
+            Log In Form
         </h2>
     </div>
     
