@@ -1547,7 +1547,7 @@
             </div>
 
             <!-- Navigation Links (Desktop) -->
-            <div class="hidden md:flex items-center gap-8 font-bold justify-center text-center">
+            <div class="hidden md:flex items-center gap-10 font-bold justify-center text-center">
                 <a href="{{ route('home')}}" class=" text-xl hover:text-cyan-600 cursor-pointer">Home</a>
                 <a href="{{ route('services')}}" class="text-xl hover:text-cyan-600 cursor-pointer">Services</a>
                 <a href="{{ route('aboutUs')}}" class="text-xl hover:text-cyan-600 cursor-pointer">About Us</a>
@@ -1585,16 +1585,17 @@
             <div class="relative">
                 <!--close btn-->
                 <button  id="closeBtn"   class="closeBtn text-2xl absolute top-2 left-2">X</button>
-                <div class="flex flex-col space-y-4 text-left py-10 pt-12">
-                    <a href="{{ route('home')}}" class="text-md hover:text-cyan-600 cursor-pointer">Home</a>
+                <div class="flex flex-col  text-left py-10 pt-12">
+                    <a href="{{ route('home')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">Home</a>
                     <hr>
-                    <a href="{{ route('services')}}" class="text-md hover:text-cyan-600 cursor-pointer">Serices</a>
+                    <a href="{{ route('services')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">Serices</a>
                     <hr>
-                    <a href="{{ route('aboutUs')}}" class="text-md hover:text-cyan-600 cursor-pointer">About Us</a>
+                    <a href="{{ route('aboutUs')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">About Us</a>
                     <hr>
-                    <a href="{{ route('blog')}}" class="text-md hover:text-cyan-600 cursor-pointer">Blog</a>
+                    <a href="{{ route('blog')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">Blog</a>
                     <hr>
-                    <a href="{{ route('contact')}}" class="text-md hover:text-cyan-600 cursor-pointer">Contact Us</a>
+                    <a href="{{ route('contact')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">Contact Us</a>
+                    <hr>
                 </div>
             </div>
         </div>
