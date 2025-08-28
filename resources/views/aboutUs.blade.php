@@ -203,7 +203,7 @@
                     <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
                         Graphic Designer
                     </h2>
-                    <p class="text-justify mx-2">
+                    <p class=" mx-2">
                         Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing materials. She
                         transforms ideas into engaging visuals that strengthen brand identity
                     </p>
@@ -226,7 +226,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="  flex flex-col items-center font-medium  bg-[#18527733]  rounded-lg border border-gray-400 overflow-hidden w-full p-2">
+                <div class="  flex flex-col items-center font-medium  rounded-lg border border-gray-400 overflow-hidden w-full p-2">
                     <img src="{{ asset('images/developers (2).jpg') }}" alt="Web Development"
                         class="h-28 md:h-[200px] w-full object-cover rounded-md" />
                     <h2 class="text-lg md:text-xl  mt-1 text-[#185277]">
@@ -235,7 +235,7 @@
                     <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
                         Graphic Designer
                     </h2>
-                    <p class="text-justify mx-2">
+                    <p class=" mx-2">
                         Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing materials. She
                         transforms ideas into engaging visuals that strengthen brand identity
                     </p>
@@ -267,7 +267,7 @@
                     <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
                         UI/UX Designer
                     </h2>
-                    <p class="text-justify mx-2">
+                    <p class=" mx-2">
                         Ezat is a passionate UI/UX designer focused on creating intuitive and visually appealing digital experiences. She
                         ensures every product is easy to use, accessible, and customer-centric.
                     </p>
@@ -299,7 +299,7 @@
                     <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
                         Web Developer
                     </h2>
-                    <p class="text-justify mx-2">
+                    <p class=" mx-2">
                         Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing materials. She
                         transforms ideas into engaging visuals that strengthen brand identity
                     </p>
