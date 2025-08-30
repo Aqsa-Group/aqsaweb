@@ -61,6 +61,8 @@ Route::get('/databaseService', function () {
     return view('services.databaseService'); })
     -> name('databaseService');
 
+// Dashboard Routes
 
-
-    
+   Route::get('/dashboard', function () {
+    return view('web.dashboard');
+  })-> name('dashboard');; 
