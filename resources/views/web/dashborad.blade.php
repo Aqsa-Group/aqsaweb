@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href={{ asset('css/stylecss.css')}}>
+    
+     <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css'])
+</head>
+<body>
+    <div class="container grid lg:w-[96%] sm:w-[94%] w-[100%] mx-auto gap-1 grid-cols bg-gray-50">
+        
+        <!-- --------------Sidebar-------------- -->
+        <aside class="h-[100vh] sm:relative fixed hidden sm:flex flex-col sm:bg-transparent sm:w-[100%] w-[18rem] z-30 sm:shadow-none sm:p-0 p-6 shadow-xl bg-white">
+            <div class="top bg-white flex items-center justify-between mt-4">
+                <div class="logo flex gap-1 sm:ml-0 ml-3">
+                    <img src={{ asset('images/LOGO.jpg') }} alt="" class="w-[2.5rem] h-[2.5rem]">
+                    <h2 class="font-bold text-2xl lg:flex sm:hidden">AQSA <span class="text-[#235F7F]">Group</span></h2>
+                </div>
+                <div class="close sm:hidden cursor-pointer" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar bg-white flex flex-col h-[83vh] relative top-12">
+                <a href="#" class="flex active text-[#235F7F] bg-[#235F7F]/10 ml-0 duration-300 transition-all ease-in gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+                    <span class="material-icons-sharp text-2xl lg:ml-3 ml-2">grid_view</span>
+                    <h3 class="font-medium lg:flex sm:hidden">Dashboard</h3>
+                </a>
+                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">person_outline</span>
+                    <h3 class="font-medium lg:flex sm:hidden">Contact Management</h3>
+                </a>
+                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">add</span>
+                    <h3 class="font-medium lg:flex sm:hidden">Add Post</h3>
+                </a>
+                    <!--  Dropdown section */} -->
+                    <div class='group relative cursor-pointer'>
+                        <a href='#'
+                        class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]"
+                        >
+                        <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">mail_outline</span>
+                        <h3 class="font-medium lg:flex sm:hidden">Pages</h3>
+                        </a>
+                        <!--  Dropdown link section  -->
+                        <div class='absolute top-12 left-8 z-[10] hidden group-hover:block text-black bg-gray-50 p-2 shadow-md w-[150px]'>
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                    class='inline-block w-full text-sm text-left rounded-md p-2 hover:bg-[#235F7F]/20'
+                                    >Home</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                    class='inline-block w-full text-sm text-left rounded-md p-2 hover:bg-[#235F7F]/20'
+                                    >About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                    class='inline-block w-full text-sm text-left rounded-md p-2 hover:bg-[#235F7F]/20'
+                                    >Services</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                    class='inline-block w-full text-sm text-left rounded-md p-2 hover:bg-[#235F7F]/20'
+                                    >Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                    class='inline-block w-full text-sm text-left rounded-md p-2 hover:bg-[#235F7F]/20'
+                                    >Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">receipt_long</span>
+                    <h3 class="font-medium lg:flex sm:hidden">User & Roles</h3>
+                </a>
+                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">settings</span>
+                    <h3 class="font-medium lg:flex sm:hidden">Settings</h3>
+                </a>
+                <!-- --------------Link Media-------------- -->
+                <div class="flex lg:flex-row sm:flex-col flex-row ml-4 lg:gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+                    <a href="#" class="text-[#235F7F] text-2xl py-1 sm:-ml-16 lg:mx-2 hover:text-xl">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#" class="text-[#235F7F] text-2xl py-1 sm:-ml-16 lg:mx-2 hover:text-xl">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#" class="text-[#235F7F] text-2xl py-1 sm:-ml-16 lg:mx-2 hover:text-xl">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </div>
+                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem] absolute bottom-4">
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">logout</span>
+                    <h3 class="font-medium lg:flex sm:hidden">Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+
+         <main class="px-8">
+            <!-- ---------------Header--------------- -->
+            <div class="top flex sm:justify-end justify-between gap-8 sm:relative fixed top-0 left-0 items-center px-2 sm:bg-transparent bg-white w-[100%] h-[4.6rem] m-0 z-10 sm:shadow-none shadow-xl">
+                <button id="menu-btn" class="sm:hidden flex bg-transparent cursor-pointer text-black left-4">
+                    <span class="material-icons-sharp  text-4xl">menu</span>
+                </button>
+                <div class="protifile flex justify-end items-center gap-4 text-right">
+                     <!--  Dropdown section */} -->
+                    <div class='group relative cursor-pointer'>
+                        <a href='#'
+                        class='flex h-[72px] items-center gap-[2px]'
+                        >
+                        <ion-icon name="globe-outline" class=" text-2xl"></ion-icon>
+                            <span>
+                                <ion-icon class='transition duration-300 group-hover:rotate-180' name="chevron-down-outline"></ion-icon>
+                            </span>
+                        </a>
+                        <!--  Dropdown link section  -->
+                        <div class='absolute top-12 z-[10] hidden group-hover:block text-black bg-white p-2 shadow-md w-[50px]'>
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                    class='inline-block w-full rounded-md p-2 hover:bg-gray-300/20'
+                                    >En</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                    class='inline-block w-full rounded-md p-2 hover:bg-gray-300/20'
+                                    >Fa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <ion-icon name="notifications-outline" class="text-2xl"></ion-icon>
+                        <span class="absolute -top-3 right-0.5 text-[9px] text-white bg-red-600 p-1 rounded-full
+                        ">21</span>
+                    </div>
+                    <div class="info sm:flex flex-col hidden">
+                        <p class="text-sm">Hey, <b>Danial</b></p>
+                        <small class="text-gray-500 text-sm">Admin</small>
+                    </div>
+                    <div class="photo">
+                        <img src={{ asset('images/02.jpg') }} alt="" class="w-[40px] h-[40px] rounded-full"> 
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------Card--------------- -->
+            <div class="sm:-mt-4 mt-24">
+                <h1 class="font-bold text-2xl">Dashboard</h1>
+            </div>
+            <div class="date inline-block bg-gray-200 rounded-lg mt-3 px-4 py-2">
+                <input type="date" class="bg-transparent text-black">
+            </div>
+
+            <div class="inights grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-1 lg:gap-4">
+                <div class="first bg-white py-4 px-10  rounded-xl mt-4 shadow-2xl transition-all duration-300 ease-out hover:shadow-none">
+                    <span class="material-icons-sharp px-3 rounded-full text-white text-2xl bg-[#235F7F]">analytics</span>
+                    <div class="middle flex items-center justify-between">
+                        <div class="left">
+                            <h3 class="mt-2 text-[12px]">Today Visied</h3>
+                            <h1 class="font-bold text-lg">1,024 <span class="material-icons-sharp text-[13px] text-gray-700">visibility</span></h1>
+                        </div>
+                        <div class="progress relative w-[60px] h-[60px] rounded-full">
+                            <svg class="w-[6rem] h-[6rem]">
+                                <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                            </svg>
+                            <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="mt-4 text-gray-400">Last 24 Hours</small>
+
+                </div>
+
+                
+                <div class="second bg-white py-4 px-10  rounded-xl mt-4 shadow-2xl transition-all duration-300 ease-out hover:shadow-none">
+                    <span class="material-icons-sharp px-1 rounded-full text-white text-2xl bg-[#235F7F]">bar_chart</span>
+                    <div class="middle flex items-center justify-between">
+                        <div class="left">
+                            <h3 class="mt-2 text-[12px]">Totle Visied</h3>
+                            <h1 class="font-bold text-lg">10,024 <span class="material-icons-sharp text-[13px] text-gray-700">visibility</span></h1>
+                        </div>
+                        <div class="progress relative w-[60px] h-[60px] rounded-full">
+                            <svg class="w-[6rem] h-[6rem]">
+                                <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                            </svg>
+                            <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                                <p>61%</p>
+                            </div>
+                        </div>  
+                    </div>
+                    <small class="mt-4 text-gray-400">Last 24 Hours</small>
+                </div>
+
+                
+                <div class="third bg-white py-4 px-10  rounded-xl mt-4 shadow-2xl transition-all duration-300 ease-out hover:shadow-none">
+                    <span class="material-icons-sharp px-3 rounded-full text-white text-2xl bg-[#235F7F]">stacked_line_chart</span>
+                    <div class="middle flex items-center justify-between">
+                        <div class="left">
+                            <h3 class="mt-2 text-[12px]">Totle User</h3>
+                            <h1 class="font-bold text-lg">2,024 <span class="material-icons-sharp text-[13px] text-gray-700">person</span></h1>
+                        </div>
+                        <div class="progress relative w-[60px] h-[60px] rounded-full">
+                            <svg class="w-[6rem] h-[6rem]">
+                                <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                            </svg>
+                            <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                                <p>44%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="mt-4 text-gray-400">Last 24 Hours</small>
+                </div>    
+                <div class="forth bg-white py-4 px-10  rounded-xl mt-4 shadow-2xl transition-all duration-300 ease-out hover:shadow-none">
+                    <span class="material-icons-sharp px-3 rounded-full text-white text-2xl bg-[#235F7F]">trending_up</span>
+                    <div class="middle flex items-center justify-between">
+                        <div class="left">
+                            <h3 class="mt-2 text-[12px]">Totle Project</h3>
+                            <h1 class="font-bold text-lg">124 <span class="material-icons-sharp text-[13px] text-gray-700">map</span></h1>
+                        </div>
+                        <div class="progress relative w-[60px] h-[60px] rounded-full">
+                            <svg class="w-[6rem] h-[6rem]">
+                                <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                            </svg>
+                            <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                                <p>70%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="mt-4 text-gray-400">Last 24 Hours</small>
+                </div>  
+                    
+            </div>
+            
+
+
+            <!-- --------------------RECEND ACTIVITES-------------------- -->
+            <div class="mt-4">
+                <h1 class="font-bold text-xl">Recent User</h1>
+                <table class="sm:w-[100%] w-[96%] text-center space-y-2">
+                    <tr class=" text-gray-600 border-y-8 border-gray-50">
+                        <th>Profile</th>
+                        <th class="none">Job</th>
+                        <th class="none">Phone Number</th>
+                        <th class="none">Join Date</th>
+                    </tr>
+                    <tr class="bg-white border-y-8 border-gray-50">
+                        <td class="flex items-center my-1">
+                            <p class="mx-auto">1</p>
+                            <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                <div>
+                                    <h1 class="font-bold">Jimmy Hadreson</h1>
+                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="none">Developer</td>
+                        <td class="none">07988334477</td>
+                        <td class="none">Mar 27, 2016</td>
+                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                    </tr>
+                    <tr class="bg-white border-y-8 border-gray-50">
+                        <td class="flex items-center my-1">
+                            <p class="mx-auto">1</p>
+                            <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                <div>
+                                    <h1 class="font-bold">Jimmy Hadreson</h1>
+                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="none">Developer</td>
+                        <td class="none">07988334477</td>
+                        <td class="none">Mar 27, 2016</td>
+                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                    </tr>
+                    <tr class="bg-white border-y-8 border-gray-50">
+                        <td class="flex items-center my-1">
+                            <p class="mx-auto">1</p>
+                            <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                <div>
+                                    <h1 class="font-bold">Jimmy Hadreson</h1>
+                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="none">Developer</td>
+                        <td class="none">07988334477</td>
+                        <td class="none">Mar 27, 2016</td>
+                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                    </tr>
+                    <tr class="bg-white border-y-8 border-gray-50">
+                        <td class="flex items-center my-1">
+                            <p class="mx-auto">1</p>
+                            <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                <div>
+                                    <h1 class="font-bold">Jimmy Hadreson</h1>
+                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="none">Developer</td>
+                        <td class="none">07988334477</td>
+                        <td class="none">Mar 27, 2016</td>
+                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <a href="#" class="text-[#235F7F] text-sm">Show All</a>
+                </div>
+            </div>
+         </main>
+    </div>
+
+    <!-- Icon -->
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Java link -->
+    <script src="{{ asset('JS/main.js')}}"></script>
+</body>
+</html>

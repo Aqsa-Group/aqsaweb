@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*{
+    font-family: "PT Serif", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid-cols{
+    grid-template-columns: 14rem auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .grid-cols{
+        grid-template-columns: 7rem auto;
+    }    
+}
+@media screen and (max-width: 786px) {
+    .grid-cols{
+        grid-template-columns: auto;
+    }    
+    .none {
+        display: none;
+    }
+}
+
+.active::before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: #235F7F;
+}
+
+.round{
+    stroke-linecap: round;
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+.first .round{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+.second .round{
+    stroke-dashoffset: 20;
+    stroke-dasharray: 80;
+}
+
+.third .round{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+.forth .round{
+    stroke-dashoffset: -40;
+    stroke-dasharray: 110;
+}
