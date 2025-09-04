@@ -20,7 +20,7 @@
     <div class="container grid lg:w-[96%] sm:w-[94%] w-[100%] mx-auto gap-1 grid-cols bg-gray-50">
         
         <!-- --------------Sidebar-------------- -->
-        <aside class="h-[100vh] sm:relative fixed hidden sm:flex flex-col sm:bg-transparent sm:w-[100%] w-[18rem] z-30 sm:shadow-none sm:p-0 p-6 shadow-xl bg-white">
+        <aside class="h-[100vh] sm:relative fixed hidden sm:flex flex-col sm:w-[100%] w-[18rem] z-30 sm:p-0 p-6 shadow-xl bg-white">
             <div class="top bg-white flex items-center justify-between mt-4">
                 <!-- --------------Logo-------------- -->
                 <div class="logo flex gap-1 sm:ml-0 ml-3">
@@ -50,7 +50,7 @@
                         <a href='#'
                         class="flex active text-[#235F7F] bg-[#235F7F]/10 ml-0 duration-300 transition-all ease-in gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]"
                         >
-                        <span class="material-icons-sharp text-2xl lg:ml-3 ml-2">mail_outline</span>
+                        <span class="material-icons-sharp text-2xl lg:ml-3 ml-2">file_copy</span>
                         <h3 class="font-medium lg:flex sm:hidden">Pages</h3>
                         </a>
                         <!--  Dropdown link section  -->
@@ -90,14 +90,14 @@
                         </div>
                     </div>
                 <a href={{ url('/user&roles') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
-                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">receipt_long</span>
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">person</span>
                     <h3 class="font-medium lg:flex sm:hidden">User & Roles</h3>
                 </a>
                 <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
                     <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">settings</span>
                     <h3 class="font-medium lg:flex sm:hidden">Settings</h3>
                 </a>
-                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem] absolute bottom-4">
+                <a href={{ url('/') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem] absolute bottom-4">
                     <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">logout</span>
                     <h3 class="font-medium lg:flex sm:hidden">Logout</h3>
                 </a>
@@ -105,9 +105,9 @@
         </aside>
 
 
-         <main class="px-8">
+         <main>
             <!-- ---------------Header--------------- -->
-            <div class="top flex sm:justify-end justify-between gap-8 sm:relative fixed top-0 left-0 items-center px-2 sm:bg-transparent bg-white w-[100%] h-[4.6rem] m-0 z-10 sm:shadow-none shadow-xl">
+            <div class="top flex sm:justify-end justify-between gap-8 sm:relative fixed top-0 left-0 items-center px-2 bg-white w-[100%] h-[4.6rem] m-0 z-20 shadow-xl">
                 <button id="menu-btn" class="sm:hidden flex bg-transparent cursor-pointer text-black left-4">
                     <span class="material-icons-sharp  text-4xl">menu</span>
                 </button>
@@ -115,7 +115,7 @@
                      <!--  Dropdown section */} -->
                     <div class='group relative cursor-pointer'>
                         <a href='#'
-                        class='flex h-[72px] items-center gap-[2px]'
+                        class='flex items-center gap-[2px] border border-gray-200 rounded-xl px-2 py-2'
                         >
                         <ion-icon name="globe-outline" class=" text-2xl"></ion-icon>
                             <span>
@@ -123,7 +123,7 @@
                             </span>
                         </a>
                         <!--  Dropdown link section  -->
-                        <div class='absolute top-12 z-[10] hidden group-hover:block text-black bg-white p-2 shadow-md w-[50px]'>
+                        <div class='absolute top-8 z-[10] hidden group-hover:block text-center text-black bg-white p-2 shadow-md w-[60px]'>
                             <ul>
                                 <li>
                                     <a href="#"
@@ -138,10 +138,10 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative border border-gray-200 rounded-xl cursor-pointer px-2 py-1">
                         <ion-icon name="notifications-outline" class="text-2xl"></ion-icon>
-                        <span class="absolute -top-3 right-0.5 text-[9px] text-white bg-red-600 p-1 rounded-full
-                        ">21</span>
+                        <span class="absolute top-1 right-2 text-white bg-red-600 p-1 rounded-full
+                        "></span>
                     </div>
                     <!-- ---------------Profile--------------- -->
                     <div class="info sm:flex flex-col hidden">
@@ -153,118 +153,122 @@
                     </div>
                 </div>
             </div>
-            <!-- ---------------title--------------- -->
-            <div class="sm:-mt-4 mt-24">
-                <h1 class="font-bold text-2xl">Page/ Home</h1>
+
+            <div class="px-8">
+                <!-- ---------------title--------------- -->
+                <div class="sm:mt-4 mt-24">
+                    <h1 class="font-bold text-2xl">Page/ Home</h1>
+                </div>
+                <div class="date inline-block bg-gray-200 rounded-lg mt-3 px-4 py-2">
+                    <input type="date" class="bg-transparent text-black">
+                </div>
+
+                <!-- ---------------Form--------------- -->
+                <form action="#">
+                    <div class="grid lg:grid-cols-3 grid-cols-1 lg:pb-0 pb-6">
+
+                        <!-- ---------------col1--------------- -->
+                        <div class="px-4">
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
+                                    <span class="material-icons-sharp">upload</span>
+                                    Uploud Background image
+                                </label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change head title</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
+                                <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change button text</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] mt-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title section</label>
+                            </div>
+                        </div>
+
+                        <!-- ---------------col2--------------- -->
+                        <div class="px-4">
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title first card section</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title second card section</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title third card section</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
+                                <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text first card section</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
+                                <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text second card section</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] mt-7">
+                                <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
+                                <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text third card section</label>
+                            </div>
+                        </div>
+
+                        <!-- ---------------col3--------------- -->
+                        <div class="px-4">
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title brand</label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
+                                    <span class="material-icons-sharp">upload</span>
+                                    Change first brand
+                                </label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
+                                    <span class="material-icons-sharp">upload</span>
+                                    Change second brand
+                                </label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
+                                    <span class="material-icons-sharp">upload</span>
+                                    Change third brand
+                                </label>
+                            </div>
+                            <div class="input-box relative w-[100%] h-[50px] my-7">
+                                <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
+                                <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
+                                    <span class="material-icons-sharp">upload</span>
+                                    Change logo
+                                </label>
+                            </div>
+                            <button class="input-btn relative w-[100%] h-[45px] border-2 border-[#235F7F] outline-none rounded-3xl cursor-pointer text-lg font-semibold flex items-center justify-center overflow-hidden">
+                                <span class="z-10">Submit</span>
+                                <span class="material-icons-sharp text-lg mx-2 z-10">send</span>
+                            </button>
+                        </div>
+                    </div>    
+                </form>    
             </div>
-            <div class="date inline-block bg-gray-200 rounded-lg mt-3 px-4 py-2">
-                <input type="date" class="bg-transparent text-black">
-            </div>
-
-            <!-- ---------------Form--------------- -->
-            <form action="#">
-                <div class="grid lg:grid-cols-3 grid-cols-1 lg:pb-0 pb-6">
-
-                    <!-- ---------------col1--------------- -->
-                    <div class="px-4">
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                <span class="material-icons-sharp">download</span>
-                                Uploud Background image
-                            </label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change head title</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
-                            <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change button text</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title section</label>
-                        </div>
-                    </div>
-
-                    <!-- ---------------col2--------------- -->
-                    <div class="px-4">
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title first card section</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title second card section</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title third card section</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
-                            <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text first card section</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
-                            <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text second card section</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <textarea id="myinput" name="message" class="w-[100%] h-[90%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" id=""></textarea>
-                            <label class="absolute transition-all top-[35%] left-0 -translate-y-[65%] pointer-events-none" for="text">Change text third card section</label>
-                        </div>
-                    </div>
-
-                    <!-- ---------------col3--------------- -->
-                    <div class="px-4">
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-lg font-medium pr-6" type="text">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none" for="text">Change title brand</label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                <span class="material-icons-sharp">download</span>
-                                Change first brand
-                            </label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                <span class="material-icons-sharp">download</span>
-                                Change second brand
-                            </label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                <span class="material-icons-sharp">download</span>
-                                Change third brand
-                            </label>
-                        </div>
-                        <div class="input-box relative w-[100%] h-[50px] my-7">
-                            <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
-                            <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                <span class="material-icons-sharp">download</span>
-                                Change logo
-                            </label>
-                        </div>
-                        <button class="input-btn relative w-[100%] h-[45px] border-2 border-[#235F7F] outline-none rounded-3xl cursor-pointer text-lg font-semibold flex items-center justify-center overflow-hidden">
-                            <span class="z-10">Submit</span>
-                            <span class="material-icons-sharp text-lg mx-2 z-10">send</span>
-                        </button>
-                    </div>
-                </div>    
-            </form>
+            
             
          </main>
     </div>
