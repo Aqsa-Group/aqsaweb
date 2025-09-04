@@ -61,6 +61,44 @@ Route::get('/databaseService', function () {
     return view('services.databaseService'); })
     -> name('databaseService');
 
+// Dashboard Routes
 
+Route::get('/dashborad', function () {
+    return view('web.dashborad');
+})-> name('dashborad');; 
 
-    
+Route::get('/contactManagement', function () {
+    return view('web.contactManagement');
+})-> name('contactManagement');; 
+
+Route::get('/addpost', function () {
+    return view('web.addpost');
+})-> name('addpost');; 
+
+Route::get('/pageHome', function () {
+    return view('web.pageHome');
+})-> name('pageHome');
+
+Route::get('/pageAboutUs', function () {
+    return view('web.pageAboutUs');
+})-> name('pageAboutUs');
+
+Route::get('/pageServies', function () {
+    return view('web.pageServies');
+})-> name('pageServies');
+
+Route::get('/pageProject', function () {
+    return view('web.pageProject');
+})-> name('pageProject');
+
+Route::get('/pageBlog', function () {
+    return view('web.pageBlog');
+})-> name('pageBlog');
+
+Route::get('/pageContactUs', function () {
+    return view('web.pageContactUs');
+})-> name('pageContactUs');
+
+Route::get('/user&roles', function () {
+    return view('web.user&roles');
+})-> name('user&roles');
