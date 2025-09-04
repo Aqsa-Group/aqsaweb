@@ -114,7 +114,7 @@
                 <button id="menu-btn" class="sm:hidden flex bg-transparent cursor-pointer text-black left-4">
                     <span class="material-icons-sharp  text-4xl">menu</span>
                 </button>
-                <div class="protifile flex justify-end items-center gap-2 text-right">
+                <div class="protifile flex justify-end items-center gap-4 text-right">
                      <!--  Dropdown section */} -->
                     <div class='group relative cursor-pointer'>
                         <a href='#'
@@ -175,7 +175,7 @@
                             <div class="input-box relative w-[100%] h-[50px] my-7">
                                 <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
                                 <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                    <span class="material-icons-sharp">download</span>
+                                    <span class="material-icons-sharp">upload</span>
                                     Change Background image
                                 </label>
                             </div>
