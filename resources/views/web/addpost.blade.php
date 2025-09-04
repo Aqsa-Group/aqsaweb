@@ -17,14 +17,14 @@
     @vite(['resources/css/app.css'])
 </head>
 <body>
-    <div class="container grid lg:w-[96%] sm:w-[94%] w-[100%] mx-auto gap-1 grid-cols bg-gray-50">
+    <div class="grid lg:w-[96%] sm:w-[94%] w-[100%] mx-auto gap-1 grid-cols bg-gray-50">
         
         <!-- --------------Sidebar-------------- -->
         <aside class="h-[100vh] sm:relative fixed hidden sm:flex flex-col sm:w-[100%] w-[18rem] z-30 sm:p-0 p-6 shadow-xl bg-white">
-            <div class="top bg-white flex items-center justify-between mt-4">
+            <div class="flex items-center justify-between mt-4">
                 <!-- --------------Logo-------------- -->
                 <div class="logo flex gap-1 sm:ml-0 ml-3">
-                    <img src={{ asset('images/LOGO.jpg') }} alt="" class="w-[2.5rem] h-[2.5rem]">
+                    <img src={{ asset('images/LOGO.jpg') }} alt="" class="w-[2.5rem] h-[2.5rem] ml-4 ">
                     <h2 class="font-bold text-2xl lg:flex sm:hidden">AQSA <span class="text-[#235F7F]">Group</span></h2>
                 </div>
                 <div class="close sm:hidden cursor-pointer" id="close-btn">
@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="sidebar bg-white flex flex-col h-[83vh] relative top-12">
+            <div class="flex flex-col h-[83vh] relative top-12">
                 <a href={{ url('/dashborad') }} class="flex duration-300 hover:text-[#235F7F] group text-gray-700 transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
                     <span class="material-icons-sharp group-hover:ml-3 transition-all duration-300 ease-out">grid_view</span>
                     <h3 class="font-medium lg:flex sm:hidden">Dashboard</h3>
@@ -107,11 +107,11 @@
 
          <main>
             <!-- ---------------Header--------------- -->
-            <div class="top flex sm:justify-end justify-between gap-8 sm:relative fixed top-0 left-0 items-center px-2 bg-white w-[100%] h-[4.6rem] m-0 z-20 shadow-xl">
+            <div class="flex sm:justify-end justify-between gap-8 sm:relative fixed top-0 left-0 items-center px-2 bg-white w-[100%] h-[4.6rem] m-0 z-20 shadow-xl">
                 <button id="menu-btn" class="sm:hidden flex bg-transparent cursor-pointer text-black left-4">
                     <span class="material-icons-sharp  text-4xl">menu</span>
                 </button>
-                <div class="protifile flex justify-end items-center gap-4 text-right">
+                <div class="flex justify-end items-center gap-4 text-right">
                      <!--  Dropdown section */} -->
                     <div class='group relative cursor-pointer'>
                         <a href='#'
@@ -144,11 +144,11 @@
                         "></span>
                     </div>
                     <!-- ---------------Profile--------------- -->
-                    <div class="info sm:flex flex-col hidden">
+                    <div class="sm:flex flex-col hidden">
                         <p class="text-sm">Hey, <b>Danial</b></p>
                         <small class="text-gray-500 text-sm">Admin</small>
                     </div>
-                    <div class="photo">
+                    <div class="">
                         <img src={{ asset('images/02.jpg') }} alt="" class="w-[40px] h-[40px] rounded-full"> 
                     </div>
                 </div>
