@@ -97,7 +97,7 @@
                     <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">settings</span>
                     <h3 class="font-medium lg:flex sm:hidden">Settings</h3>
                 </a>
-                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem] absolute bottom-4">
+                <a href={{ url('/') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem] absolute bottom-4">
                     <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">logout</span>
                     <h3 class="font-medium lg:flex sm:hidden">Logout</h3>
                 </a>
@@ -111,7 +111,7 @@
                 <button id="menu-btn" class="sm:hidden flex bg-transparent cursor-pointer text-black left-4">
                     <span class="material-icons-sharp  text-4xl">menu</span>
                 </button>
-                <div class="protifile flex justify-end items-center gap-2 text-right">
+                <div class="protifile flex justify-end items-center gap-4 text-right">
                      <!--  Dropdown section */} -->
                     <div class='group relative cursor-pointer'>
                         <a href='#'
@@ -171,7 +171,7 @@
                             <div class="input-box relative w-[100%] h-[50px] my-7">
                                 <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
                                 <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                    <span class="material-icons-sharp">download</span>
+                                    <span class="material-icons-sharp">upload</span>
                                     Uploud Background image
                                 </label>
                             </div>
