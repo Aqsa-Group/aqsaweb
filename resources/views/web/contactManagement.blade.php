@@ -20,7 +20,7 @@
     <div class="container grid lg:w-[96%] sm:w-[94%] w-[100%] mx-auto gap-1 grid-cols bg-gray-50">
         
         <!-- --------------Sidebar-------------- -->
-        <aside class="h-[100vh] sm:relative fixed hidden sm:flex flex-col sm:bg-transparent sm:w-[100%] w-[18rem] z-30 sm:shadow-none sm:p-0 p-6 shadow-xl bg-white">
+        <aside class="h-[100vh] sm:relative fixed hidden sm:flex flex-col sm:w-[100%] w-[18rem] z-30 sm:p-0 p-6 shadow-xl bg-white">
             <div class="top bg-white flex items-center justify-between mt-4">
                 <!-- --------------Logo-------------- -->
                 <div class="logo flex gap-1 sm:ml-0 ml-3">
@@ -50,7 +50,7 @@
                         <a href='#'
                         class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]"
                         >
-                        <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">mail_outline</span>
+                        <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">file_copy</span>
                         <h3 class="font-medium lg:flex sm:hidden">Pages</h3>
                         </a>
                         <!--  Dropdown link section  -->
@@ -72,6 +72,11 @@
                                     >Services</a>
                                 </li>
                                 <li>
+                                    <a href={{ url('/pageProject') }}
+                                    class='inline-block w-full text-sm text-left rounded-md p-2 hover:bg-[#235F7F]/20'
+                                    >Project</a>
+                                </li>
+                                <li>
                                     <a href={{ url('/pageBlog') }}
                                     class='inline-block w-full text-sm text-left rounded-md p-2 hover:bg-[#235F7F]/20'
                                     >Blog</a>
@@ -85,14 +90,14 @@
                         </div>
                     </div>
                 <a href={{ url('/user&roles') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
-                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">receipt_long</span>
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">person</span>
                     <h3 class="font-medium lg:flex sm:hidden">User & Roles</h3>
                 </a>
                 <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
                     <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">settings</span>
                     <h3 class="font-medium lg:flex sm:hidden">Settings</h3>
                 </a>
-                <a href="#" class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem] absolute bottom-4">
+                <a href={{ url('/') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem] absolute bottom-4">
                     <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">logout</span>
                     <h3 class="font-medium lg:flex sm:hidden">Logout</h3>
                 </a>
@@ -100,9 +105,9 @@
         </aside>
 
 
-         <main class="px-8">
+         <main>
             <!-- ---------------Header--------------- -->
-            <div class="top flex sm:justify-end justify-between gap-8 sm:relative fixed top-0 left-0 items-center px-2 sm:bg-transparent bg-white w-[100%] h-[4.6rem] m-0 z-10 sm:shadow-none shadow-xl">
+            <div class="top flex sm:justify-end justify-between gap-8 sm:relative fixed top-0 left-0 items-center px-2 bg-white w-[100%] h-[4.6rem] m-0 z-20 shadow-xl">
                 <button id="menu-btn" class="sm:hidden flex bg-transparent cursor-pointer text-black left-4">
                     <span class="material-icons-sharp  text-4xl">menu</span>
                 </button>
@@ -110,7 +115,7 @@
                      <!--  Dropdown section */} -->
                     <div class='group relative cursor-pointer'>
                         <a href='#'
-                        class='flex h-[72px] items-center gap-[2px]'
+                        class='flex items-center gap-[2px] border border-gray-200 rounded-xl px-2 py-2'
                         >
                         <ion-icon name="globe-outline" class=" text-2xl"></ion-icon>
                             <span>
@@ -118,7 +123,7 @@
                             </span>
                         </a>
                         <!--  Dropdown link section  -->
-                        <div class='absolute top-12 z-[10] hidden group-hover:block text-black bg-white p-2 shadow-md w-[50px]'>
+                        <div class='absolute top-8 z-[10] hidden group-hover:block text-center text-black bg-white p-2 shadow-md w-[60px]'>
                             <ul>
                                 <li>
                                     <a href="#"
@@ -133,12 +138,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative border border-gray-200 rounded-xl cursor-pointer px-2 py-1">
                         <ion-icon name="notifications-outline" class="text-2xl"></ion-icon>
-                        <span class="absolute -top-3 right-0.5 text-[9px] text-white bg-red-600 p-1 rounded-full
-                        ">21</span>
+                        <span class="absolute top-1 right-2 text-white bg-red-600 p-1 rounded-full
+                        "></span>
                     </div>
-                    <!-- --------------Profile-------------- -->
+                    <!-- ---------------Profile--------------- -->
                     <div class="info sm:flex flex-col hidden">
                         <p class="text-sm">Hey, <b>Danial</b></p>
                         <small class="text-gray-500 text-sm">Admin</small>
@@ -148,141 +153,128 @@
                     </div>
                 </div>
             </div>
-            <!-- ---------------title--------------- -->
-            <div class="sm:-mt-4 mt-24">
-                <h1 class="font-bold text-2xl">Contact Management</h1>
-            </div>
-            <div class="date inline-block bg-gray-200 rounded-lg mt-3 px-4 py-2">
-                <input type="date" class="bg-transparent text-black">
-            </div>
-
-
-            <!-- --------------------RECEND Post-------------------- -->
-            <div class="mt-4">
-                <table class="sm:w-[100%] w-[96%] text-center space-y-2">
-                    <tr class=" text-gray-600 border-y-8 border-gray-50">
-                        <th>Profile</th>
-                        <th class="none">Job</th>
-                        <th class="none">Phone Number</th>
-                        <th class="none">Join Date</th>
-                    </tr>
-                    <tr class="bg-white border-y-8 border-gray-50">
-                        <td class="flex items-center my-1">
-                            <p class="mx-auto">1</p>
-                            <div class="flex justify-start text-left items-center mx-auto gap-2">
-                                <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
-                                <div>
-                                    <h1 class="font-bold">Jimmy Hadreson</h1>
-                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="none">Developer</td>
-                        <td class="none">07988334477</td>
-                        <td class="none">Mar 27, 2016</td>
-                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
-                    </tr>
-                    <tr class="bg-white border-y-8 border-gray-50">
-                        <td class="flex items-center my-1">
-                            <p class="mx-auto">2</p>
-                            <div class="flex justify-start text-left items-center mx-auto gap-2">
-                                <img src={{ asset('images/02.jpg') }} alt="" class="w-[30px] h-[30px]">
-                                <div>
-                                    <h1 class="font-bold">Eiln Aline</h1>
-                                    <p class="text-[12px] text-gray-500">elinaline399@gmail.com</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="none">Desinger</td>
-                        <td class="none">07988334477</td>
-                        <td class="none">Mar 27, 2019</td>
-                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
-                    </tr>
-                    <tr class="bg-white border-y-8 border-gray-50">
-                        <td class="flex items-center my-1">
-                            <p class="mx-auto">2</p>
-                            <div class="flex justify-start text-left items-center mx-auto gap-2">
-                                <img src={{ asset('images/03.jpg') }} alt="" class="w-[30px] h-[30px]">
-                                <div>
-                                    <h1 class="font-bold">Vana Hadreson</h1>
-                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="none">Doctor</td>
-                        <td class="none">07983434498</td>
-                        <td class="none">Jan 27, 2022</td>
-                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
-                    </tr>
-                    <tr class="bg-white border-y-8 border-gray-50">
-                        <td class="flex items-center my-1">
-                            <p class="mx-auto">4</p>
-                            <div class="flex justify-start text-left items-center mx-auto gap-2">
-                                <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
-                                <div>
-                                    <h1 class="font-bold">Jimmy Hadreson</h1>
-                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="none">Developer</td>
-                        <td class="none">07988334477</td>
-                        <td class="none">Mar 27, 2016</td>
-                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
-                    </tr>
-                    <tr class="bg-white border-y-8 border-gray-50">
-                        <td class="flex items-center my-1">
-                            <p class="mx-auto">5</p>
-                            <div class="flex justify-start text-left items-center mx-auto gap-2">
-                                <img src={{ asset('images/03.jpg') }} alt="" class="w-[30px] h-[30px]">
-                                <div>
-                                    <h1 class="font-bold">Vana Hadreson</h1>
-                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="none">Doctor</td>
-                        <td class="none">07983434498</td>
-                        <td class="none">Jan 27, 2022</td>
-                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
-                    </tr>
-                    <tr class="bg-white border-y-8 border-gray-50">
-                        <td class="flex items-center my-1">
-                            <p class="mx-auto">6</p>
-                            <div class="flex justify-start text-left items-center mx-auto gap-2">
-                                <img src={{ asset('images/02.jpg') }} alt="" class="w-[30px] h-[30px]">
-                                <div>
-                                    <h1 class="font-bold">Eiln Aline</h1>
-                                    <p class="text-[12px] text-gray-500">elinaline399@gmail.com</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="none">Desinger</td>
-                        <td class="none">07988334477</td>
-                        <td class="none">Mar 27, 2019</td>
-                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
-                    </tr>
-                    <tr class="bg-white border-y-8 border-gray-50">
-                        <td class="flex items-center my-1">
-                            <p class="mx-auto">7</p>
-                            <div class="flex justify-start text-left items-center mx-auto gap-2">
-                                <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
-                                <div>
-                                    <h1 class="font-bold">Jimmy Hadreson</h1>
-                                    <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="none">Developer</td>
-                        <td class="none">07988334477</td>
-                        <td class="none">Mar 27, 2016</td>
-                        <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
-                    </tr>
-                </table>
-                <div class="text-center">
-                    <a href="#" class="text-[#235F7F] text-sm">Show All</a>
+            <div class="px-8">
+                <!-- ---------------title--------------- -->
+                <div class="sm:mt-4 mt-24">
+                    <h1 class="font-bold text-2xl">Contact Management</h1>
                 </div>
+                <div class="date inline-block bg-gray-200 rounded-lg mt-3 px-4 py-2">
+                    <input type="date" class="bg-transparent text-black">
+                </div>
+
+
+                <!-- --------------------RECEND Post-------------------- -->
+                <div class="mt-4">
+                    <table class="sm:w-[100%] w-[96%] text-center space-y-2">
+                        <tr class=" text-gray-600 border-y-8 border-gray-50">
+                            <th>Profile</th>
+                            <th class="none">Job</th>
+                            <th class="none">Phone Number</th>
+                            <th class="none">Join Date</th>
+                        </tr>
+                        <tr class="bg-white border-y-8 border-gray-50">
+                            <td class="flex items-center my-1">
+                                <p class="mx-auto">1</p>
+                                <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                    <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                    <div>
+                                        <h1 class="font-bold">Jimmy Hadreson</h1>
+                                        <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="none">Developer</td>
+                            <td class="none">07988334477</td>
+                            <td class="none">Mar 27, 2016</td>
+                            <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                        </tr>
+                        <tr class="bg-white border-y-8 border-gray-50">
+                            <td class="flex items-center my-1">
+                                <p class="mx-auto">2</p>
+                                <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                    <img src={{ asset('images/02.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                    <div>
+                                        <h1 class="font-bold">Eiln Aline</h1>
+                                        <p class="text-[12px] text-gray-500">elinaline399@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="none">Desinger</td>
+                            <td class="none">07988334477</td>
+                            <td class="none">Mar 27, 2019</td>
+                            <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                        </tr>
+                        <tr class="bg-white border-y-8 border-gray-50">
+                            <td class="flex items-center my-1">
+                                <p class="mx-auto">2</p>
+                                <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                    <img src={{ asset('images/03.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                    <div>
+                                        <h1 class="font-bold">Vana Hadreson</h1>
+                                        <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="none">Doctor</td>
+                            <td class="none">07983434498</td>
+                            <td class="none">Jan 27, 2022</td>
+                            <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                        </tr>
+                        <tr class="bg-white border-y-8 border-gray-50">
+                            <td class="flex items-center my-1">
+                                <p class="mx-auto">4</p>
+                                <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                    <img src={{ asset('images/01.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                    <div>
+                                        <h1 class="font-bold">Jimmy Hadreson</h1>
+                                        <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="none">Developer</td>
+                            <td class="none">07988334477</td>
+                            <td class="none">Mar 27, 2016</td>
+                            <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                        </tr>
+                        <tr class="bg-white border-y-8 border-gray-50">
+                            <td class="flex items-center my-1">
+                                <p class="mx-auto">5</p>
+                                <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                    <img src={{ asset('images/03.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                    <div>
+                                        <h1 class="font-bold">Vana Hadreson</h1>
+                                        <p class="text-[12px] text-gray-500">hadreson399@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="none">Doctor</td>
+                            <td class="none">07983434498</td>
+                            <td class="none">Jan 27, 2022</td>
+                            <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                        </tr>
+                        <tr class="bg-white border-y-8 border-gray-50">
+                            <td class="flex items-center my-1">
+                                <p class="mx-auto">6</p>
+                                <div class="flex justify-start text-left items-center mx-auto gap-2">
+                                    <img src={{ asset('images/02.jpg') }} alt="" class="w-[30px] h-[30px]">
+                                    <div>
+                                        <h1 class="font-bold">Eiln Aline</h1>
+                                        <p class="text-[12px] text-gray-500">elinaline399@gmail.com</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="none">Desinger</td>
+                            <td class="none">07988334477</td>
+                            <td class="none">Mar 27, 2019</td>
+                            <td><span class="material-icons-sharp text-[#235F7F]">more_vert</span></td>
+                        </tr>
+                    </table>
+                    <div class="text-center">
+                        <a href="#" class="text-[#235F7F] text-sm">Show All</a>
+                    </div>
+                </div>    
             </div>
+            
          </main>
     </div>
 
