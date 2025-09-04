@@ -186,7 +186,7 @@
                             <div class="input-box relative w-[100%] h-[50px] my-7">
                                 <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
                                 <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                    <span class="material-icons-sharp">download</span>
+                                    <span class="material-icons-sharp">upload</span>
                                     Change image first card
                                 </label>
                             </div>
@@ -205,7 +205,7 @@
                             <div class="input-box relative w-[100%] h-[50px] my-7">
                                 <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
                                 <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                    <span class="material-icons-sharp">download</span>
+                                    <span class="material-icons-sharp">upload</span>
                                     Change image second card
                                 </label>
                             </div>
@@ -220,7 +220,7 @@
                             <div class="input-box relative w-[100%] h-[50px] my-7">
                                 <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
                                 <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                    <span class="material-icons-sharp">download</span>
+                                    <span class="material-icons-sharp">upload</span>
                                     Change image third card
                                 </label>
                             </div>
@@ -239,7 +239,7 @@
                             <div class="input-box relative w-[100%] h-[50px] my-7">
                                 <input id="myinput" class="w-[100%] h-[100%] bg-transparent outline-none focus:border-[#235F7F] border-b-2 border-[#000] text-[12px] text-gray-200 font-medium pr-6" type="file">
                                 <label class="absolute transition-all top-[50%] left-0 -translate-y-[50%] pointer-events-none flex items-center" for="text">
-                                    <span class="material-icons-sharp">download</span>
+                                    <span class="material-icons-sharp">upload</span>
                                     Change image forth card
                                 </label>
                             </div>
