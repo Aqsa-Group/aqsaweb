@@ -56,3 +56,48 @@
     stroke-dashoffset: -40;
     stroke-dasharray: 110;
 }
+
+.input-box input:focus~label,
+.input-box textarea:focus~label{
+    top: -5px;
+    color: #235F7F;
+}
+.input-box input:focus~span,
+.input-box textarea:focus~span{
+    color: #235F7F;
+}
+.input-box input.filled,
+.input-box textarea.filled {
+    border-color: #235F7F; 
+}
+.input-box input.filled~label,
+.input-box textarea.filled~label {
+    top: -5px;
+    color: #235F7F;
+}
+.input-box input.filled~span,
+.input-box textarea.filled~span{
+    color: #235F7F; 
+}
+
+.input-box input[type="file"]{
+    padding-top: 10px;
+}
+.input-box input[type="file"].filled{
+    color: black;
+    font-size: small;
+}
+
+.input-btn::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(#fcfbff, #235F7F, #fcfbff, #235F7F);
+    transition: .5s;
+}
+.input-btn:hover::before{
+    top: 0; 
+}
