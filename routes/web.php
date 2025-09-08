@@ -63,9 +63,17 @@ Route::get('/databaseService', function () {
 
 // Dashboard Routes
 
-Route::get('/dashborad', function () {
-    return view('web.dashborad');
-})-> name('dashborad');; 
+Route::get('/dashboard', function () {
+    return view('web.dashboard');
+})-> name('dashboard');; 
+
+Route::get('/dashboard', function () {
+    return view('web.dashboard');
+})-> name('dashboard');; 
+
+Route::get('/dashboardhome', function () {
+    return view('web.dashboardhome');
+})-> name('dashboardhome');; 
 
 Route::get('/contactManagement', function () {
     return view('web.contactManagement');

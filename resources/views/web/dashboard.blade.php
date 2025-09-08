@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page/ Home</title>
+    <title>Dashboard</title>
     <!-- favicon link -->
     <link rel="shortcut icon" href={{ asset('images/favicon.png') }} type="image/x-icon">
     <!-- CDN -->
@@ -34,17 +34,17 @@
         </div>
     </div>
     <nav class="flex flex-col relative space-y-3 top-12">
-        <a href={{ url('/dashboard') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
-            <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">grid_view</span>
+        <a href="#" class="flex active text-[#235F7F] bg-[#235F7F]/10 ml-0 duration-300 transition-all ease-in gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+            <span class="material-icons-sharp text-2xl lg:ml-3 ml-2">grid_view</span>
             <h3 class="font-medium lg:flex sm:hidden">Dashboard</h3>
         </a>
         <!--  Dropdown section */} -->
         <div class='cursor-pointer relative'>
             <a href='#'
-            class="flex active text-[#235F7F] bg-[#235F7F]/10 ml-0 duration-300 transition-all ease-in gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]"
+            class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]"
             >
                 <div class="flex gap-2 items-center">
-                    <span class="material-icons-sharp text-2xl lg:ml-3 ml-2">file_copy</span>
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">file_copy</span>
                     <h3 class="font-medium lg:flex sm:hidden">Pages</h3>    
                 </div>
                 <span class="lg:w-40 sm:w-8 w-40 text-right">
@@ -56,9 +56,9 @@
             <div class='content lg:ml-5 sm:ml-4 ml-5 w-full mt-0 p-2 hidden text-gray-700'>
                 <ul>
                     <li>
-                        <a href="#"
-                        class='inline-block ml-3 mb-1 text-[#235F7F] w-full text-sm rounded-md p-2 bg-[#235F7F]/20 text-center'
-                        ><p class="lg:hidden sm:flex hidden text-[#235F7F]">
+                        <a href={{ url('/pageHome') }}
+                        class='inline-block hover:ml-3 mb-1 hover:text-[#235F7F] duration-300 transition-all ease-in w-full text-sm rounded-md p-2 hover:bg-[#235F7F]/20'
+                        ><p class="lg:hidden sm:flex hidden">
                             <span class="material-icons-sharp">home</span>
                         </p> <p class="lg:flex flex sm:hidden">Home</p></a>
                     </li>
@@ -115,7 +115,7 @@
         <button id="menu-btn" class="sm:hidden flex bg-transparent cursor-pointer text-black left-4">
             <span class="material-icons-sharp  text-4xl">menu</span>
         </button>
-      <h1 class="sm:flex hidden text-xl font-bold text-gray-800">Page/ Home</h1>
+      <h1 class="sm:flex hidden text-xl font-bold text-gray-800">Dashboard</h1>
       <div class="flex items-center space-x-4">
         <!-- Language Icon -->
          <!--  Dropdown section */} -->
@@ -163,99 +163,93 @@
     <!-- Dashboard Body -->
     <main class="px-6 space-y-6 overflow-y-auto pb-7">
 
-      <h1 class="flex mt-8 sm:hidden text-2xl font-bold text-gray-800">Page/ Home</h1>
+      <h1 class="flex mt-8 sm:hidden text-2xl font-bold text-gray-800">Dashboard</h1>
       <!-- Date & Time -->
       <div class="bg-white text-center p-2 rounded-xl shadow w-60">
         <div id="dateTime">Loading...</div>
       </div>
 
-      <!-- Page Form -->
-        <form id="pageForm" class="bg-white p-6 rounded-xl shadow space-y-6">
-        
-        <!-- Main Title -->
-        <div class="input-box">
-            <label class="block m-2 font-medium text-gray-700">Main Title</label>
-            <input type="text" 
-            class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" 
-            id="mainTitle myinput" 
-            placeholder="Enter main title" 
-             />
-        </div>
-
-        <!-- Main Paragraph -->
-        <div class="input-box">
-            <label class="block m-2 font-medium text-gray-700">Main Paragraph</label>
-            <textarea id="mainParagraph myinput" placeholder="Page description" 
-            class="w-full border border-gray-300 mt-2 p-2 rounded-lg focus:border-[#3084b1] text-black outline-none  px-5 py-2" rows="3"></textarea>
-        </div>
-
-        <!-- Main Image -->
-        <div class="input-box">
-            <label class="block m-2 font-medium text-gray-700">Main Image</label>
-            <input type="file" id="mainImage myinput" accept="image/*" 
-            class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-            <img id="previewMainImage" class="mt-3 w-40 rounded-lg shadow hidden" alt="Preview" />
-        </div>
-        
-        <!-- Cards Section -->
-        <div>
-            <h2 class="text-lg font-semibold text-gray-800 mb-4">Why Aqsa Group</h2>
-            <div id="cardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- Card 1 -->
-                <div class="border rounded-lg p-4 shadow input-box">
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 1 Title</label>
-                    <input type="text" id="cardTitle1 myinput" placeholder="Enter card title"
-                    class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 1 Paragraph</label>
-                    <textarea id="cardParagraph1 myinput" placeholder="Enter card description"
-                    class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" rows="2"></textarea>
+      <!-- Cards Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="first bg-white p-6 rounded-xl shadow hover:scale-105 transition transform">
+            <span class="material-icons-sharp px-3 rounded-full text-white text-2xl bg-[#235F7F]">analytics</span>
+            <div class="middle flex items-center justify-between">
+                <div class="left">
+                    <h3 class="mt-2 text-[12px]">Today Visied</h3>
+                    <h1 class="font-bold text-lg">1,024 <span class="material-icons-sharp text-[13px] text-gray-700">visibility</span></h1>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="border rounded-lg p-4 shadow input-box">
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 2 Title</label>
-                    <input type="text" id="cardTitle1 myinput" placeholder="Enter card title"
-                    class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 2 Paragraph</label>
-                    <textarea id="cardParagraph1 myinput" placeholder="Enter card description"
-                    class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" rows="2"></textarea>
+                <div class="progress relative w-[60px] h-[60px] rounded-full">
+                    <svg class="w-[6rem] h-[6rem]">
+                        <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                    </svg>
+                    <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                        <p>81%</p>
+                    </div>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="border rounded-lg p-4 shadow input-box">
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 3 Title</label>
-                    <input type="text" id="cardTitle1 myinput" placeholder="Enter card title"
-                    class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 3 Paragraph</label>
-                    <textarea id="cardParagraph1 myinput" placeholder="Enter card description"
-                    class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" rows="2"></textarea>
+            </div>
+            <small class="mt-4 text-gray-400">Last 24 Hours</small>
+        </div>
+        <div class="second bg-white p-6 rounded-xl shadow hover:scale-105 transition transform">
+            <span class="material-icons-sharp px-1 rounded-full text-white text-2xl bg-[#235F7F]">bar_chart</span>
+            <div class="middle flex items-center justify-between">
+                <div class="left">
+                    <h3 class="mt-2 text-[12px]">Totle Visied</h3>
+                    <h1 class="font-bold text-lg">10,024 <span class="material-icons-sharp text-[13px] text-gray-700">visibility</span></h1>
                 </div>
-
+                <div class="progress relative w-[60px] h-[60px] rounded-full">
+                    <svg class="w-[6rem] h-[6rem]">
+                        <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                    </svg>
+                    <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                        <p>61%</p>
+                    </div>
+                </div>  
             </div>
+            <small class="mt-4 text-gray-400">Last this week</small>           
         </div>
-        <!-- Cards Section -->
-        <div>
-            <h2 class="text-lg font-semibold text-gray-800 mb-4">Valued & Verified Clients</h2>
-            <div class="input-box">
-                <label class="block font-medium m-2 text-gray-700">Image</label>
-                <input type="file" id="cardImage1 myinput" accept="image/*"
-                class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-                <img id="previewCard1" class="mt-3 w-32 rounded-lg shadow hidden" alt="Preview" />
+        <div class="third bg-white p-6 rounded-xl shadow hover:scale-105 transition transform">
+            <span class="material-icons-sharp px-3 rounded-full text-white text-2xl bg-[#235F7F]">stacked_line_chart</span>
+            <div class="middle flex items-center justify-between">
+                <div class="left">
+                    <h3 class="mt-2 text-[12px]">Totle User</h3>
+                    <h1 class="font-bold text-lg">2,024 <span class="material-icons-sharp text-[13px] text-gray-700">person</span></h1>
+                </div>
+                <div class="progress relative w-[60px] h-[60px] rounded-full">
+                    <svg class="w-[6rem] h-[6rem]">
+                        <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                    </svg>
+                    <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                        <p>44%</p>
+                    </div>
+                </div>
             </div>
+            <small class="mt-4 text-gray-400">Last this month</small>
         </div>
-
-    <!-- Submit Button -->
-            <div class="flex justify-end">
-                <button type="submit"
-                class="px-6 py-2 bg-[#235F7F] text-white rounded-lg hover:bg-[#3084b1] transition">
-                Save Changes
-                </button>
+        <div class="forth bg-white p-6 rounded-xl shadow hover:scale-105 transition transform">
+            <span class="material-icons-sharp px-3 rounded-full text-white text-2xl bg-[#235F7F]">trending_up</span>
+            <div class="middle flex items-center justify-between">
+                <div class="left">
+                    <h3 class="mt-2 text-[12px]">Totle Project</h3>
+                    <h1 class="font-bold text-lg">124 <span class="material-icons-sharp text-[13px] text-gray-700">map</span></h1>
+                </div>
+                <div class="progress relative w-[60px] h-[60px] rounded-full">
+                    <svg class="w-[6rem] h-[6rem]">
+                        <circle class="fill-none stroke-[#235F7F] stroke-[10] round translate-5" cx='30' cy='30' r='28'></circle>
+                    </svg>
+                    <div class="number absolute top-0 left-0 h-[100%] w-[100%] flex justify-center items-center">
+                        <p>70%</p>
+                    </div>
+                </div>
             </div>
-        </form>
+            <small class="mt-4 text-gray-400">Last this week</small>
+        </div>
+      </div>
+
+      <!-- Graph Section -->
+      <div class="bg-white p-6 rounded-xl shadow w-[100%] my-10">
+        <h3 class="text-lg font-semibold text-gray-700 mb-4">Monthly Performance</h3>
+        <canvas id="myChart" height="96"></canvas>
+      </div>
     </main>
   </div>
 

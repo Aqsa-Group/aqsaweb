@@ -1,5 +1,6 @@
-const sideMenu = document.querySelector("aside");
+// Button close and open
 const menuBtn = document.querySelector("#menu-btn");
+const sideMenu = document.querySelector("aside");
 const closeBtn = document.querySelector("#close-btn");
 
 menuBtn.addEventListener('click', () => {
@@ -35,4 +36,114 @@ closeBtn.addEventListener('click', () => {
                 input.classList.remove('filled');
             }
         });
+    });
+
+// DropDownn
+
+const buttons = document.querySelectorAll('#icon');
+const contents = document.querySelectorAll('.content');
+
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            if (contents[index].style.display === 'none' || contents[index].style.display === '') {
+                contents[index].style.display = 'block';
+            } else {
+                contents[index].style.display = 'none'; 
+            }
+        });
+    });
+
+const icon = document.getElementById('icon');
+
+    icon.addEventListener('click', () => {
+        icon.classList.toggle('rotated'); 
+    });
+
+// Date and Time
+
+    // Controlled abbreviations to guarantee exactly "sep" and "fri" (lowercase)
+    const WEEKDAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const MONTHS   = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    function two(n) { return String(n).padStart(2,'0'); }
+
+    function updateDateTime() {
+      const now = new Date();
+
+      const wd = WEEKDAYS[now.getDay()];        // fri
+      const mon = MONTHS[now.getMonth()];       // sep
+      const day = now.getDate();                // 5
+      const year = now.getFullYear();           // 2025
+
+      const hh = two(now.getHours());
+      const mm = two(now.getMinutes());
+      const ss = two(now.getSeconds());
+
+      // Format: "fri, sep 5, 2025 | 14:05:09"
+      const formatted = `${wd}, ${mon} ${day}, ${year} | ${hh}:${mm}:${ss}`;
+      document.getElementById('dateTime').innerText = formatted;
+    }
+
+    // initial + every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+    // Chart.js Graph
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+          label: 'Visitors',
+          data: [500, 800, 600, 1200, 900, 1400, 1800],
+          backgroundColor: 'rgba(35, 95, 127 ,0.2)',
+          borderColor: 'rgba(35, 95, 127 ,1)',
+          borderWidth: 3,
+          
+          tension: 0.3,
+          fill: true,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true }
+        }
+      }
+    });
+
+        // Preview Main Image
+    document.getElementById("mainImage").addEventListener("change", function(e) {
+      const file = e.target.files[0];
+      const preview = document.getElementById("previewMainImage");
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.classList.remove("hidden");
+      }
+    });
+
+    // Preview Card Images
+    document.getElementById("cardImage1").addEventListener("change", function(e) {
+      const file = e.target.files[0];
+      const preview = document.getElementById("previewCard1");
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.classList.remove("hidden");
+      }
+    });
+
+    document.getElementById("cardImage2").addEventListener("change", function(e) {
+      const file = e.target.files[0];
+      const preview = document.getElementById("previewCard2");
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.classList.remove("hidden");
+      }
+    });
+
+    // Form Submission
+    document.getElementById("pageForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Page content saved successfully!");
     });
