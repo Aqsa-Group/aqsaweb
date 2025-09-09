@@ -113,10 +113,45 @@ const icon = document.getElementById('icon');
       }
     });
 
+   // Login
+    const loginSection = document.querySelector("#loginSection");
+    const dashboardSection = document.querySelector("#dashboardSection");
+    const loginBtn = document.querySelector("#loginBtn");
+    const logoutBtn = document.querySelector("#logoutBtn");
+    const loginError = document.querySelector("#loginError");
+
+    const demoEmail = "admin@lego.com";
+    const demoPassword = "123456";
+
+    // همیشه صفحه لاگین را اول نشان بده
+    loginSection.classList.remove("hidden");
+    dashboardSection.classList.add("hidden");
+
+    // Login Handler
+    loginBtn.addEventListener("click", () => {
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+
+    if (email === demoEmail && password === demoPassword) {
+        loginSection.classList.add("hidden");
+        dashboardSection.classList.remove("hidden");
+        loginError.classList.add("hidden");
+      } else {
+        loginError.classList.remove("hidden");
+      }
+    });
+
+    // Logout Handler
+    logoutBtn.addEventListener("click", () => {
+        dashboardSection.classList.add("hidden");
+        loginSection.classList.remove("hidden");
+    });
+
+
         // Preview Main Image
-    document.getElementById("mainImage").addEventListener("change", function(e) {
+    document.querySelectorAll("#mainImage").addEventListener("change", function(e) {
       const file = e.target.files[0];
-      const preview = document.getElementById("previewMainImage");
+      const preview = document.querySelectorAll("#previewMainImage");
       if (file) {
         preview.src = URL.createObjectURL(file);
         preview.classList.remove("hidden");
@@ -124,18 +159,9 @@ const icon = document.getElementById('icon');
     });
 
     // Preview Card Images
-    document.getElementById("cardImage1").addEventListener("change", function(e) {
+    document.querySelectorAll("#cardImage1").addEventListener("change", function(e) {
       const file = e.target.files[0];
-      const preview = document.getElementById("previewCard1");
-      if (file) {
-        preview.src = URL.createObjectURL(file);
-        preview.classList.remove("hidden");
-      }
-    });
-
-    document.getElementById("cardImage2").addEventListener("change", function(e) {
-      const file = e.target.files[0];
-      const preview = document.getElementById("previewCard2");
+      const preview = document.querySelectorAll("#previewCard1");
       if (file) {
         preview.src = URL.createObjectURL(file);
         preview.classList.remove("hidden");
@@ -143,7 +169,7 @@ const icon = document.getElementById('icon');
     });
 
     // Form Submission
-    document.getElementById("pageForm").addEventListener("submit", function(e) {
+    document.querySelector("#pageForm").addEventListener("submit", function(e) {
       e.preventDefault();
       alert("✅ Page content saved successfully!");
     });
