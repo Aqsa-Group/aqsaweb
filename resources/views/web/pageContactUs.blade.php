@@ -154,9 +154,9 @@
             <p class="text-sm">Hey, <b>Danial</b></p>
             <small class="text-gray-500 text-sm">Admin</small>
         </div>
-        <div class="">
+        <a href={{ url('/profile') }} class="">
             <img src={{ asset('images/02.jpg') }} alt="" class="w-[40px] h-[40px] rounded-full"> 
-        </div>
+        </a>
       </div>
     </header>
 
@@ -246,5 +246,6 @@
 
     <!-- Java link -->
     <script src="{{ asset('JS/main.js')}}"></script>
+    <script src="{{ asset('JS/mainForm.js')}}"></script>
 </body>
 </html>
