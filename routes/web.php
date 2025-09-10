@@ -61,19 +61,15 @@ Route::get('/databaseService', function () {
     return view('services.databaseService'); })
     -> name('databaseService');
 
-// Dashboard Routes
+// Dashboard Routes 
 
-Route::get('/dashborad', function () {
-    return view('web.dashborad');
-})-> name('dashborad');; 
+Route::get('/dashboard', function () {
+    return view('web.dashboard');
+})-> name('dashboard');; 
 
-Route::get('/contactManagement', function () {
-    return view('web.contactManagement');
-})-> name('contactManagement');; 
-
-Route::get('/addpost', function () {
-    return view('web.addpost');
-})-> name('addpost');; 
+Route::get('/profile', function () {
+    return view('web.profile');
+})-> name('profile');; 
 
 Route::get('/pageHome', function () {
     return view('web.pageHome');

@@ -15,7 +15,7 @@
         grid-template-columns: 7rem auto;
     }    
 }
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 640px) {
     .grid-cols{
         grid-template-columns: auto;
     }    
@@ -57,27 +57,10 @@
     stroke-dasharray: 110;
 }
 
-.input-box input:focus~label,
-.input-box textarea:focus~label{
-    top: -5px;
-    color: #235F7F;
-}
-.input-box input:focus~span,
-.input-box textarea:focus~span{
-    color: #235F7F;
-}
 .input-box input.filled,
-.input-box textarea.filled {
-    border-color: #235F7F; 
-}
-.input-box input.filled~label,
-.input-box textarea.filled~label {
-    top: -5px;
-    color: #235F7F;
-}
-.input-box input.filled~span,
-.input-box textarea.filled~span{
-    color: #235F7F; 
+.input-box textarea.filled,
+.input-box select.filled {
+    border-color: #3084b1; 
 }
 
 .input-box input[type="file"]{
@@ -100,4 +83,8 @@
 }
 .input-btn:hover::before{
     top: 0; 
+}
+
+.rotated{
+    transform: rotate(180deg);
 }
