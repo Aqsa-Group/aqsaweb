@@ -24,7 +24,7 @@
     <!-- LOGIN SECTION -->
     <div id="loginSection" class="w-full max-w-md bg-white shadow-lg rounded-2xl p-8 space-y-6">
         <div class="flex justify-center gap-1">
-            <img src={{ asset('images/favicon.png') }} alt="" class="w-[50px] h-[35px] lg:ml-4">
+            <img src={{ asset('images/aqsalogo.png') }} alt="" class="w-[50px] h-[35px] lg:ml-4">
             <h2 class="font-bold text-2xl">AQSA <span class="text-[#235F7F]">Group</span></h2>
         </div>
         <div class="flex flex-col items-center mb-6">
@@ -65,7 +65,7 @@
             <div class="flex justify-between items-center px-6 py-4 text-2xl font-bold tracking-wide border-b border-gray-100">
             <!-- --------------Logo-------------- -->
                 <div class="flex gap-1 sm:ml-0 ml-3">
-                    <img src={{ asset('images/favicon.png') }} alt="" class="w-[50px] h-[35px] lg:ml-4">
+                    <img src={{ asset('images/aqsalogo.png') }} alt="" class="w-[50px] h-[35px] lg:ml-4">
                     <h2 class="font-bold text-2xl lg:flex sm:hidden">AQSA <span class="text-[#235F7F]">Group</span></h2>
                 </div>
                 <div class="close sm:hidden cursor-pointer" id="close-btn">
