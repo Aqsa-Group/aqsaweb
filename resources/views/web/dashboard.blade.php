@@ -24,7 +24,7 @@
     <!-- LOGIN SECTION -->
     <div id="loginSection" class="w-full max-w-md bg-white shadow-lg rounded-2xl p-8 space-y-6">
         <div class="flex justify-center gap-1">
-            <img src={{ asset('images/LOGO.jpg') }} alt="" class="w-[2.5rem] h-[2.5rem] lg:ml-4">
+            <img src={{ asset('images/favicon.png') }} alt="" class="w-[40px] h-[30px] lg:ml-4">
             <h2 class="font-bold text-2xl">AQSA <span class="text-[#235F7F]">Group</span></h2>
         </div>
         <div class="flex flex-col items-center mb-6">
