@@ -77,6 +77,10 @@
                     <span class="material-icons-sharp text-2xl lg:ml-3 ml-2">grid_view</span>
                     <h3 class="font-medium lg:flex sm:hidden">Dashboard</h3>
                 </a>
+                <a href={{ url('/advertisement') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+                    <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">panorama</span>
+                    <h3 class="font-medium lg:flex sm:hidden">Advertisement</h3>
+                </a>
                 <!--  Dropdown section */} -->
                 <div class='cursor-pointer relative'>
                     <a href='#'
