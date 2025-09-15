@@ -26,7 +26,7 @@
     <div class="flex justify-between items-center px-6 py-4 text-2xl font-bold tracking-wide border-b border-gray-100">
       <!-- --------------Logo-------------- -->
         <div class="flex gap-1 sm:ml-0 ml-3">
-            <img src={{ asset('images/LOGO.jpg') }} alt="" class="w-[2.5rem] h-[2.5rem] lg:ml-4">
+            <img src={{ asset('images/aqsalogo.png') }} alt="" class="w-[50px] h-[35px] lg:ml-4">
             <h2 class="font-bold text-2xl lg:flex sm:hidden">AQSA <span class="text-[#235F7F]">Group</span></h2>
         </div>
         <div class="close sm:hidden cursor-pointer" id="close-btn">
@@ -34,9 +34,13 @@
         </div>
     </div>
     <nav class="flex flex-col relative space-y-3 top-12">
-        <a href={{ url('/dashboard') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+        <a href={{ url('/dashboard') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
             <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">grid_view</span>
             <h3 class="font-medium lg:flex sm:hidden">Dashboard</h3>
+        </a>
+        <a href={{ url('/advertisement') }} class="flex text-gray-700 duration-300 hover:text-[#235F7F] group transition-all ease-in ml-4 gap-2 items-center lg:w-[100%] sm:w-[5.6rem] h-[3.7rem]">
+            <span class="material-icons-sharp text-2xl group-hover:ml-3 transition-all duration-300 ease-out">panorama</span>
+            <h3 class="font-medium lg:flex sm:hidden">Advertisement</h3>
         </a>
         <!--  Dropdown section */} -->
         <div class='cursor-pointer relative'>

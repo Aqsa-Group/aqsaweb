@@ -91,6 +91,10 @@ Route::get('/pageBlog', function () {
     return view('web.pageBlog');
 })-> name('pageBlog');
 
+Route::get('/advertisement', function () {
+    return view('web.advertisement');
+})-> name('advertisement');
+
 Route::get('/pageContactUs', function () {
     return view('web.pageContactUs');
 })-> name('pageContactUs');
