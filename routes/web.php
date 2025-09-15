@@ -67,6 +67,11 @@ Route::get('/dashboard', function () {
     return view('web.dashboard');
 })-> name('dashboard');; 
 
+Route::get('/advertisement', function () {
+    return view('web.advertisement');
+})-> name('advertisement');;
+
+
 Route::get('/profile', function () {
     return view('web.profile');
 })-> name('profile');; 
@@ -90,10 +95,6 @@ Route::get('/pageProject', function () {
 Route::get('/pageBlog', function () {
     return view('web.pageBlog');
 })-> name('pageBlog');
-
-Route::get('/advertisement', function () {
-    return view('web.advertisement');
-})-> name('advertisement');
 
 Route::get('/pageContactUs', function () {
     return view('web.pageContactUs');
