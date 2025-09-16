@@ -174,51 +174,44 @@
       </div>
 
       <!-- Page Form -->
-        <form id="pageForm" class="bg-white p-6 rounded-xl shadow space-y-6">
+         <form method="POST" action="{{ route('ads.store') }}" enctype="multipart/form-data" class="space-y-4">
+        @csrf
 
-            <!-- Main Image -->
-            <div class="input-box">
-                <label class="block m-2 font-medium text-gray-700">Main Image</label>
-                <input type="file" id="mainImage myinput" accept="image/*" 
-                class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-                <img id="previewMainImage" class="mt-3 w-40 rounded-lg shadow hidden" alt="Preview" />
-            </div>
+        <div>
+            <label class="block mb-1">Main Image</label>
+            <input type="file" name="main_image" class="w-full border rounded px-3 py-2">
+            @error('main_image') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
+        </div>
+
+        <div>
+            <label class="block mb-1">Title</label>
+            <input type="text" name="title" placeholder="Enter title"
+                   class="w-full border rounded px-3 py-2">
+            @error('title') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
+        </div>
+
+        <div>
+            <label class="block mb-1">Paragraph</label>
+            <textarea name="paragraph" placeholder="Advertisement description"
+                      class="w-full border rounded px-3 py-2"></textarea>
+            @error('paragraph') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
+        </div>
+
+        <div>
+            <label class="block mb-1">Link</label>
+            <input type="text" name="link" placeholder="http://example.com"
+                   class="w-full border rounded px-3 py-2">
+            @error('link') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
+        </div>
+        <div class="flex justify-end">
+        <button type="submit"
+               class="px-6 py-2 bg-[#235F7F] text-white rounded-lg hover:bg-[#3084b1] transition">
+            Save Changes
+        </button>
+        </di>
         
-            <!-- Main Title -->
-            <div class="input-box">
-                <label class="block m-2 font-medium text-gray-700">Title</label>
-                <input type="text" 
-                class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" 
-                id="mainTitle myinput" 
-                placeholder="Enter title" 
-                />
-            </div>
+    </form>
 
-            <!-- Main Paragraph -->
-            <div class="input-box">
-                <label class="block m-2 font-medium text-gray-700">Paragraph</label>
-                <textarea id="mainParagraph myinput" placeholder="Advertisement description" 
-                class="w-full border border-gray-300 mt-2 p-2 rounded-lg focus:border-[#3084b1] text-black outline-none  px-5 py-2" rows="3"></textarea>
-            </div>
-
-            <!-- Main link -->
-            <div class="input-box">
-                <label class="block m-2 font-medium text-gray-700">Link</label>
-                <input type="text" 
-                class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" 
-                id="mainTitle myinput" 
-                placeholder="http://aqsagroup.af" 
-                />
-            </div>
-
-            <!-- Submit Button -->
-            <div class="flex justify-end">
-                <button type="submit"
-                class="px-6 py-2 bg-[#235F7F] text-white rounded-lg hover:bg-[#3084b1] transition">
-                Save Changes
-                </button>
-            </div>
-        </form>
     </main>
   </div>
 
