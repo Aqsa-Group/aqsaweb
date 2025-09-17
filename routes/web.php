@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -103,3 +104,7 @@ Route::get('/pageContactUs', function () {
 Route::get('/user&roles', function () {
     return view('web.user&roles');
 })-> name('user&roles');
+
+// Advertisement Routes
+Route::get('/ads/create', [AdController::class, 'create'])->name('ads.create');
+Route::post('/ads', [AdController::class, 'store'])->name('ads.store');
