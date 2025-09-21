@@ -183,6 +183,14 @@
             @error('main_image') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
         </div>
 
+         <!-- Video -->
+        <div>
+        <label class="block mb-1">Video (Optinal)</label>
+        <input type="file" name="video" accept="video/*"
+               class="w-full border rounded px-3 py-2">
+        @error('video') <p class="text-red-600 text-sm">{{ $message }}</p> @enderror
+          </div>
+
         <div>
             <label class="block mb-1">Title</label>
             <input type="text" name="title" placeholder="Enter title"

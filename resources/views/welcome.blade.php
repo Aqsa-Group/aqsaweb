@@ -1532,7 +1532,7 @@
     <div
         class="relative text-white  w-full h-auto   pt-12 md:pt-4 md:mt-[60px] flex flex-col justify-center text-center  mx-auto bg-cover bg-no-repeat" style="background-image: url('{{ asset('images/bannerBg.jpg') }}'); ">
         <h2 class="text-sm z-10 md:text-xl  mt-6  md:mt-12" >
-            WELCOME TO AQSA GROUP
+           welcome
         </h2>
         <h1 class=" z-10 text-xl font-bold md:text-7xl leading-7 md:leading-none mt-3 mb-1.5 md:my-6" style="font-family: 'M PLUS Rounded 1c';">
             Aqsa Group<br>
