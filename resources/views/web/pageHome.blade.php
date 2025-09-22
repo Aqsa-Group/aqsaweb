@@ -174,92 +174,100 @@
       </div>
 
       <!-- Page Form -->
-        <form id="pageForm" class="bg-white p-6 rounded-xl shadow space-y-6">
-        
-        <!-- Main Title -->
-        <div class="input-box">
-            <label class="block m-2 font-medium text-gray-700">Main Title</label>
-            <input type="text" 
+   <form id="pageForm" action="{{ route('home.store') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-xl shadow space-y-6">
+    @csrf
+
+    <!-- Name -->
+    <div class="input-box">
+        <label class="block m-2 font-medium text-gray-700">Page Name</label>
+        <input type="text" 
+            name="name"
             class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" 
-            id="mainTitle myinput" 
-            placeholder="Enter main title" 
-             />
-        </div>
+            placeholder="Enter page name" />
+    </div>
 
-        <!-- Main Paragraph -->
-        <div class="input-box">
-            <label class="block m-2 font-medium text-gray-700">Main Paragraph</label>
-            <textarea id="mainParagraph myinput" placeholder="Page description" 
-            class="w-full border border-gray-300 mt-2 p-2 rounded-lg focus:border-[#3084b1] text-black outline-none  px-5 py-2" rows="3"></textarea>
-        </div>
+    <!-- Main Title -->
+    <div class="input-box">
+        <label class="block m-2 font-medium text-gray-700">Main Title</label>
+        <input type="text" 
+            name="main_title"
+            class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" 
+            placeholder="Enter main title" />
+    </div>
 
-        <!-- Main Image -->
-        <div class="input-box">
-            <label class="block m-2 font-medium text-gray-700">Main Image</label>
-            <input type="file" id="mainImage myinput" accept="image/*" 
+    <!-- Main Paragraph -->
+    <div class="input-box">
+        <label class="block m-2 font-medium text-gray-700">Main Paragraph</label>
+        <textarea name="main_paragraph" placeholder="Page description" 
+            class="w-full border border-gray-300 mt-2 p-2 rounded-lg focus:border-[#3084b1] text-black outline-none px-5 py-2" rows="3"></textarea>
+    </div>
+
+    <!-- Main Image -->
+    <div class="input-box">
+        <label class="block m-2 font-medium text-gray-700">Main Image</label>
+        <input type="file" name="main_image" accept="image/*" 
             class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-            <img id="previewMainImage" class="mt-3 w-40 rounded-lg shadow hidden" alt="Preview" />
-        </div>
-        
-        <!-- Cards Section -->
-        <div>
-            <h2 class="text-lg font-semibold text-gray-800 mb-4">Why Aqsa Group</h2>
-            <div id="cardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    </div>
+    
+    <!-- Cards Section -->
+    <div>
+        <h2 class="text-lg font-semibold text-gray-800 mb-4">Why Aqsa Group</h2>
+        <div id="cardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Card 1 -->
-                <div class="border rounded-lg p-4 shadow input-box">
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 1 Title</label>
-                    <input type="text" id="cardTitle1 myinput" placeholder="Enter card title"
+            <!-- Card 1 -->
+            <div class="border rounded-lg p-4 shadow input-box">
+                <label class="block mt-4 m-1 font-medium text-gray-700">Card 1 Title</label>
+                <input type="text" name="card_title1" placeholder="Enter card title"
                     class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
 
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 1 Paragraph</label>
-                    <textarea id="cardParagraph1 myinput" placeholder="Enter card description"
+                <label class="block mt-4 m-1 font-medium text-gray-700">Card 1 Paragraph</label>
+                <textarea name="card_paragraph1" placeholder="Enter card description"
                     class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" rows="2"></textarea>
-                </div>
+            </div>
 
-                <!-- Card 2 -->
-                <div class="border rounded-lg p-4 shadow input-box">
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 2 Title</label>
-                    <input type="text" id="cardTitle1 myinput" placeholder="Enter card title"
+            <!-- Card 2 -->
+            <div class="border rounded-lg p-4 shadow input-box">
+                <label class="block mt-4 m-1 font-medium text-gray-700">Card 2 Title</label>
+                <input type="text" name="card_title2" placeholder="Enter card title"
                     class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
 
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 2 Paragraph</label>
-                    <textarea id="cardParagraph1 myinput" placeholder="Enter card description"
+                <label class="block mt-4 m-1 font-medium text-gray-700">Card 2 Paragraph</label>
+                <textarea name="card_paragraph2" placeholder="Enter card description"
                     class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" rows="2"></textarea>
-                </div>
+            </div>
 
-                <!-- Card 3 -->
-                <div class="border rounded-lg p-4 shadow input-box">
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 3 Title</label>
-                    <input type="text" id="cardTitle1 myinput" placeholder="Enter card title"
+            <!-- Card 3 -->
+            <div class="border rounded-lg p-4 shadow input-box">
+                <label class="block mt-4 m-1 font-medium text-gray-700">Card 3 Title</label>
+                <input type="text" name="card_title3" placeholder="Enter card title"
                     class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
 
-                    <label class="block mt-4 m-1 font-medium text-gray-700">Card 3 Paragraph</label>
-                    <textarea id="cardParagraph1 myinput" placeholder="Enter card description"
+                <label class="block mt-4 m-1 font-medium text-gray-700">Card 3 Paragraph</label>
+                <textarea name="card_paragraph3" placeholder="Enter card description"
                     class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" rows="2"></textarea>
-                </div>
-
             </div>
         </div>
-        <!-- Cards Section -->
-        <div>
-            <h2 class="text-lg font-semibold text-gray-800 mb-4">Valued & Verified Clients</h2>
-            <div class="input-box">
-                <label class="block font-medium m-2 text-gray-700">Image</label>
-                <input type="file" id="cardImage1 myinput" accept="image/*"
+    </div>
+
+    <!-- Clients Section -->
+    <div>
+        <h2 class="text-lg font-semibold text-gray-800 mb-4">Valued & Verified Clients</h2>
+        <div class="input-box">
+            <label class="block font-medium m-2 text-gray-700">Image</label>
+            <input type="file" name="client_image" accept="image/*"
                 class="text-black focus:border-[#3084b1] outline-none border border-gray-300 rounded-lg px-5 py-2 w-full" />
-                <img id="previewCard1" class="mt-3 w-32 rounded-lg shadow hidden" alt="Preview" />
-            </div>
         </div>
+    </div>
 
     <!-- Submit Button -->
-            <div class="flex justify-end">
-                <button type="submit"
-                class="px-6 py-2 bg-[#235F7F] text-white rounded-lg hover:bg-[#3084b1] transition">
-                Save Changes
-                </button>
-            </div>
-        </form>
+    <div class="flex justify-end">
+        <button type="submit"
+            class="px-6 py-2 bg-[#235F7F] text-white rounded-lg hover:bg-[#3084b1] transition">
+            Save Changes
+        </button>
+    </div>
+</form>
+
     </main>
   </div>
 

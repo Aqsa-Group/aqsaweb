@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -108,3 +109,17 @@ Route::get('/user&roles', function () {
 // Advertisement Routes
 Route::get('/ads/create', [AdController::class, 'create'])->name('ads.create');
 Route::post('/ads', [AdController::class, 'store'])->name('ads.store');
+
+// // Admin save/update
+// Route::post('/admin/home', [HomeController::class, 'store'])->name('home.store');
+
+// // Frontend show
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Route::post('/home/store', [HomeController::class, 'store'])->name('home.store');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/', [HomeController::class, 'index']); // show
+Route::post('/', [HomeController::class, 'store']); // save
+
