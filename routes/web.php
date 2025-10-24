@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 })-> name('home');;
 Route::get('/register', function () {
     return view('forms.register'); })
@@ -61,6 +63,64 @@ Route::get('/databaseService', function () {
     return view('services.databaseService'); })
     -> name('databaseService');
 
+// Dashboard Routes 
+
+Route::get('/dashboard', function () {
+    return view('web.dashboard');
+})-> name('dashboard');; 
+
+Route::get('/advertisement', function () {
+    return view('web.advertisement');
+})-> name('advertisement');;
 
 
-    
+Route::get('/profile', function () {
+    return view('web.profile');
+})-> name('profile');; 
+
+Route::get('/pageHome', function () {
+    return view('web.pageHome');
+})-> name('pageHome');
+
+Route::get('/pageAboutUs', function () {
+    return view('web.pageAboutUs');
+})-> name('pageAboutUs');
+
+Route::get('/pageServies', function () {
+    return view('web.pageServies');
+})-> name('pageServies');
+
+Route::get('/pageProject', function () {
+    return view('web.pageProject');
+})-> name('pageProject');
+
+Route::get('/pageBlog', function () {
+    return view('web.pageBlog');
+})-> name('pageBlog');
+
+Route::get('/pageContactUs', function () {
+    return view('web.pageContactUs');
+})-> name('pageContactUs');
+
+Route::get('/user&roles', function () {
+    return view('web.user&roles');
+})-> name('user&roles');
+
+// Advertisement Routes
+Route::get('/ads/create', [AdController::class, 'create'])->name('ads.create');
+Route::post('/ads', [AdController::class, 'store'])->name('ads.store');
+
+// // Admin save/update
+// Route::post('/admin/home', [HomeController::class, 'store'])->name('home.store');
+
+// // Frontend show
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Route::post('/home/store', [HomeController::class, 'store'])->name('home.store');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home'); // show
+Route::post('/', [HomeController::class, 'store'])->name('home.store'); // save
+
+
