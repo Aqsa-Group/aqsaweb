@@ -1588,7 +1588,7 @@
                 <div class="flex flex-col  text-left py-10 pt-12">
                     <a href="{{ route('home')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">Home</a>
                     <hr>
-                    <a href="{{ route('services')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">Serices</a>
+                    <a href="{{ route('services')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">Services</a>
                     <hr>
                     <a href="{{ route('aboutUs')}}" class="text-md hover:text-cyan-600 cursor-pointer pt-4 pb-2">About Us</a>
                     <hr>

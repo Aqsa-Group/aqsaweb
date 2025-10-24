@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
 </head>
-<body >
+
+<body>
     @include('layouts.Navbar')
 
     <div class="relative text-white  w-full h-auto   pt-12  md:mt-[60px] flex flex-col justify-center text-center  mx-auto bg-cover bg-no-repeat"
@@ -15,134 +17,248 @@
         </h1>
         <div class="z-10 flex justify-center mx-auto w-screen md:w-[850px] md:px-2  mb-6 md:mb-10">
             <p class="text-center text-sm  md:text-[20px] my-2 md:leading-7 mx-6 md:mx-0">
-                From idea to execution, AQSA Group is your trusted partner in the digital world Our professional team in design, web,
+                From idea to execution, AQSA Group is your trusted partner in the digital world Our professional team in
+                design, web,
                 mobile, and graphics is ready to create exceptional experiences
             </p>
         </div>
     </div>
 
     <!--body-->
-    <div class=" flex flex-col mx-6 md:mx-10 ">
+    <div class=" flex flex-col  md:mx-10 ">
 
         <!--section 1-->
-        <div>
-            <h2 class="flex text-center mx-auto justify-center text-xl md:text-[40px] font-medium my-3 md:my-6">
+        <div class="p-6">
+            <h2 class="flex text-center mx-auto justify-center text-2xl md:text-[40px] font-medium my-3 md:my-6">
                 Our History
             </h2>
             <p class="text-md md:text-[20px]  leading-7 md:leading-9 text-justify ">
-                AQSA Group was founded with a mission to empower businesses through innovative digital solutions. Since its
+                AQSA Group was founded with a mission to empower businesses through innovative digital solutions. Since
+                its
                 establishment, the company digital solutions.
-                Since its establishment, the company has steadily grown into a leading IT and design service provider, delivering
+                Since its establishment, the company has steadily grown into a leading IT and design service provider,
+                delivering
                 high-quality projects across various industries.
-                AQSA Group specializes in web and mobile application development, UI/UX design, graphic design, database management, and
+                AQSA Group specializes in web and mobile application development, UI/UX design, graphic design, database
+                management, and
                 digital strategy consulting. Over
-                the years, the team has successfully completed numerous projects, helping clients improve their online presence, enhance
+                the years, the team has successfully completed numerous projects, helping clients improve their online
+                presence, enhance
                 user experience, and achieve business
-                goals efficiently. With a focus on creativity, technology, and client satisfaction, AQSA Group continues to expand its
+                goals efficiently. With a focus on creativity, technology, and client satisfaction, AQSA Group continues
+                to expand its
                 services, adapt to emerging trends, and provide
                 reliable, user-friendly, and scalable digital solutions for businesses of all sizes.
             </p>
         </div>
 
-        
-        <!--section 2-->
-        <div class=" text-center mt-20">
-            <h1 class=" mb-6 text-[40px] font-medium"> 
-                Achievements & Stats
-            </h1>
-            <div class="bg-[#18527733] h-[370px] flex flex-row gap-10 justify-center font-semibold">
-                <div class="flex flex-col justify-center  px-20">
-                    <h1 class="text-transparent bg-gradient-to-r from-[#185277] to-[#49819B]  bg-clip-text font-bold  text-[80px]">+20</h1>
-                    <span class="text-[24px] text-center">Satisfied Clients</span>
-                </div>
-                <div class="flex mt-28 ">
-                    <svg width="3" height="144" viewBox="0 0 3 144" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="1.99998" y1="0.506993" x2="0.999976" y2="143.507" stroke="black" stroke-opacity="0.4" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class=" justify-start  flex flex-col px-6">
-                    <h1 class="text-transparent  leading-tight bg-gradient-to-r from-[#185277] to-[#49819B]  bg-clip-text font-bold  text-[200px]">
-                        10
+        <hr class="md:hidden text-gray-300   mt-18">
+
+        <!-- Section 2 -->
+        <div class="text-center mt-20 px-4">
+            <h1 class="mb-10 text-2xl md:text-[40px] font-medium">Achievements & Stats</h1>
+
+            <div
+                class="bg-[#18527733] rounded-lg md:h-[370px] flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 font-semibold py-10 md:py-0">
+
+                <!-- Item 1 -->
+                <div class="flex flex-col items-center">
+                    <h1 class="font-bold text-[50px] md:text-[80px]" style="
+                background: linear-gradient(to right, #185277, #49819B);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              ">
+                        +20
                     </h1>
-                    <span class="text-[36px]  text-center font-semibold">Years of Experience</span>
+                    <span class="text-[18px] md:text-[24px]">Satisfied Clients</span>
                 </div>
-                <div class="flex mt-28 ">
+
+                <!-- Divider for Desktop (Vertical) -->
+                <div class="hidden md:flex">
                     <svg width="3" height="144" viewBox="0 0 3 144" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="1.99998" y1="0.506993" x2="0.999976" y2="143.507" stroke="black" stroke-opacity="0.4"
                             stroke-width="2" />
                     </svg>
                 </div>
-                <div class="flex flex-col justify-center px-20">
-                    <h1 class="text-transparent bg-gradient-to-r from-[#185277] to-[#49819B]  bg-clip-text font-bold  text-[80px]">+50
+                <!-- Divider for Mobile (Horizontal) -->
+                <div class="md:hidden w-[60%] h-[1px] bg-black/40 my-4"></div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col items-center">
+                    <h1 class="font-bold text-[100px] md:text-[200px] leading-[0.9]" style="
+                background: linear-gradient(to right, #185277, #49819B);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              ">
+                        10
                     </h1>
-                    <span class="text-[24px] text-center">Successful Projects</span>
+                    <span class="text-[22px] md:text-[36px] font-semibold mt-[10px] md:mt-[14px]">
+                        Years of Experience
+                    </span>
+                </div>
+
+                <!-- Divider for Desktop (Vertical) -->
+                <div class="hidden md:flex">
+                    <svg width="3" height="144" viewBox="0 0 3 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.99998" y1="0.506993" x2="0.999976" y2="143.507" stroke="black" stroke-opacity="0.4"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <!-- Divider for Mobile (Horizontal) -->
+                <div class="md:hidden w-[60%] h-[1px] bg-black/40 my-4"></div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col items-center">
+                    <h1 class="font-bold text-[50px] md:text-[80px]" style="
+                background: linear-gradient(to right, #185277, #49819B);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              ">
+                        +50
+                    </h1>
+                    <span class="text-[18px] md:text-[24px]">Successful Projects</span>
                 </div>
             </div>
         </div>
 
+        <hr class="md:hidden text-gray-300   mt-18">
 
         <!--section 3-->
-        <div class="h-[618px] flex flex-row mt-24 mb-20">
-            <div class="w-[1000px] grid grid-cols-2 gap-2 text-center items-center">
-                <div class= " w-full h-full items-center flex flex-col p-4  border border-[#00000033] rounded-md">
-                    <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="md:h-[618px] flex flex-col-reverse md:flex-row  mt-10  md:mt-20 mb-10 md:mb-20">
+            <div
+                class="w-full md:w-[1000px]  mt-4 md:mt-0  grid  grid-cols-2  gap-2  px-2  md:mx-0  text-center items-center">
+                <div class=" w-full h-full items-center flex flex-col p-4  border border-[#00000033] rounded-md">
+                    <svg class="hidden md:flex" width="63" height="63" viewBox="0 0 63 63" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.8408 11.4495C26.6946 4.53883 28.6199 1.0835 31.5004 1.0835C34.3808 1.0835 36.3062 4.53883 40.16 11.4495L41.1577 13.238C42.2527 15.2029 42.8002 16.1854 43.6518 16.8332C44.5035 17.4811 45.5681 17.7214 47.6973 18.202L49.6318 18.64C57.1143 20.3342 60.8525 21.1798 61.7437 24.042C62.6318 26.9012 60.0829 29.885 54.9821 35.8498L53.662 37.3919C52.2141 39.0861 51.4872 39.9347 51.1617 40.981C50.8363 42.0304 50.9458 43.1619 51.1648 45.4219L51.3655 47.4811C52.1351 55.4411 52.5213 59.4196 50.1914 61.1868C47.8615 62.954 44.3575 61.342 37.3556 58.1178L35.5397 57.2844C33.5505 56.3658 32.5558 55.9095 31.5004 55.9095C30.4449 55.9095 29.4503 56.3658 27.4611 57.2844L25.6482 58.1178C18.6433 61.342 15.1393 62.954 12.8124 61.1899C10.4794 59.4196 10.8657 55.4411 11.6353 47.4811L11.836 45.4249C12.055 43.1619 12.1645 42.0304 11.836 40.9841C11.5136 39.9347 10.7866 39.0861 9.33881 37.3949L8.01872 35.8498C2.91785 29.8881 0.368931 26.9042 1.2571 24.042C2.14526 21.1798 5.88956 20.3312 13.3721 18.64L15.3066 18.202C17.4327 17.7214 18.4942 17.4811 19.3489 16.8332C20.2036 16.1854 20.7481 15.2029 21.8431 13.238L22.8408 11.4495Z"
+                            stroke="#185277" stroke-width="1.5" />
+                    </svg>
+                    <svg class="flex md:hidden " width="36" height="36" viewBox="0 0 63 63" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M22.8408 11.4495C26.6946 4.53883 28.6199 1.0835 31.5004 1.0835C34.3808 1.0835 36.3062 4.53883 40.16 11.4495L41.1577 13.238C42.2527 15.2029 42.8002 16.1854 43.6518 16.8332C44.5035 17.4811 45.5681 17.7214 47.6973 18.202L49.6318 18.64C57.1143 20.3342 60.8525 21.1798 61.7437 24.042C62.6318 26.9012 60.0829 29.885 54.9821 35.8498L53.662 37.3919C52.2141 39.0861 51.4872 39.9347 51.1617 40.981C50.8363 42.0304 50.9458 43.1619 51.1648 45.4219L51.3655 47.4811C52.1351 55.4411 52.5213 59.4196 50.1914 61.1868C47.8615 62.954 44.3575 61.342 37.3556 58.1178L35.5397 57.2844C33.5505 56.3658 32.5558 55.9095 31.5004 55.9095C30.4449 55.9095 29.4503 56.3658 27.4611 57.2844L25.6482 58.1178C18.6433 61.342 15.1393 62.954 12.8124 61.1899C10.4794 59.4196 10.8657 55.4411 11.6353 47.4811L11.836 45.4249C12.055 43.1619 12.1645 42.0304 11.836 40.9841C11.5136 39.9347 10.7866 39.0861 9.33881 37.3949L8.01872 35.8498C2.91785 29.8881 0.368931 26.9042 1.2571 24.042C2.14526 21.1798 5.88956 20.3312 13.3721 18.64L15.3066 18.202C17.4327 17.7214 18.4942 17.4811 19.3489 16.8332C20.2036 16.1854 20.7481 15.2029 21.8431 13.238L22.8408 11.4495Z"
                             stroke="#185277" stroke-width="1.5" />
                     </svg>
                     <h2 class="text-[24px] mt-2">Excellence</h2>
-                    <p class="text-[24px] text-[#00000080]  mt-2">
+                    <p class="text-md md:text-[24px] text-[#00000080]  mt-2">
                         We strive for the highest quality in every project, delivering solutions.
                     </p>
                 </div>
                 <div class="w-full h-full  flex flex-col p-4 items-center border border-[#00000033] rounded-md">
-                    <svg width="72" height="68" viewBox="0 0 72 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hidden md:flex" width="72" height="68" viewBox="0 0 72 68" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M18.8883 27.45C19.0917 29.4 20.3383 31.0183 22.1167 31.8367C25.8117 33.535 32.3 36.25 36 36.25C39.7 36.25 46.1883 33.5333 49.8833 31.8367C51.6617 31.02 52.9083 29.3983 53.1117 27.45C53.31 25.5383 53.5 22.68 53.5 18.75C53.5 14.82 53.31 11.9617 53.1117 10.05C52.9083 8.1 51.6617 6.48167 49.8817 5.66333C46.1883 3.965 39.7017 1.25 36 1.25C32.3 1.25 25.8117 3.96667 22.1167 5.66333C20.3383 6.48 19.0917 8.10167 18.8883 10.05C18.69 11.9617 18.5 14.82 18.5 18.75C18.5 22.68 18.69 25.5383 18.8883 27.45Z"
                             stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
-                        <path d="M18.5 8.25C18.5 8.25 32.4667 15.25 36 15.25C39.5333 15.25 53.5 8.25 53.5 8.25" stroke="#185277"
-                            stroke-width="1.5" stroke-linejoin="round" />
-                        <path d="M36 15.25V36.25" stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18.5 8.25C18.5 8.25 32.4667 15.25 36 15.25C39.5333 15.25 53.5 8.25 53.5 8.25"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M36 15.25V36.25" stroke="#185277" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
                         <path
                             d="M1.38833 57.8665C1.59167 59.8165 2.83833 61.4348 4.61833 62.2532C8.31167 63.9515 14.8 66.6665 18.5 66.6665C22.2 66.6665 28.6883 63.9498 32.3833 62.2532C34.1617 61.4365 35.4083 59.8148 35.6117 57.8665C35.81 55.9548 36 53.0965 36 49.1665C36 45.2365 35.81 42.3782 35.6117 40.4665C35.4083 38.5165 34.1617 36.8982 32.3833 36.0798C28.6883 34.3815 22.2 31.6665 18.5 31.6665C14.8 31.6665 8.31167 34.3832 4.61667 36.0798C2.83833 36.8965 1.59167 38.5182 1.38833 40.4665C1.19 42.3782 1 45.2365 1 49.1665C1 53.0965 1.19 55.9548 1.38833 57.8665Z"
                             stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
-                        <path d="M1 38.6665C1 38.6665 14.9667 45.6665 18.5 45.6665C22.0333 45.6665 36 38.6665 36 38.6665" stroke="#185277"
-                            stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                            d="M1 38.6665C1 38.6665 14.9667 45.6665 18.5 45.6665C22.0333 45.6665 36 38.6665 36 38.6665"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
                         <path d="M18.5 45.6665V66.6665" stroke="#185277" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
                         <path
                             d="M36.3883 57.8665C36.5917 59.8165 37.8383 61.4348 39.6167 62.2532C43.3133 63.9515 49.8 66.6665 53.5 66.6665C57.2 66.6665 63.6883 63.9498 67.3833 62.2532C69.1617 61.4365 70.4083 59.8148 70.6117 57.8665C70.81 55.9548 71 53.0965 71 49.1665C71 45.2365 70.81 42.3782 70.6117 40.4665C70.4083 38.5165 69.1617 36.8982 67.3817 36.0798C63.6883 34.3815 57.2033 31.6665 53.5 31.6665C49.8 31.6665 43.3117 34.3832 39.6167 36.0798C37.8383 36.8965 36.5917 38.5182 36.3883 40.4665C36.19 42.3782 36 45.2365 36 49.1665C36 53.0965 36.19 55.9548 36.3883 57.8665Z"
                             stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
-                        <path d="M36 38.6665C36 38.6665 49.9667 45.6665 53.5 45.6665C57.0333 45.6665 71 38.6665 71 38.6665" stroke="#185277"
-                            stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                            d="M36 38.6665C36 38.6665 49.9667 45.6665 53.5 45.6665C57.0333 45.6665 71 38.6665 71 38.6665"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M53.5 45.6665V66.6665" stroke="#185277" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="flex md:hidden " width="42" height="40" viewBox="0 0 72 68" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.8883 27.45C19.0917 29.4 20.3383 31.0183 22.1167 31.8367C25.8117 33.535 32.3 36.25 36 36.25C39.7 36.25 46.1883 33.5333 49.8833 31.8367C51.6617 31.02 52.9083 29.3983 53.1117 27.45C53.31 25.5383 53.5 22.68 53.5 18.75C53.5 14.82 53.31 11.9617 53.1117 10.05C52.9083 8.1 51.6617 6.48167 49.8817 5.66333C46.1883 3.965 39.7017 1.25 36 1.25C32.3 1.25 25.8117 3.96667 22.1167 5.66333C20.3383 6.48 19.0917 8.10167 18.8883 10.05C18.69 11.9617 18.5 14.82 18.5 18.75C18.5 22.68 18.69 25.5383 18.8883 27.45Z"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M18.5 8.25C18.5 8.25 32.4667 15.25 36 15.25C39.5333 15.25 53.5 8.25 53.5 8.25"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M36 15.25V36.25" stroke="#185277" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M1.38833 57.8665C1.59167 59.8165 2.83833 61.4348 4.61833 62.2532C8.31167 63.9515 14.8 66.6665 18.5 66.6665C22.2 66.6665 28.6883 63.9498 32.3833 62.2532C34.1617 61.4365 35.4083 59.8148 35.6117 57.8665C35.81 55.9548 36 53.0965 36 49.1665C36 45.2365 35.81 42.3782 35.6117 40.4665C35.4083 38.5165 34.1617 36.8982 32.3833 36.0798C28.6883 34.3815 22.2 31.6665 18.5 31.6665C14.8 31.6665 8.31167 34.3832 4.61667 36.0798C2.83833 36.8965 1.59167 38.5182 1.38833 40.4665C1.19 42.3782 1 45.2365 1 49.1665C1 53.0965 1.19 55.9548 1.38833 57.8665Z"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                            d="M1 38.6665C1 38.6665 14.9667 45.6665 18.5 45.6665C22.0333 45.6665 36 38.6665 36 38.6665"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M18.5 45.6665V66.6665" stroke="#185277" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M36.3883 57.8665C36.5917 59.8165 37.8383 61.4348 39.6167 62.2532C43.3133 63.9515 49.8 66.6665 53.5 66.6665C57.2 66.6665 63.6883 63.9498 67.3833 62.2532C69.1617 61.4365 70.4083 59.8148 70.6117 57.8665C70.81 55.9548 71 53.0965 71 49.1665C71 45.2365 70.81 42.3782 70.6117 40.4665C70.4083 38.5165 69.1617 36.8982 67.3817 36.0798C63.6883 34.3815 57.2033 31.6665 53.5 31.6665C49.8 31.6665 43.3117 34.3832 39.6167 36.0798C37.8383 36.8965 36.5917 38.5182 36.3883 40.4665C36.19 42.3782 36 45.2365 36 49.1665C36 53.0965 36.19 55.9548 36.3883 57.8665Z"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                            d="M36 38.6665C36 38.6665 49.9667 45.6665 53.5 45.6665C57.0333 45.6665 71 38.6665 71 38.6665"
+                            stroke="#185277" stroke-width="1.5" stroke-linejoin="round" />
                         <path d="M53.5 45.6665V66.6665" stroke="#185277" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                     <h2 class="text-[24px] mt-2">Innovation</h2>
-                    <p class="text-[24px] text-[#00000080] mt-2">
+                    <p class="text-md md:text-[24px] text-[#00000080] mt-2">
                         We embrace creativity and innovation to design modern solutions.
                     </p>
                 </div>
                 <div class="w-full h-full flex flex-col p-4 items-center border border-[#00000033] rounded-md">
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hidden md:flex" width="80" height="80" viewBox="0 0 80 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M73.333 17.1665V29.4998C73.333 36.9998 70.333 39.9998 62.833 39.9998H53.833C46.333 39.9998 43.333 36.9998 43.333 29.4998V17.1665C43.333 9.6665 46.333 6.6665 53.833 6.6665H62.833C70.333 6.6665 73.333 9.6665 73.333 17.1665Z"
                             stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path
                             d="M36.667 50.5V62.8333C36.667 70.3333 33.667 73.3333 26.167 73.3333H17.167C9.66699 73.3333 6.66699 70.3333 6.66699 62.8333V50.5C6.66699 43 9.66699 40 17.167 40H26.167C33.667 40 36.667 43 36.667 50.5Z"
                             stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M73.3333 50C73.3333 62.9 62.9 73.3333 50 73.3333L53.5 67.5" stroke="#292D32" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.66699 29.9998C6.66699 17.0998 17.1003 6.6665 30.0003 6.6665L26.5003 12.4998" stroke="#292D32"
+                        <path d="M73.3333 50C73.3333 62.9 62.9 73.3333 50 73.3333L53.5 67.5" stroke="#292D32"
                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.66699 29.9998C6.66699 17.0998 17.1003 6.6665 30.0003 6.6665L26.5003 12.4998"
+                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="flex md:hidden" width="45" height="45" viewBox="0 0 80 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M73.333 17.1665V29.4998C73.333 36.9998 70.333 39.9998 62.833 39.9998H53.833C46.333 39.9998 43.333 36.9998 43.333 29.4998V17.1665C43.333 9.6665 46.333 6.6665 53.833 6.6665H62.833C70.333 6.6665 73.333 9.6665 73.333 17.1665Z"
+                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M36.667 50.5V62.8333C36.667 70.3333 33.667 73.3333 26.167 73.3333H17.167C9.66699 73.3333 6.66699 70.3333 6.66699 62.8333V50.5C6.66699 43 9.66699 40 17.167 40H26.167C33.667 40 36.667 43 36.667 50.5Z"
+                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M73.3333 50C73.3333 62.9 62.9 73.3333 50 73.3333L53.5 67.5" stroke="#292D32"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6.66699 29.9998C6.66699 17.0998 17.1003 6.6665 30.0003 6.6665L26.5003 12.4998"
+                            stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <h2 class="text-[24px] mt-2">Adaptability</h2>
-                    <p class="text-[24px] text-[#00000080]  mt-2">
+                    <p class="text-md md:text-[24px] text-[#00000080]  mt-2">
                         We stay agile and responsive to industry changes, helping businesses.
                     </p>
                 </div>
                 <div class="w-full h-full flex flex-col p-4 items-center border border-[#00000033] rounded-md">
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hidden md:flex" width="80" height="80" viewBox="0 0 80 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M59.9996 23.8665C59.7996 23.8332 59.5663 23.8332 59.3663 23.8665C54.7663 23.6998 51.0996 19.9332 51.0996 15.2665C51.0996 10.4998 54.9329 6.6665 59.6996 6.6665C64.4663 6.6665 68.2996 10.5332 68.2996 15.2665C68.2663 19.9332 64.5996 23.6998 59.9996 23.8665Z"
+                            stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M56.5658 48.1332C61.1325 48.8999 66.1658 48.0999 69.6992 45.7332C74.3992 42.5999 74.3992 37.4666 69.6992 34.3332C66.1325 31.9666 61.0325 31.1665 56.4658 31.9665"
+                            stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M19.8996 23.8665C20.0996 23.8332 20.3329 23.8332 20.5329 23.8665C25.1329 23.6998 28.7996 19.9332 28.7996 15.2665C28.7996 10.4998 24.9663 6.6665 20.1996 6.6665C15.4329 6.6665 11.5996 10.5332 11.5996 15.2665C11.6329 19.9332 15.2996 23.6998 19.8996 23.8665Z"
+                            stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M23.3331 48.1332C18.7665 48.8999 13.7331 48.0999 10.1998 45.7332C5.4998 42.5999 5.4998 37.4666 10.1998 34.3332C13.7665 31.9666 18.8665 31.1665 23.4331 31.9665"
+                            stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M40.0006 48.7669C39.8006 48.7336 39.5673 48.7336 39.3673 48.7669C34.7673 48.6002 31.1006 44.8336 31.1006 40.1669C31.1006 35.4002 34.9339 31.5669 39.7006 31.5669C44.4672 31.5669 48.3006 35.4336 48.3006 40.1669C48.2673 44.8336 44.6006 48.6336 40.0006 48.7669Z"
+                            stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M30.3004 59.2667C25.6004 62.4 25.6004 67.5334 30.3004 70.6667C35.6337 74.2334 44.3671 74.2334 49.7004 70.6667C54.4004 67.5334 54.4004 62.4 49.7004 59.2667C44.4004 55.7334 35.6337 55.7334 30.3004 59.2667Z"
+                            stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="flex md:hidden" width="45" height="45" viewBox="0 0 80 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M59.9996 23.8665C59.7996 23.8332 59.5663 23.8332 59.3663 23.8665C54.7663 23.6998 51.0996 19.9332 51.0996 15.2665C51.0996 10.4998 54.9329 6.6665 59.6996 6.6665C64.4663 6.6665 68.2996 10.5332 68.2996 15.2665C68.2663 19.9332 64.5996 23.6998 59.9996 23.8665Z"
                             stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -163,23 +279,27 @@
                             stroke="#185277" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <h2 class="text-[24px] mt-2">Collaboration</h2>
-                    <p class="text-[24px] text-[#00000080]  mt-2">
+                    <p class="text-md md:text-[24px] text-[#00000080]  mt-2">
                         We work as a team, both internally and with our clients.
                     </p>
                 </div>
             </div>
-            <div class="relative w-full flex flex-col  p-6">
-                <h1 class="text-[40px] font-medium text-[#185277] leading-12 my-4">
+            <div class="md:relative  w-full flex flex-col p-4  md:p-6">
+                <h1 class="hidden md:flex text-[40px] font-medium text-[#185277] leading-12 my-4">
                     Our Core Values, Guiding Principles <br> and Commitment to <br> Excellence
                 </h1>
-                <p class="text-[24px] leading-8 mb-16 text-justify" >
+                <h1 class="flex md:hidden text-[26px] font-medium text-[#185277] leading-10 ">
+                    Our Core Values, Guiding Principles and Commitment to Excellence
+                </h1>
+                <p class="text-md   md:text-[24px]  leading-8  md:mb-16  md:text-justify  mt-2  md:mt-0">
                     At AQSA Group, our core values define who we are and guide everything we do. We
                     are committed to excellence, innovation, and adaptability, ensuring that every solution
                     we provide meets the highest standards. With a focus on integrity, collaboration, and
                     customer-centric approaches, we continuously strive to deliver value, build trust, and
                     create lasting impact for our clients and partners.
                 </p>
-                <button class="w-1/3  text-[24px] px-4 py-1.5 rounded-2xl bg-[#185277] shadow-xl text-white">
+                <button
+                    class="w-1/2  mt-4 md:mt-2 md:w-1/3  text-md  md:text-[24px] px-4 py-1.5 rounded-2xl bg-[#185277] shadow-xl text-white">
                     View More
                 </button>
             </div>
@@ -187,24 +307,26 @@
 
 
 
-        <hr class="text-gray-300 my-4">
+        <hr class="text-gray-300  my-4 mt-10">
+
         <!--section 4-->
-        <div class="container">
-            <h1 class="flex text-center mx-auto justify-center text-xl md:text-[40px] font-medium my-6">
+        <div class="container p-4  md:p-0">
+            <h1 class="flex text-center mx-auto justify-center text-2xl md:text-[40px] font-medium my-6">
                 Our Team
             </h1>
-            <div class=" grid grid-cols-2 lg:grid-cols-4  gap-2  md:gap-3  font-medium">
+            <div class=" grid grid-cols-1 lg:grid-cols-4  gap-2  md:gap-3  font-medium">
                 <div class="  flex flex-col items-center  rounded-lg border border-gray-400 overflow-hidden w-full p-2">
                     <img src="{{ asset('images/developers (3).jpg') }}" alt="Web Development"
-                        class="h-28 md:h-[200px] w-full object-cover rounded-md" />
+                        class="h-48 md:h-[200px] w-full object-cover rounded-md" />
                     <h2 class="text-lg md:text-xl  mt-1 text-[#185277]">
                         Mohammad Qaderi
                     </h2>
-                    <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
+                    <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600 ">
                         Graphic Designer
                     </h2>
-                    <p class="text-justify mx-2">
-                        Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing materials. She
+                    <p class="text-center mx-2">
+                        Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing
+                        materials. She
                         transforms ideas into engaging visuals that strengthen brand identity
                     </p>
                     <hr class="text-gray-400 my-3 w-full mt-10">
@@ -226,17 +348,19 @@
                         </svg>
                     </div>
                 </div>
-                <div class="  flex flex-col items-center font-medium  bg-[#18527733]  rounded-lg border border-gray-400 overflow-hidden w-full p-2">
+                <div
+                    class="  flex flex-col items-center font-medium  bg-[#18527733]  rounded-lg border border-gray-400 overflow-hidden w-full p-2">
                     <img src="{{ asset('images/developers (2).jpg') }}" alt="Web Development"
-                        class="h-28 md:h-[200px] w-full object-cover rounded-md" />
+                        class="h-48 md:h-[200px] w-full object-cover rounded-md" />
                     <h2 class="text-lg md:text-xl  mt-1 text-[#185277]">
                         Mohammad Qaderi
                     </h2>
                     <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
                         Graphic Designer
                     </h2>
-                    <p class="text-justify mx-2">
-                        Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing materials. She
+                    <p class="text-center mx-2">
+                        Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing
+                        materials. She
                         transforms ideas into engaging visuals that strengthen brand identity
                     </p>
                     <hr class="text-gray-400 my-3 w-full mt-10">
@@ -258,17 +382,19 @@
                         </svg>
                     </div>
                 </div>
-                <div class="font-medium  flex flex-col items-center  rounded-lg border border-[#00000033] overflow-hidden w-full p-2">
+                <div
+                    class="font-medium  flex flex-col items-center  rounded-lg border border-[#00000033] overflow-hidden w-full p-2">
                     <img src="{{ asset('images/developers (1).jpg') }}" alt="Web Development"
-                        class="h-28 md:h-[200px] w-full object-cover rounded-md" />
+                        class="h-48 md:h-[200px] w-full object-cover rounded-md" />
                     <h2 class="text-lg md:text-xl  mt-1 text-[#185277]">
                         Ezat Hamidi
                     </h2>
                     <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
                         UI/UX Designer
                     </h2>
-                    <p class="text-justify mx-2">
-                        Ezat is a passionate UI/UX designer focused on creating intuitive and visually appealing digital experiences. She
+                    <p class="text-center mx-2">
+                        Ezat is a passionate UI/UX designer focused on creating intuitive and visually appealing digital
+                        experiences. She
                         ensures every product is easy to use, accessible, and customer-centric.
                     </p>
                     <hr class="text-gray-400 my-3 w-full mt-10">
@@ -290,17 +416,19 @@
                         </svg>
                     </div>
                 </div>
-                <div class="font-medium  flex flex-col items-center  rounded-lg border border-gray-400 overflow-hidden w-full p-2">
+                <div
+                    class="font-medium  flex flex-col items-center  rounded-lg border border-gray-400 overflow-hidden w-full p-2">
                     <img src="{{ asset('images/developer.png') }}" alt="Web Development"
-                        class="h-28 md:h-[200px] w-full object-cover rounded-md" />
+                        class="h-48 md:h-[200px] w-full object-cover rounded-md" />
                     <h2 class="text-lg md:text-xl  mt-1 text-[#185277]">
                         Ahmad Rahimi
                     </h2>
                     <h2 class=" text-sm md:text-lg   px-2  py-2  text-gray-600">
                         Web Developer
                     </h2>
-                    <p class="text-justify mx-2">
-                        Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing materials. She
+                    <p class="text-center mx-2">
+                        Mohammad is a creative graphic designer with expertise in branding, illustration, and marketing
+                        materials. She
                         transforms ideas into engaging visuals that strengthen brand identity
                     </p>
                     <hr class="text-gray-400 my-3 w-full mt-10">
@@ -325,7 +453,8 @@
             </div>
         </div>
     </div>
-  
-@include('layouts.Footer')
+
+    @include('layouts.Footer')
 </body>
+
 </html>
