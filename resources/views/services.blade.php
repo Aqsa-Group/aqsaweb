@@ -17,7 +17,7 @@
                 <h2 class="text-lg md:text-2xl  mt-1  ">Security</h2>
                 <p class="text-center text-sm pb-7  md:pb-4  md:text-lg font-medium  px-2   md:py-2 md:mt-2 text-gray-500">
                     AQSA Group offers expert securitly camera installation to ensure safety and reliable monitoring for
-                    property.
+                    property......
                 </p>
                 <a href="{{ route('databaseService')}}">
                     <button
