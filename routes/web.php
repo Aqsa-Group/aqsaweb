@@ -146,13 +146,53 @@ Route::post('/management/logout', [AuthController::class, 'logout'])->name('mana
 
 
 
-// Pages    
+// Pages   
+
+// Dashboard
 Route::get('/management/dashboard', function () {
     if (!Auth::guard('management')->check()) {
         return redirect()->route('management.login.form');
     }
     return view('Management.components.dashboard');
 })->name('management.home');
+
+
+
+// users
+Route::get('/management/users', function () {
+    if (!Auth::guard('management')->check()) {
+        return redirect()->route('management.login.form');
+    }
+    return view('Management.components.user');
+})->name('management.user');
+
+
+
+// departments
+Route::get('/management/departments', function () {
+    if (!Auth::guard('management')->check()) {
+        return redirect()->route('management.login.form');
+    }
+    return view('Management.components.departments');
+})->name('management.departments');
+
+
+// employees
+Route::get('/management/employee', function () {
+    if (!Auth::guard('management')->check()) {
+        return redirect()->route('management.login.form');
+    }
+    return view('Management.components.employees');
+})->name('management.employees');
+
+
+
+
+
+
+
+
+
 
 
 
