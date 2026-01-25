@@ -1,8 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ManagementPanel\AuthController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
+
+
 
 Route::get('/', function () {
     return view('home');
@@ -122,5 +127,36 @@ Route::post('/ads', [AdController::class, 'store'])->name('ads.store');
 
 Route::get('/', [HomeController::class, 'index'])->name('home'); // show
 Route::post('/', [HomeController::class, 'store'])->name('home.store'); // save
+
+
+
+
+
+
+
+// Management Panel
+
+
+Route::get('/management', [AuthController::class, 'showLoginForm'])->name('management.login.form');
+
+Route::post('/management/login', [AuthController::class, 'login'])->name('management.login');
+
+Route::post('/management/logout', [AuthController::class, 'logout'])->name('management.logout');
+
+
+
+
+// Pages    
+Route::get('/management/dashboard', function () {
+    if (!Auth::guard('management')->check()) {
+        return redirect()->route('management.login.form');
+    }
+    return view('Management.components.dashboard');
+})->name('management.home');
+
+
+
+
+
 
 
