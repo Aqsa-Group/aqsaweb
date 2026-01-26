@@ -462,21 +462,22 @@ $currentUser = Auth::guard('management')->user();
                                             ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
                                             : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' }}">
 
-                                    <svg width="24" height="24" class="w-4 mr-3 " viewBox="0 0 24 24" fill="none"
+                                    <svg width="24" height="24" class="w-4 mr-3  " viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
-                                            stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                         <path
                                             d="M15.5 2V9.85999C15.5 10.3 14.98 10.52 14.66 10.23L12.34 8.09003C12.15 7.91003 11.85 7.91003 11.66 8.09003L9.34003 10.23C9.02003 10.52 8.5 10.3 8.5 9.85999V2H15.5Z"
-                                            stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
                                             stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M13.25 14H17.5" stroke="#292D32" stroke-width="1.5"
+                                        <path d="M13.25 14H17.5" stroke="currentColor" stroke-width="1.5"
                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M9 18H17.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
-                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9 18H17.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
+
 
 
                                     Employee Reports
@@ -488,7 +489,7 @@ $currentUser = Auth::guard('management')->user();
                             </div>
                         </div>
 
-                        @if ($currentUser->role === 'Manager' || 
+                        @if ($currentUser->role === 'Manager' ||
                         $currentUser->role === 'Administrator')
                         <div class="pt-6">
                             <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Financial
@@ -526,11 +527,11 @@ $currentUser = Auth::guard('management')->user();
 
 
                         <div class="pt-6">
-                              @if ($currentUser->role === 'Manager' ||
-                                $currentUser->role === 'Administrator')
+                            @if ($currentUser->role === 'Manager' ||
+                            $currentUser->role === 'Administrator')
                             <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Settings
                             </h3>
-                          
+
                             <div class="space-y-1">
                                 <a href="#"
                                     class="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg">
@@ -563,24 +564,29 @@ $currentUser = Auth::guard('management')->user();
                 <!-- User Profile and Theme Toggle -->
                 <div class="px-4 pt-4 border-t border-gray-200 dark:border-gray-800">
                     <div class="flex items-center justify-between p-2">
+                        <!-- User Info -->
                         <div class="flex items-center">
                             <img src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff"
-                                alt="John Doe"
+                                alt="{{ $currentUser->name  }}"
                                 class="w-8 h-8 rounded-full border-2 border-white dark:border-gray-800 shadow-sm">
                             <div class="ml-3">
-                                <p class="text-sm font-medium text-gray-900 dark:text-white">John Doe</p>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">Administrator</p>
+                                <p class="text-sm font-medium text-gray-900 dark:text-white">{{ $currentUser->name }}
+                                </p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">{{ $currentUser->role }}</p>
                             </div>
                         </div>
-                        <!-- Theme Toggle for Desktop -->
-                        <div class="theme-toggle" id="desktopThemeToggle">
-                            <div class="theme-toggle-slider">
-                                <i class="fas fa-sun sun-icon"></i>
-                                <i class="fas fa-moon moon-icon"></i>
-                            </div>
-                        </div>
+
+                        <!-- Logout Icon Button -->
+                        <form method="POST" action="{{ route('management.logout') }}">
+                            @csrf
+                            <button type="submit"
+                                class="ml-4 p-2 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-sm flex items-center justify-center">
+                                <i class="fas fa-right-from-bracket"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -611,13 +617,20 @@ $currentUser = Auth::guard('management')->user();
                                 <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
                             </div>
 
-                            <button
-                                class="px-4 py-2 gradient-blue text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity">
-                                <i class="fas fa-plus mr-2"></i>New Report
-                            </button>
+
+                            <div class="theme-toggle" id="desktopThemeToggle">
+                                <div class="theme-toggle-slider">
+                                    <i class="fas fa-sun sun-icon"></i>
+                                    <i class="fas fa-moon moon-icon"></i>
+                                </div>
+                            </div>
                         </div>
+
+
                     </div>
+
                 </div>
+
             </header>
 
             <!-- Page Content -->

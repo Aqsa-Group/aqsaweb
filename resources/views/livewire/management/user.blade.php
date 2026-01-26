@@ -15,6 +15,7 @@
         @endif
 
         {{-- Form Card --}}
+        {{-- Form Card --}}
         <div
             class="main-card rounded-xl overflow-hidden shadow-sm card-hover border border-gray-200 dark:border-gray-800">
             <div class="p-6">
@@ -32,33 +33,65 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {{-- Employee Selection --}}
+                    {{-- Employee Selection --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
                             <i class="fas fa-user text-gray-400 mr-1"></i> Employee
                         </label>
-
                         <div class="relative">
-                            <select wire:model="employee_id"
-                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
-
+                            <select wire:model.live="employee_id"
+                                class="w-full pl-10 pr-4 py-3 appearance-none bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
                                 <option value="">Select employee</option>
-
                                 @foreach ($employees as $employee)
                                 <option value="{{ $employee->id }}">
-                                    {{ $employee->name }} — {{ $employee->department ?? '' }}
+                                    {{ $employee->name }} {{ $employee->lastname ?? '' }}
+                                    @if($employee->department)
+                                    - {{ $employee->department }}
+                                    @endif
                                 </option>
                                 @endforeach
                             </select>
-
                             <i class="fas fa-users absolute left-3 top-3.5 text-gray-400"></i>
+                            <i
+                                class="fas fa-chevron-down absolute right-3 top-3.5 text-gray-400 pointer-events-none"></i>
                         </div>
-
                         @error('employee_id')
                         <span class="text-sm text-red-500">{{ $message }}</span>
                         @enderror
+
+                    </div>
+                    {{-- Auto-filled Department --}}
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-building text-gray-400 mr-1"></i> Department
+                        </label>
+                        <div class="relative">
+                            <input type="text" wire:model="department"
+                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors"
+                                placeholder="Auto-filled from employee" readonly>
+                            <i class="fas fa-building absolute left-3 top-3.5 text-gray-400"></i>
+
+                        </div>
+                        @error('department') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
 
+                    {{-- Auto-filled Section --}}
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-sitemap text-gray-400 mr-1"></i> Section
+                        </label>
+                        <div class="relative">
+                            <input type="text" wire:model="section"
+                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors"
+                                placeholder="Auto-filled from employee" readonly>
+                            <i class="fas fa-sitemap absolute left-3 top-3.5 text-gray-400"></i>
 
+                        </div>
+                        @error('section') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+                    </div>
+
+                    {{-- Username --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
                             <i class="fas fa-at text-gray-400 mr-1"></i> Username
@@ -68,15 +101,17 @@
                                 class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
                             <i class="fas fa-at absolute left-3 top-3.5 text-gray-400"></i>
                         </div>
+                        @error('username') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
 
+                    {{-- Password (only for new users) --}}
                     @if(!$user_id)
                     <div class="space-y-2">
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
                             <i class="fas fa-lock text-gray-400 mr-1"></i> Password
                         </label>
                         <div class="relative">
-                            <input wire:model="password" type="password" placeholder="Enter password"
+                            <input wire:model="password" type="password" placeholder="Enter password (default: 123456)"
                                 class="w-full pl-10 pr-10 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
                             <i class="fas fa-lock absolute left-3 top-3.5 text-gray-400"></i>
                             <button type="button" onclick="togglePassword(this)"
@@ -84,9 +119,31 @@
                                 <i class="fas fa-eye"></i>
                             </button>
                         </div>
+
+                        @error('password') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
+                    </div>
+                    @else
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            <i class="fas fa-lock text-gray-400 mr-1"></i> New Password
+                        </label>
+                        <div class="relative">
+                            <input wire:model="password" type="password" placeholder="Leave empty to keep current"
+                                class="w-full pl-10 pr-10 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
+                            <i class="fas fa-lock absolute left-3 top-3.5 text-gray-400"></i>
+                            <button type="button" onclick="togglePassword(this)"
+                                class="absolute right-3 top-3.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                            Enter new password only if you want to change it
+                        </p>
+                        @error('password') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
                     @endif
 
+                    {{-- Role --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
                             <i class="fas fa-user-tag text-gray-400 mr-1"></i> Role
@@ -99,42 +156,17 @@
                                 <option value="Manager">Manager</option>
                                 <option value="HR Manager">HR Manager</option>
                                 <option value="Supervisor">Supervisor</option>
-                                <option value="Employee">Employee</option>
+                                <option value="Employee" selected>Employee</option>
                                 <option value="Viewer">Viewer</option>
                             </select>
                             <i class="fas fa-user-tag absolute left-3 top-3.5 text-gray-400"></i>
                             <i
                                 class="fas fa-chevron-down absolute right-3 top-3.5 text-gray-400 pointer-events-none"></i>
                         </div>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <i class="fas fa-building text-gray-400 mr-1"></i> Department
-                        </label>
-                        <div class="relative">
-                            <select wire:model="department"
-                                class="w-full pl-6 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
-                                <option value="">-- Select Department --</option>
-                                @foreach($departmentsList as $dep)
-                                <option value="{{ $dep }}">{{ $dep }}</option>
-                                @endforeach
-                            </select>
-                            <i class="fas fa-building absolute left-3 top-3.5 text-gray-400"></i>
-                        </div>
+                        @error('role') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
 
-
-                    <div class="space-y-2">
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <i class="fas fa-sitemap text-gray-400 mr-1"></i> Section
-                        </label>
-                        <div class="relative">
-                            <input wire:model="section" type="text" placeholder="Enter section"
-                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
-                            <i class="fas fa-sitemap absolute left-3 top-3.5 text-gray-400"></i>
-                        </div>
-                    </div>
-
+                    {{-- Job Title --}}
                     <div class="space-y-2">
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
                             <i class="fas fa-briefcase text-gray-400 mr-1"></i> Job Title
@@ -144,14 +176,23 @@
                                 class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
                             <i class="fas fa-briefcase absolute left-3 top-3.5 text-gray-400"></i>
                         </div>
+                        @error('job') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
                     </div>
                 </div>
+
+
 
                 <div
                     class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
                         <i class="fas fa-info-circle mr-2 text-blue-500"></i>
-                        <span>All fields are required for user creation</span>
+                        <span>
+                            @if($employee_id)
+                            Department and Section will be auto-filled from the selected employee.
+                            @else
+                            Select an employee to auto-fill Department and Section.
+                            @endif
+                        </span>
                     </div>
                     <div class="flex items-center gap-3">
                         @if ($user_id)
@@ -174,6 +215,7 @@
             </div>
         </div>
 
+
         {{-- Table Card --}}
         <div class="main-card rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
             <div class="p-6 border-b border-gray-100 dark:border-gray-800">
@@ -188,13 +230,12 @@
                         </p>
                     </div>
                     <div class="relative">
-                        <input type="text" placeholder="Search users..."
+                        <input type="text" placeholder="Search users..." wire:model.debounce.300ms="search"
                             class="w-full sm:w-64 pl-10 pr-4 py-2 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900">
                         <i class="fas fa-search absolute left-3 top-2.5 text-gray-400"></i>
                     </div>
                 </div>
             </div>
-
             <div class="overflow-x-auto">
                 <table class="w-full">
                     <thead>
