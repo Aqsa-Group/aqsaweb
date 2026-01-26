@@ -11,20 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('withdraws', function (Blueprint $table) {
+        Schema::create('employee_reports', function (Blueprint $table) {
             $table->id();
-
-            $table->decimal('amount', 14, 2);
-
-            $table->string('currency', 10);
-
-            $table->string('expansess_type', 255);
-
-            $table->foreignId('employee_id')
-                ->constrained('employees')
+            $table->foreignId('user_id')
+                ->constrained('panel_users')
                 ->onDelete('cascade');
+            $table->string('title');
+            $table->string('description');
+            $table->string('file');
             $table->date('date');
-            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('withdraws');
+        Schema::dropIfExists('employee_reports');
     }
 };

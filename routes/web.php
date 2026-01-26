@@ -186,6 +186,28 @@ Route::get('/management/employee', function () {
 })->name('management.employees');
 
 
+// Withdraws
+Route::get('/management/withdraw', function () {
+    if (!Auth::guard('management')->check()) {
+        return redirect()->route('management.login.form');
+    }
+    return view('Management.components.withdraws');
+})->name('management.withdraws');
+
+
+
+// Employee_reports
+Route::get('/management/employee_reports', function () {
+    if (!Auth::guard('management')->check()) {
+        return redirect()->route('management.login.form');
+    }
+    return view('Management.components.employee_reports');
+})->name('management.employee_reports');
+
+
+
+
+
 
 
 

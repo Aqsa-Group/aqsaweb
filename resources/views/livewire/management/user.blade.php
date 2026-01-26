@@ -34,14 +34,30 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="space-y-2">
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <i class="fas fa-user text-gray-400 mr-1"></i> Full Name
+                            <i class="fas fa-user text-gray-400 mr-1"></i> Employee
                         </label>
+
                         <div class="relative">
-                            <input wire:model="name" type="text" placeholder="Enter full name"
+                            <select wire:model="employee_id"
                                 class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-colors">
-                            <i class="fas fa-user absolute left-3 top-3.5 text-gray-400"></i>
+
+                                <option value="">Select employee</option>
+
+                                @foreach ($employees as $employee)
+                                <option value="{{ $employee->id }}">
+                                    {{ $employee->name }} — {{ $employee->department ?? '' }}
+                                </option>
+                                @endforeach
+                            </select>
+
+                            <i class="fas fa-users absolute left-3 top-3.5 text-gray-400"></i>
                         </div>
+
+                        @error('employee_id')
+                        <span class="text-sm text-red-500">{{ $message }}</span>
+                        @enderror
                     </div>
+
 
                     <div class="space-y-2">
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -81,6 +97,7 @@
                                 <option value="">Select Role</option>
                                 <option value="Administrator">Administrator</option>
                                 <option value="Manager">Manager</option>
+                                <option value="HR Manager">HR Manager</option>
                                 <option value="Supervisor">Supervisor</option>
                                 <option value="Employee">Employee</option>
                                 <option value="Viewer">Viewer</option>

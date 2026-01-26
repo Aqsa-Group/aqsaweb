@@ -20,7 +20,8 @@ class User extends Authenticatable
         'department',
         'section',
         'role',
-        'job'
+        'job',
+        'employee_id'
     ];
 
   
@@ -37,4 +38,18 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    public function employee()
+{
+    return $this->belongsTo(Employee::class);
+}
+
+
+
+    public function employeeReports()
+{
+    return $this->hasMany(EmployeeReports::class, 'user_id');
+}
+
 }

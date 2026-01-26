@@ -311,6 +311,15 @@
     </style>
 </head>
 
+@php
+$usercount =\App\Models\Management\User::count();
+$departmentcount =\App\Models\Management\Department::count();
+$employeecount =\App\Models\Management\Employee::count();
+
+
+$currentUser = Auth::guard('management')->user();
+@endphp
+
 <body
     class="antialiased bg-gradient-to-br from-gray-50 to-white text-gray-800 dark:from-gray-900 dark:to-gray-950 dark:text-gray-100">
     <!-- Mobile Header (Sticky) -->
@@ -381,7 +390,7 @@
                 <!-- Logo -->
                 <div class="flex items-center px-6 mb-8">
                     <div class="w-10 h-10 gradient-blue rounded-xl flex items-center justify-center mr-3">
-                            <span class="text-white font-bold"><img src="{{ asset('images/aqsa.jpg') }}" alt=""></span>
+                        <span class="text-white font-bold"><img src="{{ asset('images/aqsa.jpg') }}" alt=""></span>
                     </div>
                     <div>
                         <h1 class="text-lg font-bold text-gray-900 dark:text-white">Aqsa Group</h1>
@@ -392,6 +401,7 @@
                 <!-- Navigation -->
                 <div class="flex-1 px-4 overflow-y-auto custom-scroll">
                     <nav class="space-y-1">
+
                         <a href="{{ route('management.home') }}" class="flex items-center px-3 py-2.5 text-sm font-medium rounded-lg
                 {{ request()->routeIs('management.home') 
                         ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
@@ -402,18 +412,133 @@
                         </a>
 
 
+
+
                         <div class="pt-6">
-                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Company
+                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">HR
+                                Management
+                            </h3>
+                            <div class="space-y-1">
+                                @if ($currentUser->role === 'Manager' || $currentUser->role === 'HR Manager' ||
+                                $currentUser->role === 'Administrator')
+
+                                <a href="{{ route('management.departments') }}"
+                                    class="flex items-center px-3 py-2 text-sm rounded-lg
+                                    {{ request()->routeIs('management.departments') 
+                                            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
+                                            : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' }}">
+                                    <i
+                                        class="fa-solid fa-building w-4 mr-3 
+                                        {{ request()->routeIs('management.departments') ? 'text-blue-500' : 'text-gray-400' }}"></i>
+                                    Departments
+                                    <span
+                                        class="ml-auto bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-xs px-2 py-0.5 rounded">{{
+                                        $departmentcount }}</span>
+                                </a>
+                                @endif
+                                @if ($currentUser->role === 'Manager' || $currentUser->role === 'HR Manager' ||
+                                $currentUser->role === 'Administrator')
+                                <a href="{{ route('management.employees') }}"
+                                    class="flex items-center px-3 py-2 text-sm rounded-lg
+                                    {{ request()->routeIs('management.employees') 
+                                            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
+                                            : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' }}">
+                                    <i
+                                        class="fa-regular fa-address-book w-4 mr-3 
+                                        {{ request()->routeIs('management.employees') ? 'text-blue-500' : 'text-gray-400' }}"></i>
+                                    Employees
+                                    <span
+                                        class="ml-auto bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-xs px-2 py-0.5 rounded">{{
+                                        $employeecount }}</span>
+                                </a>
+                                @endif
+
+                                @if ($currentUser->role === 'Manager' || $currentUser->role === 'HR Manager' ||
+                                $currentUser->role === 'Employee' ||
+                                $currentUser->role === 'Administrator')
+                                <a href="{{ route('management.employee_reports') }}"
+                                    class="flex items-center px-3 py-2 text-sm rounded-lg
+                                    {{ request()->routeIs('management.employee_reports') 
+                                            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
+                                            : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' }}">
+
+                                    <svg width="24" height="24" class="w-4 mr-3 " viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                            stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M15.5 2V9.85999C15.5 10.3 14.98 10.52 14.66 10.23L12.34 8.09003C12.15 7.91003 11.85 7.91003 11.66 8.09003L9.34003 10.23C9.02003 10.52 8.5 10.3 8.5 9.85999V2H15.5Z"
+                                            stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M13.25 14H17.5" stroke="#292D32" stroke-width="1.5"
+                                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9 18H17.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+
+                                    Employee Reports
+
+                                </a>
+                                @endif
+
+
+                            </div>
+                        </div>
+
+                        @if ($currentUser->role === 'Manager' || 
+                        $currentUser->role === 'Administrator')
+                        <div class="pt-6">
+                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Financial
                             </h3>
                             <div class="space-y-1">
 
-                                @php
-                                $usercount =\App\Models\Management\User::count();
-                                $departmentcount =\App\Models\Management\Department::count();
-                                $employeecount =\App\Models\Management\Employee::count();
+                                @if ($currentUser->role === 'Manager' ||
+                                $currentUser->role === 'Administrator')
+                                <a href="{{ route('management.withdraws') }}"
+                                    class="flex items-center px-3 py-2 text-sm rounded-lg
+                                    {{ request()->routeIs('management.withdraws') 
+                                            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
+                                            : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' }}">
+                                    <i
+                                        class="fa-solid fa-arrow-up w-4 mr-3 
+                                        {{ request()->routeIs('management.withdraws') ? 'text-blue-500' : 'text-gray-400' }}"></i>
+                                    Withdraws
+
+                                </a>
+                                @endif
+                                <a href="#"
+                                    class="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg">
+                                    <i class="fas fa-file-invoice-dollar w-4 mr-3 text-gray-400"></i>
+                                    Invoices
+                                </a>
+                            </div>
+                        </div>
+
+                        @endif
 
 
-                                @endphp
+
+
+
+
+
+                        <div class="pt-6">
+                              @if ($currentUser->role === 'Manager' ||
+                                $currentUser->role === 'Administrator')
+                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Settings
+                            </h3>
+                          
+                            <div class="space-y-1">
+                                <a href="#"
+                                    class="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg">
+                                    <i class="fas fa-cog w-4 mr-3 text-gray-400"></i>
+                                    System
+                                </a>
+
+
                                 <a href="{{ route('management.user') }}"
                                     class="flex items-center px-3 py-2 text-sm rounded-lg
                                     {{ request()->routeIs('management.user') 
@@ -429,70 +554,8 @@
                                         $usercount }}</span>
                                 </a>
 
-                                <a href="{{ route('management.departments') }}"
-                                    class="flex items-center px-3 py-2 text-sm rounded-lg
-                                    {{ request()->routeIs('management.departments') 
-                                            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
-                                            : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' }}">
-                                    <i
-                                        class="fa-solid fa-building w-4 mr-3 
-                                        {{ request()->routeIs('management.departments') ? 'text-blue-500' : 'text-gray-400' }}"></i>
-                                    Departments
-                                    <span
-                                        class="ml-auto bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-xs px-2 py-0.5 rounded">{{
-                                        $departmentcount }}</span>
-                                </a>
-
-                                 <a href="{{ route('management.employees') }}"
-                                    class="flex items-center px-3 py-2 text-sm rounded-lg
-                                    {{ request()->routeIs('management.employees') 
-                                            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/30' 
-                                            : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' }}">
-                                    <i
-                                        class="fa-solid fa-building w-4 mr-3 
-                                        {{ request()->routeIs('management.employees') ? 'text-blue-500' : 'text-gray-400' }}"></i>
-                                    Employees
-                                    <span
-                                        class="ml-auto bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-xs px-2 py-0.5 rounded">{{
-                                        $employeecount }}</span>
-                                </a>
-                                <a href="#"
-                                    class="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg">
-                                    <i class="fas fa-briefcase w-4 mr-3 text-gray-400"></i>
-                                    Projects
-                                    <span
-                                        class="ml-auto bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 text-xs px-2 py-0.5 rounded">24</span>
-                                </a>
                             </div>
-                        </div>
-
-                        <div class="pt-6">
-                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Financial
-                            </h3>
-                            <div class="space-y-1">
-                                <a href="#"
-                                    class="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg">
-                                    <i class="fas fa-chart-bar w-4 mr-3 text-gray-400"></i>
-                                    Reports
-                                </a>
-                                <a href="#"
-                                    class="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg">
-                                    <i class="fas fa-file-invoice-dollar w-4 mr-3 text-gray-400"></i>
-                                    Invoices
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="pt-6">
-                            <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Settings
-                            </h3>
-                            <div class="space-y-1">
-                                <a href="#"
-                                    class="flex items-center px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg">
-                                    <i class="fas fa-cog w-4 mr-3 text-gray-400"></i>
-                                    System
-                                </a>
-                            </div>
+                            @endif
                         </div>
                     </nav>
                 </div>
