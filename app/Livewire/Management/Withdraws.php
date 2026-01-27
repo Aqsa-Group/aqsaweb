@@ -37,6 +37,8 @@ class Withdraws extends Component
 
     // Available expense types
     public $expenseTypes = [
+        'Food',
+        'Gass',
         'Salary',
         'Office Supplies',
         'Utilities',
