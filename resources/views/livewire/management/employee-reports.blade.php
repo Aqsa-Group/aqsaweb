@@ -359,11 +359,14 @@
                             </td>
                             <td class="py-4 px-6">
                                 @if($report->file)
+                                {{-- قسمت لینک فایل را به این صورت تغییر دهید --}}
+                                @if($report->file)
                                 <a href="{{ route('employee.report.file', str_replace('/', '___', $report->file)) }}"
-                                    class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
-                                  bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300">
-                                    <i class="fas fa-file-download mr-1"></i> View File
+                                    download="{{ basename($report->file) }}" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+              bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300">
+                                    <i class="fas fa-file-download mr-1"></i> Download File
                                 </a>
+                                @endif
 
                                 @else
                                 <span
