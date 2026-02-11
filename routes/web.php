@@ -207,11 +207,18 @@ Route::get('/management/employee_reports', function () {
 
 
 // web.php
-Route::get('/employee-report-file/{path}', function ($path) {
-    $path = str_replace('___', '/', $path);
-    $fullPath = storage_path('app/' . $path);
 
-    abort_if(!file_exists($fullPath), 404);
+Route::get('/employee-report-file/{path}', function ($path) {
+
+    // تبدیل ___ به /
+    $path = str_replace('___', '/', $path);
+
+    // اگر اشتباها storage/ ذخیره شده باشه
+    $path = str_replace(['storage/', '/storage/'], '', $path);
+
+    $fullPath = storage_path('app/public/' . $path);
+
+    abort_if(!file_exists($fullPath), 404, 'File not found');
 
     $mime = mime_content_type($fullPath);
 
@@ -228,12 +235,9 @@ Route::get('/employee-report-file/{path}', function ($path) {
         return response()->file($fullPath);
     }
 
-    // بقیه دانلود بشن
+    // بقیه دانلود
     return response()->download($fullPath);
 })->name('employee.report.file');
-
-
-
 
 
 
