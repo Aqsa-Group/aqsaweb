@@ -155,6 +155,7 @@
                                 <option value="Administrator">Administrator</option>
                                 <option value="Manager">Manager</option>
                                 <option value="HR Manager">HR Manager</option>
+                                <option value="HR Manager">Web Leader</option>
                                 <option value="Supervisor">Supervisor</option>
                                 <option value="Employee" selected>Employee</option>
                                 <option value="Viewer">Viewer</option>

@@ -453,7 +453,7 @@ $currentUser = Auth::guard('management')->user();
                                 </a>
                                 @endif
 
-                                @if ($currentUser->role === 'Manager' || $currentUser->role === 'HR Manager' ||
+                                @if ($currentUser->role === 'Manager' || $currentUser->role === 'HR Manager' ||  $currentUser->role === 'Web Leader' ||
                                 $currentUser->role === 'Employee' ||
                                 $currentUser->role === 'Administrator')
                                 <a href="{{ route('management.employee_reports') }}"
