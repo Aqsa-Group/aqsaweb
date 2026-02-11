@@ -15,8 +15,7 @@
         @endif
 
         @if (session()->has('error'))
-        <div
-            class="animate-slide-up p-4 bg-red-500 text-white rounded-xl shadow-lg flex items-center justify-between">
+        <div class="animate-slide-up p-4 bg-red-500 text-white rounded-xl shadow-lg flex items-center justify-between">
             <div class="flex items-center">
                 <i class="fas fa-exclamation-triangle mr-3 text-xl"></i>
                 <span class="font-medium">{{ session('error') }}</span>
@@ -35,8 +34,8 @@
         @endphp
 
 
-     @if ($currentUser->role === 'Manager' || $currentUser->role === 'HR Manager' ||
-                                $currentUser->role === 'Administrator')
+        @if ($currentUser->role === 'Manager' || $currentUser->role === 'HR Manager' ||
+        $currentUser->role === 'Administrator')
 
 
         {{-- Statistics Cards --}}
@@ -360,10 +359,12 @@
                             </td>
                             <td class="py-4 px-6">
                                 @if($report->file)
-                                <a href="{{ Storage::url($report->file) }}" target="_blank"
-                                    class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800 transition-colors">
+                                <a href="{{ route('employee.report.file', str_replace('/', '___', $report->file)) }}"
+                                    class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+                                  bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300">
                                     <i class="fas fa-file-download mr-1"></i> View File
                                 </a>
+
                                 @else
                                 <span
                                     class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">

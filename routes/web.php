@@ -206,6 +206,31 @@ Route::get('/management/employee_reports', function () {
 
 
 
+// web.php
+Route::get('/employee-report-file/{path}', function ($path) {
+    $path = str_replace('___', '/', $path);
+    $fullPath = storage_path('app/' . $path);
+
+    abort_if(!file_exists($fullPath), 404);
+
+    $mime = mime_content_type($fullPath);
+
+    // فایل‌هایی که تو مرورگر باز میشن
+    $inlineMimes = [
+        'application/pdf',
+        'image/png',
+        'image/jpeg',
+        'image/webp',
+        'text/plain',
+    ];
+
+    if (in_array($mime, $inlineMimes)) {
+        return response()->file($fullPath);
+    }
+
+    // بقیه دانلود بشن
+    return response()->download($fullPath);
+})->name('employee.report.file');
 
 
 
