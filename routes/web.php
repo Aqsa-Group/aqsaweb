@@ -28,6 +28,12 @@ Route::get('/aboutUs', function () {
     return view('aboutUs'); })
     -> name('aboutUs');
 
+
+    Route::get('/privacy-policy',function () {
+    return view('privacy-policy'); })
+    -> name('priviciy');
+
+
 Route::get('/blog', function () {
     return view('blog'); })
     -> name('blog');

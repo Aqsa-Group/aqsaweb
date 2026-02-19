@@ -1553,6 +1553,8 @@
                 <a href="{{ route('aboutUs')}}" class="text-xl hover:text-cyan-600 cursor-pointer">About Us</a>
                 <a href="{{ route('blog')}}" class="text-xl hover:text-cyan-600 cursor-pointer">Blog</a>
                 <a href="{{ route('contact')}}" class="text-xl hover:text-cyan-600 cursor-pointer">Contact Us</a>
+                <a href="{{ route('priviciy')}}" class="text-xl hover:text-cyan-600 cursor-pointer">Privacy & Legal Policy</a>
+
             </div>
 
             <!-- Mobile Menu Button -->
