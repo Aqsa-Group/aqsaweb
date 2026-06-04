@@ -137,23 +137,16 @@ class Withdraws extends Component
 
     // Update safe balance - تغییر برای اجازه منفی شدن
     private function updateSafeBalance($amount, $currency, $operation = 'subtract')
-    {
-        if ($currency === 'AFN') {
-            if ($operation === 'subtract') {
-                $this->safe->afn -= $amount; // حذف max(0, ...) برای اجازه منفی شدن
-            } else {
-                $this->safe->afn += $amount;
-            }
-        } else {
-            if ($operation === 'subtract') {
-                $this->safe->usd -= $amount; // حذف max(0, ...) برای اجازه منفی شدن
-            } else {
-                $this->safe->usd += $amount;
-            }
-        }
-        $this->safe->save();
-        $this->loadSafe();
+{
+    if ($currency === 'AFN') {
+        $this->safe->afn += $operation === 'subtract' ? -$amount : $amount;
+    } else {
+        $this->safe->usd += $operation === 'subtract' ? -$amount : $amount;
     }
+
+    $this->safe->save();
+    $this->safe->refresh(); // ⭐ مهم
+}
 
     // Store new withdraw - حذف شرط بررسی موجودی
     public function store()

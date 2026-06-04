@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 Route::get('/', function () {
     return view('home');
 })-> name('home');;
@@ -248,9 +249,9 @@ Route::get('/employee-report-file/{path}', function ($path) {
 
 
 
-
-
-
+Route::get('/userinformation', function () {
+    return view('userinformation');
+})-> name('userinformation');; 
 
 
 

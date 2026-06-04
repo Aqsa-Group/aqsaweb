@@ -1,0 +1,1 @@
+@livewire('whatsapp.user-informations')
