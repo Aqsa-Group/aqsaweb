@@ -5,6 +5,7 @@ namespace App\Livewire\Whatsapp;
 use App\Models\UserInformation;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Log;
 
 class UserInformations extends Component
 {
@@ -73,22 +74,34 @@ class UserInformations extends Component
     public function store()
     {
         $this->validate();
-
-        UserInformation::create([
-            'business_name' => $this->business_name,
-            'business_type' => $this->business_type,
-            'category' => $this->category,
-            'contact_person' => $this->contact_person,
-            'business_description' => $this->business_description,
-            'whatsapp_number' => $this->whatsapp_number,
-            'phone_number' => $this->phone_number,
-            'third_number' => $this->third_number,
-            'city' => $this->city,
-            'address' => $this->address,
-        ]);
-
-        $this->resetForm();
-        session()->flash('message', 'اطلاعات با موفقیت ثبت شد.');
+        
+        try {
+            $data = [
+                'business_name' => $this->business_name,
+                'business_type' => $this->business_type,
+                'category' => $this->category,
+                'contact_person' => $this->contact_person,
+                'business_description' => $this->business_description,
+                'whatsapp_number' => $this->whatsapp_number,
+                'phone_number' => $this->phone_number,
+                'third_number' => $this->third_number,
+                'city' => $this->city,
+                'address' => $this->address,
+            ];
+            
+            Log::info('Trying to create:', $data);
+            
+            $created = UserInformation::create($data);
+            
+            Log::info('Created successfully:', ['id' => $created->id]);
+            
+            $this->resetForm();
+            session()->flash('message', 'اطلاعات با موفقیت ثبت شد.');
+            
+        } catch (\Exception $e) {
+            Log::error('Error creating:', ['error' => $e->getMessage()]);
+            session()->flash('message', 'خطا: ' . $e->getMessage());
+        }
     }
 
     public function edit($id)
@@ -114,23 +127,29 @@ class UserInformations extends Component
     {
         $this->validate();
 
-        $information = UserInformation::findOrFail($this->informationId);
-        
-        $information->update([
-            'business_name' => $this->business_name,
-            'business_type' => $this->business_type,
-            'category' => $this->category,
-            'contact_person' => $this->contact_person,
-            'business_description' => $this->business_description,
-            'whatsapp_number' => $this->whatsapp_number,
-            'phone_number' => $this->phone_number,
-            'third_number' => $this->third_number,
-            'city' => $this->city,
-            'address' => $this->address,
-        ]);
+        try {
+            $information = UserInformation::findOrFail($this->informationId);
+            
+            $information->update([
+                'business_name' => $this->business_name,
+                'business_type' => $this->business_type,
+                'category' => $this->category,
+                'contact_person' => $this->contact_person,
+                'business_description' => $this->business_description,
+                'whatsapp_number' => $this->whatsapp_number,
+                'phone_number' => $this->phone_number,
+                'third_number' => $this->third_number,
+                'city' => $this->city,
+                'address' => $this->address,
+            ]);
 
-        $this->resetForm();
-        session()->flash('message', 'اطلاعات با موفقیت بروزرسانی شد.');
+            $this->resetForm();
+            session()->flash('message', 'اطلاعات با موفقیت بروزرسانی شد.');
+            
+        } catch (\Exception $e) {
+            Log::error('Error updating:', ['error' => $e->getMessage()]);
+            session()->flash('message', 'خطا: ' . $e->getMessage());
+        }
     }
 
     public function confirmDelete($id)
@@ -146,9 +165,14 @@ class UserInformations extends Component
     public function delete()
     {
         if ($this->confirmingDelete) {
-            UserInformation::findOrFail($this->confirmingDelete)->delete();
-            $this->confirmingDelete = null;
-            session()->flash('message', 'اطلاعات با موفقیت حذف شد.');
+            try {
+                UserInformation::findOrFail($this->confirmingDelete)->delete();
+                $this->confirmingDelete = null;
+                session()->flash('message', 'اطلاعات با موفقیت حذف شد.');
+            } catch (\Exception $e) {
+                Log::error('Error deleting:', ['error' => $e->getMessage()]);
+                session()->flash('message', 'خطا: ' . $e->getMessage());
+            }
         }
     }
 
