@@ -178,6 +178,6 @@ class UserInformations extends Component
 
     public function updatingSearch()
     {
-        $this->resetPage();
+        $this->resetPage(); 
     }
 }
