@@ -32,8 +32,6 @@ class UserInformations extends Component
         'address' => 'nullable|string|max:500',
     ];
 
-    protected $listeners = ['deleteConfirmed' => 'delete'];
-
     public function render()
     {
         $informations = UserInformation::query()
@@ -72,12 +70,6 @@ class UserInformations extends Component
         $this->resetValidation();
     }
 
-    public function create()
-    {
-        $this->resetForm();
-        $this->dispatch('openModal');
-    }
-
     public function store()
     {
         $this->validate();
@@ -97,7 +89,6 @@ class UserInformations extends Component
 
         $this->resetForm();
         session()->flash('message', 'اطلاعات با موفقیت ثبت شد.');
-        $this->dispatch('closeModal');
     }
 
     public function edit($id)
@@ -117,7 +108,6 @@ class UserInformations extends Component
         $this->address = $information->address;
         
         $this->isEdit = true;
-        $this->dispatch('openModal');
     }
 
     public function update()
@@ -141,7 +131,6 @@ class UserInformations extends Component
 
         $this->resetForm();
         session()->flash('message', 'اطلاعات با موفقیت بروزرسانی شد.');
-        $this->dispatch('closeModal');
     }
 
     public function confirmDelete($id)
