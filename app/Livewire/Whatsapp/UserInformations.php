@@ -13,7 +13,8 @@ class UserInformations extends Component
 
     public $business_name, $business_type, $category, $contact_person;
     public $business_description, $whatsapp_number, $phone_number;
-    public $third_number, $city, $address;
+    public $third_number, $address;
+    public $city = 'هرات';
     
     public $informationId;
     public $isEdit = false;

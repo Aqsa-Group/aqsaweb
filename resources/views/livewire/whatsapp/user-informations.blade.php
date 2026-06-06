@@ -171,13 +171,50 @@
                             placeholder="شماره سوم">
                     </div>
 
-                    <!-- City -->
-                    <div>
-                        <label class="block text-xs sm:text-sm font-bold text-black mb-1">شهر</label>
-                        <input type="text" wire:model="city"
-                            class="w-full border-2 border-black rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition bg-white text-black placeholder-slate-400 font-medium"
-                            placeholder="نام شهر">
-                    </div>
+                  <!-- شهر -->
+<div>
+    <label class="block text-xs sm:text-sm font-bold text-black mb-1">شهر</label>
+
+    <select wire:model="city"
+        class="w-full border-2 border-black rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition bg-white text-black font-medium">
+        
+        <option value="هرات">هرات</option>
+        <option value="کابل">کابل</option>
+        <option value="قندهار">قندهار</option>
+        <option value="بلخ">بلخ</option>
+        <option value="ننگرهار">ننگرهار</option>
+        <option value="بامیان">بامیان</option>
+        <option value="بدخشان">بدخشان</option>
+        <option value="بغلان">بغلان</option>
+        <option value="فاریاب">فاریاب</option>
+        <option value="غزنی">غزنی</option>
+        <option value="غور">غور</option>
+        <option value="هلمند">هلمند</option>
+        <option value="جوزجان">جوزجان</option>
+        <option value="کاپیسا">کاپیسا</option>
+        <option value="خوست">خوست</option>
+        <option value="کنر">کنر</option>
+        <option value="کندز">کندز</option>
+        <option value="لغمان">لغمان</option>
+        <option value="لوگر">لوگر</option>
+        <option value="میدان وردک">میدان وردک</option>
+        <option value="نورستان">نورستان</option>
+        <option value="پکتیا">پکتیا</option>
+        <option value="پکتیکا">پکتیکا</option>
+        <option value="پنجشیر">پنجشیر</option>
+        <option value="پروان">پروان</option>
+        <option value="سمنگان">سمنگان</option>
+        <option value="سرپل">سرپل</option>
+        <option value="تخار">تخار</option>
+        <option value="ارزگان">ارزگان</option>
+        <option value="دایکندی">دایکندی</option>
+        <option value="فراه">فراه</option>
+        <option value="نیمروز">نیمروز</option>
+        <option value="زابل">زابل</option>
+        <option value="بادغیس">بادغیس</option>
+        <option value="پلخمری">پلخمری</option>
+    </select>
+</div>
 
                     <!-- Address -->
                     <div class="sm:col-span-2">
