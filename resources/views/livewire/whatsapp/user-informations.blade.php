@@ -177,13 +177,7 @@
                         </select>
                     </div>
 
-                    <!-- Contact Person -->
-                    <div>
-                        <label class="block text-xs sm:text-sm font-bold text-slate-300 mb-2">شخص تماس</label>
-                        <input type="text" wire:model="contact_person"
-                            class="w-full bg-slate-900/80 border-2 border-slate-600 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-200 placeholder-slate-500 font-medium hover:border-slate-500"
-                            placeholder="نام شخص تماس">
-                    </div>
+                 
 
                     <!-- WhatsApp Number -->
                     <div>
