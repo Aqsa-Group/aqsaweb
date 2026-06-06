@@ -64,11 +64,11 @@ class UserInformations extends Component
             'whatsapp_number',
             'phone_number',
             'third_number',
-            'city',
             'address',
             'informationId',
             'isEdit'
         ]);
+        $this->city = 'هرات'; // تنظیم مقدار پیش‌فرض بعد از ریست
         $this->resetValidation();
     }
 
@@ -118,10 +118,12 @@ class UserInformations extends Component
         $this->whatsapp_number = $information->whatsapp_number;
         $this->phone_number = $information->phone_number;
         $this->third_number = $information->third_number;
-        $this->city = $information->city;
+        $this->city = $information->city ?? 'هرات';
         $this->address = $information->address;
         
         $this->isEdit = true;
+        
+        Log::info('Edit loaded:', ['id' => $id, 'city' => $this->city]);
     }
 
     public function update()
