@@ -146,14 +146,7 @@
                         </select>
                     </div>
 
-                    <!-- Contact Person -->
-                    <div>
-                        <label class="block text-xs sm:text-sm font-bold text-black mb-1">شخص تماس</label>
-                        <input type="text" wire:model="contact_person"
-                            class="w-full border-2 border-black rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition bg-white text-black placeholder-slate-400 font-medium"
-                            placeholder="نام شخص تماس">
-                    </div>
-
+                   
                     <!-- WhatsApp Number -->
                     <div>
                         <label class="block text-xs sm:text-sm font-bold text-black mb-1">شماره واتساپ</label>
