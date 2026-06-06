@@ -177,12 +177,20 @@
                         </select>
                     </div>
 
+                    <!-- Contact Person -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-bold text-slate-300 mb-2">شخص تماس</label>
+                        <input type="text" wire:model="contact_person"
+                            class="w-full bg-slate-900/80 border-2 border-slate-600 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-slate-200 placeholder-slate-500 font-medium hover:border-slate-500"
+                            placeholder="نام شخص تماس">
+                    </div>
+
                     <!-- WhatsApp Number -->
                     <div>
                         <label class="block text-xs sm:text-sm font-bold text-slate-300 mb-2">
                             <span class="flex items-center gap-1.5">
                                 <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967..."/>
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                 </svg>
                                 شماره واتساپ
                             </span>
@@ -293,7 +301,7 @@
                 <!-- Form Buttons -->
                 <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-end">
                     @if($isEdit)
-                    <button type="button" wire:click="resetForm"
+                    <button type="button" wire:click.prevent="resetForm"
                         class="group bg-slate-800 border-2 border-slate-600 text-slate-300 hover:bg-slate-700 hover:border-slate-500 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 flex items-center gap-2">
                         <svg class="w-4 h-4 group-hover:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -389,7 +397,7 @@
                                 @if($information->whatsapp_number)
                                 <span class="flex items-center gap-1.5">
                                     <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967..."/>
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                     </svg>
                                     {{ $information->whatsapp_number }}
                                 </span>
@@ -412,14 +420,14 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
                                 <div class="flex items-center justify-center gap-2">
-                                    <button wire:click="edit({{ $information->id }})"
+                                    <button type="button" wire:click.prevent="edit({{ $information->id }})"
                                         class="group relative text-emerald-400 hover:text-gray-900 hover:bg-emerald-500 p-2 rounded-lg border-2 border-emerald-500/50 hover:border-emerald-500 transition-all duration-200 hover:shadow-lg hover:shadow-emerald-500/20"
                                         title="ویرایش">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                                         </svg>
                                     </button>
-                                    <button wire:click="confirmDelete({{ $information->id }})"
+                                    <button type="button" wire:click.prevent="confirmDelete({{ $information->id }})"
                                         class="group relative text-red-400 hover:text-gray-900 hover:bg-red-500 p-2 rounded-lg border-2 border-red-500/50 hover:border-red-500 transition-all duration-200 hover:shadow-lg hover:shadow-red-500/20"
                                         title="حذف">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -486,13 +494,13 @@
                         </div>
                     </div>
                     <div class="flex gap-1.5 mr-2">
-                        <button wire:click="edit({{ $information->id }})"
+                        <button type="button" wire:click.prevent="edit({{ $information->id }})"
                             class="text-emerald-400 hover:text-gray-900 hover:bg-emerald-500 p-2 rounded-lg border-2 border-emerald-500/50 hover:border-emerald-500 transition-all duration-200">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                             </svg>
                         </button>
-                        <button wire:click="confirmDelete({{ $information->id }})"
+                        <button type="button" wire:click.prevent="confirmDelete({{ $information->id }})"
                             class="text-red-400 hover:text-gray-900 hover:bg-red-500 p-2 rounded-lg border-2 border-red-500/50 hover:border-red-500 transition-all duration-200">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
@@ -553,128 +561,143 @@
                 <div class="w-20 h-20 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg class="w-10 h-10 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
-                    </svg>
-                </div>
-                <p class="text-slate-300 text-base font-bold mb-1">هیچ اطلاعاتی یافت نشد</p>
-                <p class="text-slate-500 text-sm">برای شروع، اطلاعات جدیدی ثبت کنید</p>
+                </svg>
             </div>
-            @endforelse
-
-            @if($informations->hasPages())
-            <div class="mt-6">
-                {{ $informations->links() }}
-            </div>
-            @endif
+            <p class="text-slate-300 text-base font-bold mb-1">هیچ اطلاعاتی یافت نشد</p>
+            <p class="text-slate-500 text-sm">برای شروع، اطلاعات جدیدی ثبت کنید</p>
         </div>
+        @endforelse
 
-        <!-- Delete Confirmation Modal -->
-        @if($confirmingDelete)
-        <div class="fixed inset-0 z-50 overflow-y-auto animate-fadeIn">
-            <div class="flex items-center justify-center min-h-screen px-4">
-                <div class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity" wire:click="cancelDelete"></div>
-                <div class="relative bg-slate-800 rounded-2xl max-w-md w-full p-8 shadow-2xl border border-slate-700 animate-scaleIn">
-                    <div class="text-center">
-                        <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-red-900/50 to-red-800/50 border-2 border-red-500/30 mb-6 animate-bounce">
-                            <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-200 mb-3">تأیید حذف</h3>
-                        <p class="text-slate-400 text-sm mb-8 font-medium leading-relaxed">
-                            آیا از حذف این اطلاعات اطمینان دارید؟<br>
-                            <span class="text-red-400 text-xs">این عملیات قابل بازگشت نیست!</span>
-                        </p>
-                        <div class="flex gap-3 justify-center">
-                            <button wire:click="delete"
-                                class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-gray-900 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 shadow-lg shadow-red-500/20 hover:shadow-xl hover:shadow-red-500/30 transform hover:-translate-y-0.5">
-                                بله، حذف کن
-                            </button>
-                            <button wire:click="cancelDelete"
-                                class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 border-2 border-slate-600 hover:border-slate-500">
-                                انصراف
-                            </button>
-                        </div>
+        @if($informations->hasPages())
+        <div class="mt-6">
+            {{ $informations->links() }}
+        </div>
+        @endif
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    @if($confirmingDelete)
+    <div class="fixed inset-0 z-50 overflow-y-auto animate-fadeIn">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity" wire:click="cancelDelete"></div>
+            <div class="relative bg-slate-800 rounded-2xl max-w-md w-full p-8 shadow-2xl border border-slate-700 animate-scaleIn">
+                <div class="text-center">
+                    <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-red-900/50 to-red-800/50 border-2 border-red-500/30 mb-6 animate-bounce">
+                        <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-200 mb-3">تأیید حذف</h3>
+                    <p class="text-slate-400 text-sm mb-8 font-medium leading-relaxed">
+                        آیا از حذف این اطلاعات اطمینان دارید؟<br>
+                        <span class="text-red-400 text-xs">این عملیات قابل بازگشت نیست!</span>
+                    </p>
+                    <div class="flex gap-3 justify-center">
+                        <button type="button" wire:click.prevent="delete"
+                            class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-gray-900 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 shadow-lg shadow-red-500/20 hover:shadow-xl hover:shadow-red-500/30 transform hover:-translate-y-0.5">
+                            بله، حذف کن
+                        </button>
+                        <button type="button" wire:click.prevent="cancelDelete"
+                            class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200 border-2 border-slate-600 hover:border-slate-500">
+                            انصراف
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        @endif
-
     </div>
-    <style>
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    
-    @keyframes scaleIn {
-        from { 
-            opacity: 0;
-            transform: scale(0.9) translateY(20px);
-        }
-        to { 
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-    }
-    
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    
-    .animate-fadeIn {
-        animation: fadeIn 0.2s ease-out;
-    }
-    
-    .animate-scaleIn {
-        animation: scaleIn 0.3s ease-out;
-    }
-    
-    .animate-slideIn {
-        animation: slideIn 0.3s ease-out;
-    }
-    
-    /* استایل اسکرول بار تیره */
-    .overflow-x-auto::-webkit-scrollbar {
-        height: 8px;
-    }
-    
-    .overflow-x-auto::-webkit-scrollbar-track {
-        background: #1e293b;
-        border-radius: 10px;
-    }
-    
-    .overflow-x-auto::-webkit-scrollbar-thumb {
-        background: linear-gradient(to right, #475569, #64748b);
-        border-radius: 10px;
-    }
-    
-    .overflow-x-auto::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(to right, #64748b, #94a3b8);
-    }
-    
-    /* استایل select option */
-    select option {
-        background-color: #1e293b;
-        color: #e2e8f0;
-    }
-    
-    /* استایل placeholder */
-    ::placeholder {
-        color: #64748b !important;
-    }
-    
-    /* استایل focus */
-    input:focus, select:focus, textarea:focus {
-        outline: none;
-    }
-</style>
+    @endif
+
 </div>
 
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { 
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.2s ease-out;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.3s ease-out;
+}
+
+.animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+    height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #475569, #64748b);
+    border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, #64748b, #94a3b8);
+}
+
+select option {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+::placeholder {
+    color: #64748b !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+</style>
+<script>
+document.addEventListener('livewire:init', () => {
+    Livewire.on('edit-mode-activated', (event) => {
+        const data = event[0];
+        
+        // تنظیم مستقیم value فیلدها
+        if (data.business_name) document.getElementById('input_business_name').value = data.business_name;
+        if (data.business_type) document.getElementById('input_business_type').value = data.business_type;
+        if (data.category) document.getElementById('input_category').value = data.category;
+        if (data.contact_person) document.getElementById('input_contact_person').value = data.contact_person;
+        if (data.whatsapp_number) document.getElementById('input_whatsapp_number').value = data.whatsapp_number;
+        if (data.phone_number) document.getElementById('input_phone_number').value = data.phone_number;
+        if (data.third_number) document.getElementById('input_third_number').value = data.third_number;
+        if (data.city) document.getElementById('input_city').value = data.city;
+        if (data.address) document.getElementById('input_address').value = data.address;
+        if (data.business_description) document.getElementById('input_business_description').value = data.business_description;
+    });
+});
+</script>
+</div>

@@ -16,7 +16,7 @@ class UserInformations extends Component
     public $third_number, $address;
     public $city = 'هرات';
     
-    public $informationId;
+    public $informationId = null;
     public $isEdit = false;
     public $search = '';
     public $confirmingDelete = null;
@@ -68,7 +68,7 @@ class UserInformations extends Component
             'informationId',
             'isEdit'
         ]);
-        $this->city = 'هرات'; // تنظیم مقدار پیش‌فرض بعد از ریست
+        $this->city = 'هرات';
         $this->resetValidation();
     }
 
@@ -77,7 +77,7 @@ class UserInformations extends Component
         $this->validate();
         
         try {
-            $data = [
+            UserInformation::create([
                 'business_name' => $this->business_name,
                 'business_type' => $this->business_type,
                 'category' => $this->category,
@@ -88,46 +88,60 @@ class UserInformations extends Component
                 'third_number' => $this->third_number,
                 'city' => $this->city,
                 'address' => $this->address,
-            ];
-            
-            Log::info('Trying to create:', $data);
-            
-            $created = UserInformation::create($data);
-            
-            Log::info('Created successfully:', ['id' => $created->id]);
-            
+            ]);
+
             $this->resetForm();
-            session()->flash('message', 'اطلاعات با موفقیت ثبت شد.');
+            session()->flash('message', '✅ اطلاعات با موفقیت ثبت شد.');
             
         } catch (\Exception $e) {
             Log::error('Error creating:', ['error' => $e->getMessage()]);
-            session()->flash('message', 'خطا: ' . $e->getMessage());
+            session()->flash('message', '❌ خطا: ' . $e->getMessage());
         }
     }
 
-    public function edit($id)
-    {
-        $information = UserInformation::findOrFail($id);
-        
-        $this->informationId = $information->id;
-        $this->business_name = $information->business_name;
-        $this->business_type = $information->business_type;
-        $this->category = $information->category;
-        $this->contact_person = $information->contact_person;
-        $this->business_description = $information->business_description;
-        $this->whatsapp_number = $information->whatsapp_number;
-        $this->phone_number = $information->phone_number;
-        $this->third_number = $information->third_number;
-        $this->city = $information->city ?? 'هرات';
-        $this->address = $information->address;
-        
-        $this->isEdit = true;
-        
-        Log::info('Edit loaded:', ['id' => $id, 'city' => $this->city]);
+   public function edit($id)
+{
+    $information = UserInformation::find($id);
+    
+    if (!$information) {
+        return;
     }
+    
+    $this->informationId = $information->id;
+    $this->isEdit = true;
+    $this->business_name = $information->business_name;
+    $this->business_type = $information->business_type;
+    $this->category = $information->category;
+    $this->contact_person = $information->contact_person;
+    $this->business_description = $information->business_description;
+    $this->whatsapp_number = $information->whatsapp_number;
+    $this->phone_number = $information->phone_number;
+    $this->third_number = $information->third_number;
+    $this->city = $information->city ?? 'هرات';
+    $this->address = $information->address;
+    
+    // این خط معجزه میکنه - JavaScript مستقیم
+    $this->dispatch('edit-mode-activated', data: [
+        'business_name' => $this->business_name,
+        'business_type' => $this->business_type,
+        'category' => $this->category,
+        'contact_person' => $this->contact_person,
+        'business_description' => $this->business_description,
+        'whatsapp_number' => $this->whatsapp_number,
+        'phone_number' => $this->phone_number,
+        'third_number' => $this->third_number,
+        'city' => $this->city,
+        'address' => $this->address,
+    ]);
+}
 
     public function update()
     {
+        if (!$this->informationId) {
+            session()->flash('message', '❌ خطا: شناسه اطلاعات نامشخص است.');
+            return;
+        }
+
         $this->validate();
 
         try {
@@ -147,11 +161,11 @@ class UserInformations extends Component
             ]);
 
             $this->resetForm();
-            session()->flash('message', 'اطلاعات با موفقیت بروزرسانی شد.');
+            session()->flash('message', '✅ اطلاعات با موفقیت بروزرسانی شد.');
             
         } catch (\Exception $e) {
             Log::error('Error updating:', ['error' => $e->getMessage()]);
-            session()->flash('message', 'خطا: ' . $e->getMessage());
+            session()->flash('message', '❌ خطا: ' . $e->getMessage());
         }
     }
 
@@ -171,10 +185,10 @@ class UserInformations extends Component
             try {
                 UserInformation::findOrFail($this->confirmingDelete)->delete();
                 $this->confirmingDelete = null;
-                session()->flash('message', 'اطلاعات با موفقیت حذف شد.');
+                session()->flash('message', '✅ اطلاعات با موفقیت حذف شد.');
             } catch (\Exception $e) {
                 Log::error('Error deleting:', ['error' => $e->getMessage()]);
-                session()->flash('message', 'خطا: ' . $e->getMessage());
+                session()->flash('message', '❌ خطا: ' . $e->getMessage());
             }
         }
     }
