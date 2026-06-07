@@ -132,10 +132,6 @@ Route::post('/ads', [AdController::class, 'store'])->name('ads.store');
 // Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home'); // show
-Route::post('/', [HomeController::class, 'store'])->name('home.store'); // save
-
-
 
 
 
