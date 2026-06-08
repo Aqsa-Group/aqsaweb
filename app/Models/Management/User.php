@@ -10,7 +10,9 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
 
-    protected $table = 'panel_users'; 
+    protected $table = 'panel_users';
+     protected $connection = 'mysql';
+    
     use HasFactory, Notifiable;
 
     protected $fillable = [

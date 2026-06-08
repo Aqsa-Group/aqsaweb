@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AdController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManagementPanel\AuthController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
