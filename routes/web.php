@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\ManagementPanel\AuthController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -138,6 +139,16 @@ Route::post('/ads', [AdController::class, 'store'])->name('ads.store');
 
 // Management Panel
 
+Route::prefix('admin-dashboard')->name('admin.')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('/', [AdminDashboardController::class, 'dashboard'])->name('home');
+    Route::get('/dashboard', [AdminDashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/{section}/{page}', [AdminDashboardController::class, 'module'])->name('module');
+});
+
 
 Route::get('/management', [AuthController::class, 'showLoginForm'])->name('management.login.form');
 
@@ -247,8 +258,6 @@ Route::get('/employee-report-file/{path}', function ($path) {
 Route::get('/userinformation', function () {
     return view('userinformation');
 })-> name('userinformation');; 
-
-
 
 
 

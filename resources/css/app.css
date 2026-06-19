@@ -9,3 +9,50 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+@media (max-width: 1023px) {
+    body {
+        padding-top: 76px;
+        padding-bottom: 108px;
+    }
+
+    .mobile-admin-topbar {
+        background: #0f2d4f;
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .mobile-admin-bottom {
+        background: #0f2d4f;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 -10px 30px rgba(15, 45, 79, 0.28);
+    }
+
+    .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        min-width: 42px;
+        color: #c7d7ea;
+        font-size: 10px;
+        line-height: 1;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .mobile-nav-item i {
+        font-size: 16px;
+        color: #c7d7ea;
+    }
+
+    .mobile-nav-item:hover,
+    .mobile-nav-item:hover i {
+        color: #ffffff;
+    }
+
+    .mobile-dashboard-btn {
+        background: #315a89;
+        color: #ffffff;
+        box-shadow: 0 10px 25px rgba(49, 90, 137, 0.35);
+    }
+}

@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function showLoginForm()
+    public function showLoginForm(Request $request)
 {
    
     if (Auth::guard('management')->check()) {
-        return redirect()->route('management.home');
+        return redirect()->route($request->routeIs('admin.*') ? 'admin.dashboard' : 'management.home');
     }
 
     return view('Management.Auth.login');
@@ -36,7 +36,7 @@ class AuthController extends Controller
                 $user->save();
             }
 
-            return redirect()->route('management.home'); 
+            return redirect()->route($request->routeIs('admin.*') ? 'admin.dashboard' : 'management.home'); 
         }
 
         return back()->with('error', 'نام کاربری یا رمز  اشتباه است.');
@@ -56,11 +56,13 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
+        $loginRoute = $request->routeIs('admin.*') ? 'admin.login.form' : 'management.login.form';
+
         if ($request->header('X-Livewire') || $request->ajax()) {
-            return response()->json(['redirect' => route('management.login.form')], 401);
+            return response()->json(['redirect' => route($loginRoute)], 401);
         }
 
-        return redirect()->route('management.login.form');
+        return redirect()->route($loginRoute);
     }
 
 }

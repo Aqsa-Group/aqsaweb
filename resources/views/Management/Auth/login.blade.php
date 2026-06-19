@@ -113,7 +113,7 @@
                 </div>
 
                 <!-- Login Form -->
-                <form action="{{ route('management.login') }}" method="POST" class="space-y-6">
+                <form action="{{ request()->routeIs('admin.*') ? route('admin.login') : route('management.login') }}" method="POST" class="space-y-6">
                     @csrf
 
                     <!-- Username Field -->
