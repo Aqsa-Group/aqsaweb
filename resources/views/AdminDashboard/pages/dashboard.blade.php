@@ -11,6 +11,22 @@
             ['Food Distribution Supply Chain', 'Active', 'WFP Afghanistan', '200$'],
             ['ICT Infrastructure Setup', 'Under Review', 'UNACF Afghanistan', '9000$'],
             ['Network Maintenance support', 'Approved', 'WHO Afghanistan', '88,000'],
+            ['Vehicle Lease Agreement', 'Active', 'IOM Afghanistan', '4,500$'],
+            ['Fuel Delivery Contract', 'Under Review', 'UNDP Afghanistan', '7,200$'],
+            ['Internet Backup Line', 'Approved', 'UNICEF Afghanistan', '1,900$'],
+            ['Warehouse Rent Contract', 'Active', 'IRC Afghanistan', '3,400$'],
+            ['Server Room Maintenance', 'Active', 'WHO Afghanistan', '2,100$'],
+            ['Fleet Tracking Setup', 'Under Review', 'WFP Afghanistan', '5,600$'],
+            ['Office Equipment Support', 'Approved', 'UNHCR Afghanistan', '1,250$'],
+            ['Emergency Logistics Support', 'Active', 'MSF Afghanistan', '8,300$'],
+            ['Network Upgrade Phase 2', 'Under Review', 'ACF Afghanistan', '6,700$'],
+            ['ICT Helpdesk Retainer', 'Active', 'UNDP Afghanistan', '2,800$'],
+            ['Procurement Advisory', 'Approved', 'GIZ Afghanistan', '3,150$'],
+            ['Transport Support Plan', 'Active', 'WFP Afghanistan', '4,900$'],
+            ['Data Center Audit', 'Under Review', 'WHO Afghanistan', '9,100$'],
+            ['Private Sector CRM Setup', 'Approved', 'Ariana Group', '5,450$'],
+            ['Government Liaison Support', 'Active', 'MoPH Afghanistan', '6,250$'],
+            ['Audit Documentation Package', 'Approved', 'UNICEF Afghanistan', '2,650$'],
         ];
     @endphp
 
@@ -92,55 +108,7 @@
         <article class="erp-card p-7">
             <h2 id="mainChartTitle" class="mb-8 font-semibold">Revenue Logistic VS ICT (6 Month)</h2>
 
-            <div id="mainChartBars" class="bar-grid relative h-72 px-8 pb-12 pt-3">
-                <div class="inline-flex h-full w-[15%] flex-col justify-end gap-3 align-bottom">
-                    <div class="flex h-52 items-end justify-center gap-2">
-                        <span class="w-5 rounded-t bg-blue-600" style="height: 62%"></span>
-                        <span class="w-5 rounded-t bg-blue-200" style="height: 41%"></span>
-                    </div>
-                    <span class="text-center text-xs text-gray-500">Jan</span>
-                </div>
-
-                <div class="inline-flex h-full w-[15%] flex-col justify-end gap-3 align-bottom">
-                    <div class="flex h-52 items-end justify-center gap-2">
-                        <span class="w-5 rounded-t bg-blue-600" style="height: 52%"></span>
-                        <span class="w-5 rounded-t bg-blue-200" style="height: 78%"></span>
-                    </div>
-                    <span class="text-center text-xs text-gray-500">Feb</span>
-                </div>
-
-                <div class="inline-flex h-full w-[15%] flex-col justify-end gap-3 align-bottom">
-                    <div class="flex h-52 items-end justify-center gap-2">
-                        <span class="w-5 rounded-t bg-blue-600" style="height: 36%"></span>
-                        <span class="w-5 rounded-t bg-blue-200" style="height: 52%"></span>
-                    </div>
-                    <span class="text-center text-xs text-gray-500">Mar</span>
-                </div>
-
-                <div class="inline-flex h-full w-[15%] flex-col justify-end gap-3 align-bottom">
-                    <div class="flex h-52 items-end justify-center gap-2">
-                        <span class="w-5 rounded-t bg-blue-600" style="height: 36%"></span>
-                        <span class="w-5 rounded-t bg-blue-200" style="height: 36%"></span>
-                    </div>
-                    <span class="text-center text-xs text-gray-500">Apr</span>
-                </div>
-
-                <div class="inline-flex h-full w-[15%] flex-col justify-end gap-3 align-bottom">
-                    <div class="flex h-52 items-end justify-center gap-2">
-                        <span class="w-5 rounded-t bg-blue-600" style="height: 68%"></span>
-                        <span class="w-5 rounded-t bg-blue-200" style="height: 52%"></span>
-                    </div>
-                    <span class="text-center text-xs text-gray-500">May</span>
-                </div>
-
-                <div class="inline-flex h-full w-[15%] flex-col justify-end gap-3 align-bottom">
-                    <div class="flex h-52 items-end justify-center gap-2">
-                        <span class="w-5 rounded-t bg-blue-600" style="height: 31%"></span>
-                        <span class="w-5 rounded-t bg-blue-200" style="height: 52%"></span>
-                    </div>
-                    <span class="text-center text-xs text-gray-500">Jun</span>
-                </div>
-            </div>
+           <div id="mainChartBars" class="bar-grid relative h-72 overflow-x-auto overflow-y-hidden px-3 pb-12 pt-3 sm:px-8"></div>
 
             <div class="mt-4 flex justify-center gap-5 text-sm text-gray-600">
                 <label class="inline-flex cursor-pointer items-center gap-2">
@@ -177,17 +145,17 @@
 
     <section>
         <div class="mb-4 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <h2 class="rounded bg-gray-100 px-3 py-1 font-medium">Recent Contracts</h2>
-                <span class="rounded border border-gray-200 bg-white px-3 py-1 text-sm shadow-sm">Today</span>
-            </div>
+    <div class="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-[#F5F5F5] px-3 py-2 shadow-sm">
+        <h2 class="text-md font-medium text-gray-950">Recent Contracts</h2>
+        <span class="rounded-md border border-gray-200 bg-white px-3 py-1 text-sm shadow-sm">Today</span>
+    </div>
 
-            <a href="{{ route('admin.module', ['clients', 'clients']) }}" class="text-sm text-gray-600">More</a>
-        </div>
+    <a href="{{ route('admin.module', ['clients', 'clients']) }}" class="text-sm text-gray-600">More</a>
+</div>
 
         <div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
-            <div class="space-y-3 p-3 md:hidden">
-                @foreach ($contractRows as $row)
+            <div id="contractsCardList" class="space-y-3 p-3 md:hidden">
+                @foreach ($contractRows as $index => $row)
                     @php
                         $statusClass = match ($row[1]) {
                             'Active' => 'bg-green-50 text-green-600 ring-green-200',
@@ -196,13 +164,54 @@
                             default => 'bg-gray-50 text-gray-600 ring-gray-200',
                         };
                     @endphp
-                    <article class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                    <article class="contract-record rounded-lg border border-gray-200 bg-white p-4 shadow-sm" data-index="{{ $index }}">
                         <div class="mb-3 flex items-start justify-between gap-3">
                             <label class="flex min-w-0 items-start gap-3">
                                 <input type="checkbox" class="mt-1 rounded border-gray-300">
                                 <span class="font-medium text-gray-950">{{ $row[0] }}</span>
                             </label>
-                            <i class="fa-solid fa-ellipsis-vertical pt-1 text-gray-700"></i>
+                            <div class="flex shrink-0 items-center gap-2">
+    <button type="button" class="rounded-md border border-gray-200 p-2 text-blue-700">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1202_33320)">
+<path d="M18.3337 10C18.3337 12.357 18.3337 13.5355 17.6014 14.2678C17.067 14.8022 16.2949 14.9466 15.0003 14.9856M5.00033 14.9856C3.70579 14.9466 2.93364 14.8022 2.39923 14.2678C1.66699 13.5355 1.66699 12.357 1.66699 10C1.66699 7.64298 1.66699 6.46447 2.39923 5.73223C3.13146 5 4.30997 5 6.66699 5H13.3337C15.6907 5 16.8692 5 17.6014 5.73223C17.8513 5.98206 18.0158 6.28385 18.1243 6.66667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M7.5 8.33337H5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M15.833 12.5L4.16634 12.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M14.9856 4.99996C14.9466 3.70542 14.8022 2.93328 14.2678 2.39886C13.5355 1.66663 12.357 1.66663 10 1.66663C7.64298 1.66663 6.46447 1.66663 5.73223 2.39886C5.19781 2.93328 5.05344 3.70542 5.01444 4.99996M15 12.5V13.3333C15 15.6903 15 16.8688 14.2678 17.6011C13.7334 18.1355 12.9612 18.2799 11.6667 18.3189M5 12.5V13.3333C5 15.6903 5 16.8688 5.73223 17.6011C6.26665 18.1355 7.03879 18.2799 8.33333 18.3189" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="14.1663" cy="8.33333" r="0.833333" fill="#1C274C"/>
+</g>
+<defs>
+<clipPath id="clip0_1202_33320">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+    </button>
+    <button type="button" class="rounded-md border border-gray-200 p-2 text-gray-700">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1202_33313)">
+<path d="M11.967 3.39884L12.7394 2.62644C14.0192 1.34669 16.0941 1.34669 17.3738 2.62644C18.6536 3.90619 18.6536 5.98109 17.3738 7.26084L16.6014 8.03324M11.967 3.39884C11.967 3.39884 12.0636 5.04019 13.5118 6.48844C14.9601 7.93669 16.6014 8.03324 16.6014 8.03324M11.967 3.39884L10.0003 5.36556M7.08366 8.28223L4.86601 10.4999C4.38504 10.9808 4.14456 11.2213 3.93774 11.4865C3.69377 11.7993 3.4846 12.1377 3.31394 12.4958C3.16927 12.7994 3.06172 13.122 2.84663 13.7673L1.93517 16.5017L1.71237 17.1701C1.60652 17.4876 1.68916 17.8377 1.92585 18.0744C2.16254 18.3111 2.51264 18.3938 2.83019 18.2879L3.49859 18.0651L6.23297 17.1537C6.87826 16.9386 7.20091 16.831 7.50447 16.6863C7.86257 16.5157 8.20101 16.3065 8.5138 16.0625C8.77896 15.8557 9.01944 15.6152 9.50041 15.1343L9.63472 15L12.2176 12.4171L16.6014 8.03324M3.49859 18.0651L1.93517 16.5017" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1202_33313">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+    </button>
+    <button type="button" class="rounded-md border border-gray-200 p-2 text-red-600">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.0837 5H2.91699" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M7.91699 9.16663L8.33366 13.3333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M12.0837 9.16663L11.667 13.3333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M5.41699 5C5.46356 5 5.48684 5 5.50795 4.99947C6.19415 4.98208 6.79951 4.54576 7.03301 3.90027C7.04019 3.88041 7.04755 3.85832 7.06228 3.81415L7.14318 3.57143C7.21225 3.36423 7.24678 3.26063 7.29259 3.17267C7.47533 2.82173 7.81345 2.57803 8.20417 2.51564C8.3021 2.5 8.4113 2.5 8.62971 2.5H11.3709C11.5893 2.5 11.6986 2.5 11.7965 2.51564C12.1872 2.57803 12.5253 2.82173 12.7081 3.17267C12.7539 3.26063 12.7884 3.36423 12.8575 3.57143L12.9384 3.81415C12.9531 3.85826 12.9605 3.88042 12.9676 3.90027C13.2011 4.54576 13.8065 4.98208 14.4927 4.99947C14.5138 5 14.5371 5 14.5837 5" stroke="#1C274C" stroke-width="1.5"/>
+<path d="M15.3113 12.8326C15.1638 15.0451 15.09 16.1513 14.3692 16.8257C13.6483 17.5 12.5397 17.5 10.3223 17.5H9.67787C7.46054 17.5 6.35187 17.5 5.63103 16.8257C4.91019 16.1513 4.83644 15.0451 4.68895 12.8326L4.30566 7.08337M15.6946 7.08337L15.5279 9.58337" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+
+    </button>
+</div>
                         </div>
                         <div class="grid gap-2 text-sm text-gray-600">
                             <p class="flex items-center justify-between gap-4">
@@ -237,7 +246,7 @@
                 </thead>
 
                 <tbody>
-                    @foreach ($contractRows as $row)
+                    @foreach ($contractRows as $index => $row)
                         @php
                             $statusClass = match ($row[1]) {
                                 'Active' => 'bg-green-50 text-green-600 ring-green-200',
@@ -246,7 +255,7 @@
                                 default => 'bg-gray-50 text-gray-600 ring-gray-200',
                             };
                         @endphp
-                        <tr class="border-t border-gray-200">
+                        <tr class="contract-record border-t border-gray-200" data-index="{{ $index }}">
                             <td class="px-4 py-4"><input type="checkbox" class="rounded border-gray-300"></td>
                             <td class="px-4 py-4 font-medium text-gray-950">{{ $row[0] }}</td>
                             <td class="px-4 py-4">
@@ -254,7 +263,57 @@
                             </td>
                             <td class="px-4 py-4">{{ $row[2] }}</td>
                             <td class="px-4 py-4">{{ $row[3] }}</td>
-                            <td class="px-4 py-4 text-right"><i class="fa-solid fa-ellipsis-vertical text-gray-700"></i></td>
+                            <td class="relative px-4 py-4 text-right">
+    <button type="button" class="contract-action-toggle rounded-md p-2 text-gray-700 hover:bg-gray-100">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </button>
+
+    <div class="contract-action-menu absolute right-4 top-12 z-40 hidden w-40 rounded-xl border border-gray-200 bg-white py-2 text-left shadow-xl">
+        <button type="button" class="flex w-full items-center gap-1 px-4 py-2 text-sm text-gray-950 hover:bg-gray-50">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1202_33320)">
+<path d="M18.3337 10C18.3337 12.357 18.3337 13.5355 17.6014 14.2678C17.067 14.8022 16.2949 14.9466 15.0003 14.9856M5.00033 14.9856C3.70579 14.9466 2.93364 14.8022 2.39923 14.2678C1.66699 13.5355 1.66699 12.357 1.66699 10C1.66699 7.64298 1.66699 6.46447 2.39923 5.73223C3.13146 5 4.30997 5 6.66699 5H13.3337C15.6907 5 16.8692 5 17.6014 5.73223C17.8513 5.98206 18.0158 6.28385 18.1243 6.66667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M7.5 8.33337H5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M15.833 12.5L4.16634 12.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M14.9856 4.99996C14.9466 3.70542 14.8022 2.93328 14.2678 2.39886C13.5355 1.66663 12.357 1.66663 10 1.66663C7.64298 1.66663 6.46447 1.66663 5.73223 2.39886C5.19781 2.93328 5.05344 3.70542 5.01444 4.99996M15 12.5V13.3333C15 15.6903 15 16.8688 14.2678 17.6011C13.7334 18.1355 12.9612 18.2799 11.6667 18.3189M5 12.5V13.3333C5 15.6903 5 16.8688 5.73223 17.6011C6.26665 18.1355 7.03879 18.2799 8.33333 18.3189" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="14.1663" cy="8.33333" r="0.833333" fill="#1C274C"/>
+</g>
+<defs>
+<clipPath id="clip0_1202_33320">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+            <span>Print</span>
+        </button>
+        <button type="button" class="flex w-full items-center gap-1 px-4 py-2 text-sm text-gray-950 hover:bg-gray-50">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1202_33313)">
+<path d="M11.967 3.39884L12.7394 2.62644C14.0192 1.34669 16.0941 1.34669 17.3738 2.62644C18.6536 3.90619 18.6536 5.98109 17.3738 7.26084L16.6014 8.03324M11.967 3.39884C11.967 3.39884 12.0636 5.04019 13.5118 6.48844C14.9601 7.93669 16.6014 8.03324 16.6014 8.03324M11.967 3.39884L10.0003 5.36556M7.08366 8.28223L4.86601 10.4999C4.38504 10.9808 4.14456 11.2213 3.93774 11.4865C3.69377 11.7993 3.4846 12.1377 3.31394 12.4958C3.16927 12.7994 3.06172 13.122 2.84663 13.7673L1.93517 16.5017L1.71237 17.1701C1.60652 17.4876 1.68916 17.8377 1.92585 18.0744C2.16254 18.3111 2.51264 18.3938 2.83019 18.2879L3.49859 18.0651L6.23297 17.1537C6.87826 16.9386 7.20091 16.831 7.50447 16.6863C7.86257 16.5157 8.20101 16.3065 8.5138 16.0625C8.77896 15.8557 9.01944 15.6152 9.50041 15.1343L9.63472 15L12.2176 12.4171L16.6014 8.03324M3.49859 18.0651L1.93517 16.5017" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_1202_33313">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+            <span>Edit</span>
+        </button>
+        <button type="button" class="flex w-full items-center gap-1 px-4 py-2 text-sm text-gray-950 hover:bg-gray-50">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.0837 5H2.91699" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M7.91699 9.16663L8.33366 13.3333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M12.0837 9.16663L11.667 13.3333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M5.41699 5C5.46356 5 5.48684 5 5.50795 4.99947C6.19415 4.98208 6.79951 4.54576 7.03301 3.90027C7.04019 3.88041 7.04755 3.85832 7.06228 3.81415L7.14318 3.57143C7.21225 3.36423 7.24678 3.26063 7.29259 3.17267C7.47533 2.82173 7.81345 2.57803 8.20417 2.51564C8.3021 2.5 8.4113 2.5 8.62971 2.5H11.3709C11.5893 2.5 11.6986 2.5 11.7965 2.51564C12.1872 2.57803 12.5253 2.82173 12.7081 3.17267C12.7539 3.26063 12.7884 3.36423 12.8575 3.57143L12.9384 3.81415C12.9531 3.85826 12.9605 3.88042 12.9676 3.90027C13.2011 4.54576 13.8065 4.98208 14.4927 4.99947C14.5138 5 14.5371 5 14.5837 5" stroke="#1C274C" stroke-width="1.5"/>
+<path d="M15.3113 12.8326C15.1638 15.0451 15.09 16.1513 14.3692 16.8257C13.6483 17.5 12.5397 17.5 10.3223 17.5H9.67787C7.46054 17.5 6.35187 17.5 5.63103 16.8257C4.91019 16.1513 4.83644 15.0451 4.68895 12.8326L4.30566 7.08337M15.6946 7.08337L15.5279 9.58337" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+
+            <span>Delete</span>
+        </button>
+    </div>
+</td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -263,10 +322,15 @@
             <div class="flex flex-col gap-3 border-t border-gray-200 px-4 py-4 text-sm text-gray-600 md:flex-row md:items-center md:justify-between">
                 <span>0 of 68 row(s) selected.</span>
 
-                <div class="flex items-center gap-6">
-                    <span>Rows per page</span>
-                    <span class="rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-950">10</span>
-                    <span class="text-gray-950">Page 1 of 7</span>
+                <div class="flex flex-wrap items-center gap-3 sm:gap-6">
+                    <label for="rowsPerPageSelect">Rows per page</label>
+                    <select id="rowsPerPageSelect" class="rounded-md border border-gray-200 bg-white px-3 py-2 text-gray-950 outline-none focus:border-blue-400">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                    <span id="pageCountText" class="text-gray-950">Page 1 of 2</span>
 
                     <div class="flex items-center gap-2">
                         <button class="rounded-md border border-gray-200 px-3 py-2 text-gray-400">
@@ -283,11 +347,16 @@
     <script>
     const dashboardCharts = {
         revenue: {
-            title: "Revenue Logistic VS ICT (6 Month)",
-            legendOne: "ICT",
-            legendTwo: "Logistic",
-            months: [["Jan", 62, 41], ["Feb", 52, 78], ["Mar", 36, 52], ["Apr", 36, 36], ["May", 68, 52], ["Jun", 31, 52]],
-        },
+    title: "Revenue Logistic VS ICT (12 Month)",
+    legendOne: "ICT",
+    legendTwo: "Logistic",
+    months: [
+        ["Jan", 62, 41], ["Feb", 52, 78], ["Mar", 36, 52],
+        ["Apr", 36, 36], ["May", 68, 52], ["Jun", 31, 52],
+        ["Jul", 58, 46], ["Aug", 72, 61], ["Sep", 44, 55],
+        ["Oct", 63, 48], ["Nov", 70, 66], ["Dec", 56, 73],
+    ],
+},
         contacts: {
             title: "Active Contacts VS New Contacts (6 Month)",
             legendOne: "Active",
@@ -327,12 +396,17 @@
         });
 
         wrapper.innerHTML = chart.months.map(([month, first, second]) => `
-            <div class="inline-flex h-full w-[15%] flex-col justify-end gap-3 align-bottom">
+            <div class="group relative inline-flex h-full min-w-[74px] flex-col justify-end gap-3 align-bottom">
                 <div class="flex h-52 items-end justify-center gap-2">
-                    ${visibleSeries.first ? `<span class="w-5 rounded-t bg-blue-600 transition-all duration-300" title="${chart.legendOne}: ${first}%" style="height:${first}%"></span>` : ""}
-                    ${visibleSeries.second ? `<span class="w-5 rounded-t bg-blue-200 transition-all duration-300" title="${chart.legendTwo}: ${second}%" style="height:${second}%"></span>` : ""}
+                    ${visibleSeries.first ? `<span class="w-5 rounded-t bg-blue-600 transition-all duration-300" style="height:${first}%"></span>` : ""}
+                    ${visibleSeries.second ? `<span class="w-5 rounded-t bg-blue-200 transition-all duration-300" style="height:${second}%"></span>` : ""}
                 </div>
                 <span class="text-center text-xs text-gray-500">${month}</span>
+                <span class="pointer-events-none absolute left-1/2 top-20 z-20 hidden w-max max-w-[220px] -translate-x-1/2 rounded bg-white px-5 py-4 text-left shadow-xl ring-1 ring-gray-100 group-hover:block">
+                    <b class="mb-2 block text-lg text-gray-950">${month}</b>
+                    ${visibleSeries.first ? `<span class="block whitespace-nowrap text-sm font-semibold text-gray-950">${chart.legendOne}: ${(first * 100000).toLocaleString()} AF</span>` : ""}
+                    ${visibleSeries.second ? `<span class="block whitespace-nowrap text-sm font-semibold text-gray-950">${chart.legendTwo}: ${(second * 100000).toLocaleString()} AF</span>` : ""}
+                </span>
             </div>
         `).join("");
     }
@@ -360,6 +434,43 @@
         });
     });
 
+    function updateVisibleContracts() {
+        const rowsPerPage = Number(document.getElementById("rowsPerPageSelect")?.value || 10);
+        const records = document.querySelectorAll(".contract-record");
+        const total = records.length / 2;
+
+        records.forEach((record) => {
+            const index = Number(record.dataset.index);
+            record.classList.toggle("hidden", index >= rowsPerPage);
+        });
+
+        const pageCount = Math.max(1, Math.ceil(total / rowsPerPage));
+        document.getElementById("pageCountText").textContent = `Page 1 of ${pageCount}`;
+    }
+
+    document.getElementById("rowsPerPageSelect")?.addEventListener("change", updateVisibleContracts);
+document.querySelectorAll(".contract-action-toggle").forEach((button) => {
+    button.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        const menu = button.parentElement.querySelector(".contract-action-menu");
+
+        document.querySelectorAll(".contract-action-menu").forEach((item) => {
+            if (item !== menu) {
+                item.classList.add("hidden");
+            }
+        });
+
+        menu.classList.toggle("hidden");
+    });
+});
+
+document.addEventListener("click", () => {
+    document.querySelectorAll(".contract-action-menu").forEach((menu) => {
+        menu.classList.add("hidden");
+    });
+});
     renderDashboardChart("revenue");
+    updateVisibleContracts();
 </script>
 @endsection

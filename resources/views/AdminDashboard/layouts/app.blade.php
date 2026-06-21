@@ -7,9 +7,11 @@
     <title>@yield('title', 'AQSA SYSTEM')</title>
     <link rel="icon" type="image/jpeg" href="{{ asset('images/aqsa.jpg') }}">
     <script src="https://cdn.tailwindcss.com"></script>
+    @livewireStyles
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+        html, body { max-width: 100%; overflow-x: hidden; }
         body { background: #ffffff; color: #111827; }
         .admin-shell { min-height: 100vh; display: grid; grid-template-columns: 252px minmax(0, 1fr); }
         .admin-sidebar { background: #0d2545; color: #FAFAFA; }
@@ -127,6 +129,7 @@
             });
         });
     </script>
+    @livewireScripts
 </body>
 
 </html>
