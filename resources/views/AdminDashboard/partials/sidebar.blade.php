@@ -29,8 +29,8 @@
             Dashboard
         </a>
 
-      <details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
+      <details class="group" {{ request()->is('admin-dashboard/hr/*') ? 'open' : '' }}>
+    <summary class="{{ request()->is('admin-dashboard/hr/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1969_1885)">
 <path d="M3.33325 4.66667C3.33325 5.37391 3.6142 6.05219 4.1143 6.55229C4.6144 7.05238 5.29267 7.33333 5.99992 7.33333C6.70716 7.33333 7.38544 7.05238 7.88554 6.55229C8.38563 6.05219 8.66659 5.37391 8.66659 4.66667C8.66659 3.95942 8.38563 3.28115 7.88554 2.78105C7.38544 2.28095 6.70716 2 5.99992 2C5.29267 2 4.6144 2.28095 4.1143 2.78105C3.6142 3.28115 3.33325 3.95942 3.33325 4.66667Z" stroke="#FAFAFA" stroke-linecap="round" stroke-linejoin="round"/>
@@ -58,8 +58,8 @@
     </div>
 </details>
 
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
+<details class="group" {{ request()->is('admin-dashboard/finance/*') ? 'open' : '' }}>
+    <summary class="{{ request()->is('admin-dashboard/finance/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.6814 5.83337H18.3332V10.4549M18.3332 5.83337L14.5832 9.58337M12.1835 11.9456C11.3521 12.7719 10.9364 13.1851 10.4208 13.185C9.90514 13.185 9.48954 12.7717 8.65834 11.9452L8.45888 11.7469C7.62695 10.9196 7.21099 10.506 6.69502 10.5062C6.17905 10.5064 5.76339 10.9203 4.93206 11.7481L1.6665 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -79,8 +79,8 @@
     </div>
 </details>
 
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
+<details class="group" {{ request()->is('admin-dashboard/ict/*') ? 'open' : '' }}>
+    <summary class="{{ request()->is('admin-dashboard/ict/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.5 8.33333V11.6667C2.5 13.238 2.5 14.0237 2.98816 14.5118C3.47631 15 4.26198 15 5.83333 15H14.1667C15.738 15 16.5237 15 17.0118 14.5118C17.5 14.0237 17.5 13.238 17.5 11.6667V7.5C17.5 5.14298 17.5 3.96447 16.7678 3.23223C16.0355 2.5 14.857 2.5 12.5 2.5H7.5C5.14298 2.5 3.96447 2.5 3.23223 3.23223C2.82399 3.64047 2.64336 4.18743 2.56343 5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M18.3332 17.5H13.3332M1.6665 17.5H9.99984" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
@@ -102,8 +102,8 @@
 </details>
 
 
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
+<details class="group" {{ request()->is('admin-dashboard/logistic/*') ? 'open' : '' }}>
+    <summary class="{{ request()->is('admin-dashboard/logistic/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1969_1324)">
 <path d="M8.3335 1.67395C6.26719 1.70384 5.09571 1.85711 4.30981 2.64302C3.3335 3.61933 3.3335 5.19068 3.3335 8.33337V10C3.3335 13.1427 3.3335 14.7141 4.30981 15.6904C5.28612 16.6667 6.85747 16.6667 10.0002 16.6667C13.1429 16.6667 14.7142 16.6667 15.6905 15.6904C16.6668 14.7141 16.6668 13.1427 16.6668 10V8.33338C16.6668 5.19068 16.6668 3.61933 15.6905 2.64302C14.9046 1.85711 13.7331 1.70384 11.6668 1.67395" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
@@ -136,8 +136,8 @@
     </div>
 </details>
 
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
+<details class="group" {{ request()->is('admin-dashboard/clients/*') ? 'open' : '' }}>
+    <summary class="{{ request()->is('admin-dashboard/clients/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1208_7989)">
 <path d="M18.3334 18.3334L1.66675 18.3334" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
@@ -173,8 +173,8 @@
 
 
 
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
+<details class="group" {{ request()->is('admin-dashboard/accounting/*') ? 'open' : '' }}>
+    <summary class="{{ request()->is('admin-dashboard/accounting/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1969_1269)">
 <path d="M12 5.854V20.9999" stroke="white" stroke-width="1.5"/>
@@ -205,8 +205,8 @@
 
 
 
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
+<details class="group" {{ request()->is('admin-dashboard/crm/*') ? 'open' : '' }}>
+    <summary class="{{ request()->is('admin-dashboard/crm/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="8.33333" cy="4.99996" r="3.33333" stroke="white" stroke-width="1.5"/>
 <path d="M15.8335 1.66663C15.8335 1.66663 17.5002 2.66663 17.5002 4.99996C17.5002 7.33329 15.8335 8.33329 15.8335 8.33329" stroke="white" stroke-width="1.5" stroke-linecap="round"/>

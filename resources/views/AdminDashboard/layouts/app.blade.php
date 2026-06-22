@@ -65,7 +65,7 @@
     <div class="admin-shell">
         @include('AdminDashboard.partials.sidebar')
 
-        <div class="min-w-0">
+        <div class="min-w-0 overflow-x-hidden">
             <header class="hidden h-[68px] border-b border-gray-200 bg-white px-6 lg:px-9 lg:flex items-center justify-between">
                 <div class="flex items-center gap-3 text-sm">
                     <span class="text-gray-400">@yield('breadcrumb_parent', 'Dashboards')</span>
@@ -97,7 +97,7 @@
                 </div>
             </header>
 
-            <main class="px-6 py-8 lg:px-9">
+            <main class="min-w-0 overflow-x-hidden px-4 py-8 sm:px-6 lg:px-9">
                 @yield('content')
             </main>
         </div>

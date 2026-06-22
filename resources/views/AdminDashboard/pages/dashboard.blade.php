@@ -104,40 +104,44 @@
         </article>
     </section>
 
-    <section class="mb-12 grid gap-7 xl:grid-cols-[1.55fr_1fr]">
-        <article class="erp-card p-7">
-            <h2 id="mainChartTitle" class="mb-8 font-semibold">Revenue Logistic VS ICT (6 Month)</h2>
+    <section class="mb-12 grid items-stretch gap-7 xl:grid-cols-[1.55fr_1fr]">
+        <article class="erp-card flex h-full flex-col p-6">
+            <h2 id="mainChartTitle" class="mb-5 font-semibold">Revenue Logistic VS ICT (6 Month)</h2>
 
-           <div id="mainChartBars" class="bar-grid relative h-72 overflow-x-auto overflow-y-hidden px-3 pb-12 pt-3 sm:px-8"></div>
+           <div id="mainChartBars" class="bar-grid relative h-64 overflow-x-auto overflow-y-hidden px-3 pb-9 pt-3 sm:px-6"></div>
 
-            <div class="mt-4 flex justify-center gap-5 text-sm text-gray-600">
-                <label class="inline-flex cursor-pointer items-center gap-2">
-                    <input type="checkbox" class="chart-series-toggle rounded border-gray-300" data-series="first" checked>
-                    <i class="fa-solid fa-square text-blue-600"></i>
+            <div class="mt-4 flex flex-wrap justify-center gap-3 text-sm text-gray-600">
+                <button type="button" class="chart-series-toggle inline-flex h-9 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 font-medium shadow-sm hover:bg-gray-50" data-series="first" aria-pressed="true">
+                    <span class="chart-series-check inline-flex h-4 w-4 items-center justify-center rounded bg-blue-600 text-[10px] text-white">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span class="h-3 w-3 rounded-sm bg-blue-600"></span>
                     <span id="legendOneText">ICT</span>
-                </label>
-                <label class="inline-flex cursor-pointer items-center gap-2">
-                    <input type="checkbox" class="chart-series-toggle rounded border-gray-300" data-series="second" checked>
-                    <i class="fa-solid fa-square text-blue-200"></i>
+                </button>
+                <button type="button" class="chart-series-toggle inline-flex h-9 items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 font-medium shadow-sm hover:bg-gray-50" data-series="second" aria-pressed="true">
+                    <span class="chart-series-check inline-flex h-4 w-4 items-center justify-center rounded bg-blue-600 text-[10px] text-white">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span class="h-3 w-3 rounded-sm bg-blue-200"></span>
                     <span id="legendTwoText">Logistic</span>
-                </label>
+                </button>
             </div>
         </article>
 
-        <article class="erp-card p-7">
-            <h2 class="mb-10 font-semibold">Contract Status</h2>
+        <article class="erp-card flex h-full flex-col p-6">
+            <h2 class="mb-5 font-semibold">Contract Status</h2>
 
-            <div class="grid items-center gap-8 md:grid-cols-[180px_1fr]">
+            <div class="grid flex-1 items-center justify-center gap-8 md:grid-cols-[180px_minmax(0,220px)]">
                 <div class="relative mx-auto h-36 w-36 rounded-full"
                     style="background: conic-gradient(#64a166 0 52%, #2169b3 52% 75%, #d99569 75% 89%, #ef2626 89% 100%);">
                     <span class="absolute inset-8 rounded-full bg-[#f7f7f7]"></span>
                 </div>
 
-                <div class="space-y-5 text-sm">
-                    <p class="flex justify-between gap-6"><span class="text-green-700">Official Rent</span><b>52.1%</b></p>
-                    <p class="flex justify-between gap-6"><span class="text-red-600">Fuel</span><b>22.8%</b></p>
-                    <p class="flex justify-between gap-6"><span class="text-blue-700">Internet</span><b>13.9%</b></p>
-                    <p class="flex justify-between gap-6"><span class="text-orange-400">Urgent</span><b>11.2%</b></p>
+                <div class="w-full space-y-5 text-sm">
+                    <p class="flex items-center justify-between gap-5"><span class="text-green-700">Official Rent</span><b>52.1%</b></p>
+                    <p class="flex items-center justify-between gap-5"><span class="text-red-600">Fuel</span><b>22.8%</b></p>
+                    <p class="flex items-center justify-between gap-5"><span class="text-blue-700">Internet</span><b>13.9%</b></p>
+                    <p class="flex items-center justify-between gap-5"><span class="text-orange-400">Urgent</span><b>11.2%</b></p>
                 </div>
             </div>
         </article>
@@ -231,17 +235,25 @@
                 @endforeach
             </div>
 
-            <table class="hidden w-full text-left text-sm md:table">
+            <table class="hidden w-full table-fixed text-left text-xs md:table">
+                <colgroup>
+                    <col class="w-[4%]">
+                    <col class="w-[34%]">
+                    <col class="w-[15%]">
+                    <col class="w-[25%]">
+                    <col class="w-[14%]">
+                    <col class="w-[8%]">
+                </colgroup>
                 <thead class="bg-gray-50 text-gray-950">
                     <tr>
-                        <th class="w-12 px-4 py-3">
-                            <input type="checkbox" class="rounded border-gray-300">
+                        <th class="px-3 py-3">
+                            <input type="checkbox" class="h-4 w-4 rounded border-gray-300">
                         </th>
-                        <th class="px-4 py-3 font-medium">Contract</th>
-                        <th class="px-4 py-3 font-medium">Status</th>
-                        <th class="px-4 py-3 font-medium">Organization</th>
-                        <th class="px-4 py-3 font-medium">Amount</th>
-                        <th class="w-10 px-4 py-3"></th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold">Contract</th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold">Status</th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold">Organization</th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold">Amount</th>
+                        <th class="whitespace-nowrap px-3 py-3 text-right font-semibold">Actions</th>
                     </tr>
                 </thead>
 
@@ -255,21 +267,28 @@
                                 default => 'bg-gray-50 text-gray-600 ring-gray-200',
                             };
                         @endphp
-                        <tr class="contract-record border-t border-gray-200" data-index="{{ $index }}">
-                            <td class="px-4 py-4"><input type="checkbox" class="rounded border-gray-300"></td>
-                            <td class="px-4 py-4 font-medium text-gray-950">{{ $row[0] }}</td>
-                            <td class="px-4 py-4">
-                                <span class="rounded-md px-2 py-1 text-xs ring-1 {{ $statusClass }}">{{ $row[1] }}</span>
+                        <tr class="contract-record border-t border-gray-100 align-middle" data-index="{{ $index }}">
+                            <td class="px-3 py-4"><input type="checkbox" class="h-4 w-4 rounded border-gray-300"></td>
+                            <td class="px-3 py-4">
+                                <span class="block min-w-0 break-words text-sm font-medium leading-5 text-gray-950">{{ $row[0] }}</span>
                             </td>
-                            <td class="px-4 py-4">{{ $row[2] }}</td>
-                            <td class="px-4 py-4">{{ $row[3] }}</td>
-                            <td class="relative px-4 py-4 text-right">
+                            <td class="px-3 py-4">
+                                <span class="inline-flex max-w-full items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-medium leading-5 ring-1 {{ $statusClass }}">
+                                    <span class="h-1.5 w-1.5 shrink-0 rounded-full {{ $row[1] === 'Active' ? 'bg-green-500' : ($row[1] === 'Approved' ? 'bg-blue-500' : 'bg-orange-500') }}"></span>
+                                    <span class="truncate">{{ $row[1] }}</span>
+                                </span>
+                            </td>
+                            <td class="px-3 py-4">
+                                <span class="block min-w-0 truncate text-sm text-gray-700">{{ $row[2] }}</span>
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-700">{{ $row[3] }}</td>
+                            <td class="relative px-3 py-4 text-right">
     <button type="button" class="contract-action-toggle rounded-md p-2 text-gray-700 hover:bg-gray-100">
         <i class="fa-solid fa-ellipsis-vertical"></i>
     </button>
 
-    <div class="contract-action-menu absolute right-4 top-12 z-40 hidden w-40 rounded-xl border border-gray-200 bg-white py-2 text-left shadow-xl">
-        <button type="button" class="flex w-full items-center gap-1 px-4 py-2 text-sm text-gray-950 hover:bg-gray-50">
+    <div class="contract-action-menu absolute right-3 top-12 z-40 hidden w-44 rounded-xl border border-gray-200 bg-white p-1.5 text-left shadow-xl shadow-gray-200/70">
+        <button type="button" class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1202_33320)">
 <path d="M18.3337 10C18.3337 12.357 18.3337 13.5355 17.6014 14.2678C17.067 14.8022 16.2949 14.9466 15.0003 14.9856M5.00033 14.9856C3.70579 14.9466 2.93364 14.8022 2.39923 14.2678C1.66699 13.5355 1.66699 12.357 1.66699 10C1.66699 7.64298 1.66699 6.46447 2.39923 5.73223C3.13146 5 4.30997 5 6.66699 5H13.3337C15.6907 5 16.8692 5 17.6014 5.73223C17.8513 5.98206 18.0158 6.28385 18.1243 6.66667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
@@ -287,7 +306,7 @@
 
             <span>Print</span>
         </button>
-        <button type="button" class="flex w-full items-center gap-1 px-4 py-2 text-sm text-gray-950 hover:bg-gray-50">
+        <button type="button" class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1202_33313)">
 <path d="M11.967 3.39884L12.7394 2.62644C14.0192 1.34669 16.0941 1.34669 17.3738 2.62644C18.6536 3.90619 18.6536 5.98109 17.3738 7.26084L16.6014 8.03324M11.967 3.39884C11.967 3.39884 12.0636 5.04019 13.5118 6.48844C14.9601 7.93669 16.6014 8.03324 16.6014 8.03324M11.967 3.39884L10.0003 5.36556M7.08366 8.28223L4.86601 10.4999C4.38504 10.9808 4.14456 11.2213 3.93774 11.4865C3.69377 11.7993 3.4846 12.1377 3.31394 12.4958C3.16927 12.7994 3.06172 13.122 2.84663 13.7673L1.93517 16.5017L1.71237 17.1701C1.60652 17.4876 1.68916 17.8377 1.92585 18.0744C2.16254 18.3111 2.51264 18.3938 2.83019 18.2879L3.49859 18.0651L6.23297 17.1537C6.87826 16.9386 7.20091 16.831 7.50447 16.6863C7.86257 16.5157 8.20101 16.3065 8.5138 16.0625C8.77896 15.8557 9.01944 15.6152 9.50041 15.1343L9.63472 15L12.2176 12.4171L16.6014 8.03324M3.49859 18.0651L1.93517 16.5017" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
@@ -301,7 +320,7 @@
 
             <span>Edit</span>
         </button>
-        <button type="button" class="flex w-full items-center gap-1 px-4 py-2 text-sm text-gray-950 hover:bg-gray-50">
+        <button type="button" class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.0837 5H2.91699" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M7.91699 9.16663L8.33366 13.3333" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
@@ -319,25 +338,37 @@
                 </tbody>
             </table>
 
-            <div class="flex flex-col gap-3 border-t border-gray-200 px-4 py-4 text-sm text-gray-600 md:flex-row md:items-center md:justify-between">
+            <div class="flex flex-col gap-3 border-t border-gray-200 px-4 py-4 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
                 <span>0 of 68 row(s) selected.</span>
 
-                <div class="flex flex-wrap items-center gap-3 sm:gap-6">
-                    <label for="rowsPerPageSelect">Rows per page</label>
-                    <select id="rowsPerPageSelect" class="rounded-md border border-gray-200 bg-white px-3 py-2 text-gray-950 outline-none focus:border-blue-400">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                    </select>
-                    <span id="pageCountText" class="text-gray-950">Page 1 of 2</span>
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="font-medium text-gray-700">Rows per page</span>
+                    <details id="rowsPerPageSelect" class="contract-rows-select relative">
+                        <summary class="flex h-10 min-w-[72px] cursor-pointer list-none items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 text-sm font-semibold text-gray-800 shadow-sm outline-none hover:bg-gray-50">
+                            <span class="contract-rows-value">10</span>
+                            <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
+                        </summary>
+                        <div class="absolute bottom-11 right-0 z-40 w-24 rounded-xl border border-gray-200 bg-white p-1.5 text-left shadow-xl shadow-gray-200/70">
+                            <button type="button" data-contract-rows-option="5" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">5</button>
+                            <button type="button" data-contract-rows-option="10" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">10</button>
+                            <button type="button" data-contract-rows-option="15" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">15</button>
+                            <button type="button" data-contract-rows-option="20" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">20</button>
+                        </div>
+                    </details>
+                    <span id="pageCountText" class="font-medium text-gray-700">Page 1 of 2</span>
 
-                    <div class="flex items-center gap-2">
-                        <button class="rounded-md border border-gray-200 px-3 py-2 text-gray-400">
-                            <i class="fa-solid fa-chevron-left"></i>
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50">
+                            <i class="fa-solid fa-angles-left text-[10px]"></i>
                         </button>
-                        <button class="rounded-md border border-gray-200 px-3 py-2 text-gray-950">
-                            <i class="fa-solid fa-chevron-right"></i>
+                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50">
+                            <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                        </button>
+                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50">
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50">
+                            <i class="fa-solid fa-angles-right text-[10px]"></i>
                         </button>
                     </div>
                 </div>
@@ -392,17 +423,20 @@
         document.getElementById("legendOneText").textContent = chart.legendOne;
         document.getElementById("legendTwoText").textContent = chart.legendTwo;
         document.querySelectorAll(".chart-series-toggle").forEach((toggle) => {
-            toggle.checked = visibleSeries[toggle.dataset.series];
+            const isVisible = visibleSeries[toggle.dataset.series];
+            toggle.setAttribute("aria-pressed", isVisible ? "true" : "false");
+            toggle.classList.toggle("opacity-50", !isVisible);
+            toggle.querySelector(".chart-series-check")?.classList.toggle("invisible", !isVisible);
         });
 
         wrapper.innerHTML = chart.months.map(([month, first, second]) => `
             <div class="group relative inline-flex h-full min-w-[74px] flex-col justify-end gap-3 align-bottom">
-                <div class="flex h-52 items-end justify-center gap-2">
+                <div class="flex h-44 items-end justify-center gap-2">
                     ${visibleSeries.first ? `<span class="w-5 rounded-t bg-blue-600 transition-all duration-300" style="height:${first}%"></span>` : ""}
                     ${visibleSeries.second ? `<span class="w-5 rounded-t bg-blue-200 transition-all duration-300" style="height:${second}%"></span>` : ""}
                 </div>
                 <span class="text-center text-xs text-gray-500">${month}</span>
-                <span class="pointer-events-none absolute left-1/2 top-20 z-20 hidden w-max max-w-[220px] -translate-x-1/2 rounded bg-white px-5 py-4 text-left shadow-xl ring-1 ring-gray-100 group-hover:block">
+                <span class="pointer-events-none absolute left-1/2 top-12 z-20 hidden w-max max-w-[220px] -translate-x-1/2 rounded bg-white px-5 py-4 text-left shadow-xl ring-1 ring-gray-100 group-hover:block">
                     <b class="mb-2 block text-lg text-gray-950">${month}</b>
                     ${visibleSeries.first ? `<span class="block whitespace-nowrap text-sm font-semibold text-gray-950">${chart.legendOne}: ${(first * 100000).toLocaleString()} AF</span>` : ""}
                     ${visibleSeries.second ? `<span class="block whitespace-nowrap text-sm font-semibold text-gray-950">${chart.legendTwo}: ${(second * 100000).toLocaleString()} AF</span>` : ""}
@@ -423,8 +457,8 @@
     });
 
     document.querySelectorAll(".chart-series-toggle").forEach((toggle) => {
-        toggle.addEventListener("change", () => {
-            visibleSeries[toggle.dataset.series] = toggle.checked;
+        toggle.addEventListener("click", () => {
+            visibleSeries[toggle.dataset.series] = !visibleSeries[toggle.dataset.series];
 
             if (!visibleSeries.first && !visibleSeries.second) {
                 visibleSeries[toggle.dataset.series] = true;
@@ -435,7 +469,7 @@
     });
 
     function updateVisibleContracts() {
-        const rowsPerPage = Number(document.getElementById("rowsPerPageSelect")?.value || 10);
+        const rowsPerPage = Number(document.querySelector(".contract-rows-value")?.textContent || 10);
         const records = document.querySelectorAll(".contract-record");
         const total = records.length / 2;
 
@@ -448,7 +482,29 @@
         document.getElementById("pageCountText").textContent = `Page 1 of ${pageCount}`;
     }
 
-    document.getElementById("rowsPerPageSelect")?.addEventListener("change", updateVisibleContracts);
+document.querySelectorAll("[data-contract-rows-option]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        const select = button.closest(".contract-rows-select");
+        const value = select?.querySelector(".contract-rows-value");
+
+        if (value) {
+            value.textContent = button.dataset.contractRowsOption;
+        }
+
+        select?.removeAttribute("open");
+        updateVisibleContracts();
+    });
+});
+
+document.addEventListener("click", (event) => {
+    document.querySelectorAll(".contract-rows-select[open]").forEach((select) => {
+        if (!select.contains(event.target)) {
+            select.removeAttribute("open");
+        }
+    });
+});
 document.querySelectorAll(".contract-action-toggle").forEach((button) => {
     button.addEventListener("click", (event) => {
         event.stopPropagation();
