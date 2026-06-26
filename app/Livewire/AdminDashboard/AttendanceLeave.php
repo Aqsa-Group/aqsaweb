@@ -7,7 +7,6 @@ use Livewire\Component;
 class AttendanceLeave extends Component
 {
     public bool $showForm = false;
-    public bool $typeSelected = false;
     public string $formType = 'attendance';
 
     public string $fullName = '';
@@ -56,25 +55,9 @@ class AttendanceLeave extends Component
     public function toggleForm(): void
     {
         $this->showForm = ! $this->showForm;
-        $this->typeSelected = false;
         $this->formType = 'attendance';
         $this->resetFormFields();
     }
-
-    public function continueForm(): void
-{
-    $this->validate([
-        'formType' => 'required|in:attendance,leave',
-    ]);
-
-    if ($this->formType === 'attendance') {
-        $this->status = 'Present';
-    } else {
-        $this->status = 'On Leave';
-    }
-
-    $this->typeSelected = true;
-}
 
     public function cancelForm(): void
     {

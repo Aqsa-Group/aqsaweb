@@ -14,71 +14,50 @@
     </div>
 
     @if ($showForm)
-        <div class="pt-2">
-            <h3 class="mb-5 text-[15px] font-semibold text-gray-950">Add Attendance / Leave Record</h3>
-
-            @if (! $typeSelected)
-                <div class="grid gap-x-8 gap-y-4 md:grid-cols-2">
-                    <div>
-                        <label class="mb-2 block text-[11px] font-medium">Type</label>
-                        <select
-    wire:model.live="formType"
-    wire:change="setFormType($event.target.value)"
-    class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600"
->
-    <option value="attendance">Attendance</option>
-    <option value="leave">Leave</option>
-</select>
-                    </div>
-                </div>
-
-                <div class="mt-5 flex justify-end gap-3">
-                    <button type="button" wire:click="cancelForm"
-                        class="h-9 rounded-md border border-blue-700 px-6 text-xs font-medium text-blue-700">
-                        Cancel
-                    </button>
-                    <button type="button" wire:click="continueForm"
-                        class="h-9 rounded-md bg-blue-700 px-7 text-xs font-medium text-white">
-                        Continue
-                    </button>
-                </div>
-            @else
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+            <h3 class="mb-5 flex items-center gap-2 text-[15px] font-semibold text-gray-950">
+                <i class="fa-regular fa-calendar-check text-blue-600"></i>
+                Add Attendance / Leave Record
+            </h3>
                 @if ($formType === 'attendance')
                     <div class="grid gap-x-8 gap-y-4 md:grid-cols-2">
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Full Name</label>
+                            <label class="mb-2 block text-sm font-medium">Full Name</label>
                             <input wire:model="fullName"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Check Out</label>
-                            <input wire:model="checkOut" type="time"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                            <label class="mb-2 block text-sm font-medium">Check Out</label>
+                            <input wire:model="checkOut" type="text" inputmode="text" placeholder="08:08 --"
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Type</label>
-                            <input value="Attendance" disabled
-                                class="h-9 w-full rounded-md border border-gray-200 bg-gray-50 px-3 text-xs outline-none">
+                            <label class="mb-2 block text-sm font-medium">Type</label>
+                            <select wire:model.live="formType" wire:change="setFormType($event.target.value)"
+    class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
+    <option value="attendance">Attendance</option>
+    <option value="leave">Leave</option>
+</select>
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Check In</label>
-                            <input wire:model="checkIn" type="time"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                            <label class="mb-2 block text-sm font-medium">Check In</label>
+                            <input wire:model="checkIn" type="text" inputmode="text" placeholder="05:56 --"
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Date</label>
+                            <label class="mb-2 block text-sm font-medium">Date</label>
                             <input wire:model="date" type="date"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Status</label>
+                            <label class="mb-2 block text-sm font-medium">Status</label>
                             <select wire:model="status"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                                 <option>Present</option>
                                 <option>Absent</option>
                             </select>
@@ -87,15 +66,15 @@
                 @else
                     <div class="grid gap-x-8 gap-y-4 md:grid-cols-2">
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Full Name</label>
+                            <label class="mb-2 block text-sm font-medium">Full Name</label>
                             <input wire:model="fullName"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Days</label>
+                            <label class="mb-2 block text-sm font-medium">Days</label>
                             <select wire:model="days"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -105,15 +84,15 @@
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Type</label>
+                            <label class="mb-2 block text-sm font-medium">Type</label>
                             <input value="Leave" disabled
-                                class="h-9 w-full rounded-md border border-gray-200 bg-gray-50 px-3 text-xs outline-none">
+                                class="h-11 w-full rounded-md border border-gray-200 bg-gray-50 px-3 text-sm outline-none">
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Leave Type</label>
+                            <label class="mb-2 block text-sm font-medium">Leave Type</label>
                             <select wire:model="leaveType"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                                 <option>Sick</option>
                                 <option>Annual</option>
                                 <option>Emergency</option>
@@ -121,34 +100,32 @@
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Date</label>
+                            <label class="mb-2 block text-sm font-medium">Date</label>
                             <input wire:model="date" type="date"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-[11px] font-medium">Status</label>
+                            <label class="mb-2 block text-sm font-medium">Status</label>
                             <select wire:model="status"
-                                class="h-9 w-full rounded-md border border-gray-200 px-3 text-xs outline-none focus:border-blue-600">
+                                class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
                                 <option>On Leave</option>
                                 <option>Pending</option>
                                 <option>Approved</option>
                             </select>
                         </div>
                     </div>
-                @endif
-
-                <div class="mt-5 flex justify-end gap-3">
-                    <button type="button" wire:click="cancelForm"
-                        class="h-9 rounded-md border border-blue-700 px-6 text-xs font-medium text-blue-700">
-                        Cancel
-                    </button>
-                    <button type="button" wire:click="save"
-                        class="h-9 rounded-md bg-blue-700 px-7 text-xs font-medium text-white">
-                        Save
-                    </button>
-                </div>
             @endif
+            <div class="mt-5 flex justify-end gap-3">
+                <button type="button" wire:click="cancelForm"
+                    class="h-10 rounded-md border border-blue-700 px-7 text-sm font-medium text-blue-700">
+                    Cancel
+                </button>
+                <button type="button" wire:click="save"
+                    class="h-10 rounded-md bg-blue-700 px-8 text-sm font-medium text-white">
+                    Save
+                </button>
+            </div>
         </div>
     @endif
 
@@ -218,10 +195,7 @@
                         <td class="px-2 py-4"><input type="checkbox" class="h-4 w-4 rounded border-gray-300"></td>
 
                         <td class="px-2 py-4">
-                            <div class="flex min-w-0 items-center gap-3">
-                                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#A8D1FF] text-sm font-bold text-gray-950">
-                                    {{ strtoupper(substr($item['name'], 0, 1)) }}
-                                </div>
+                            <div class="flex min-w-0 items-center">
                                 <span class="min-w-0 break-words text-sm font-medium leading-5 text-gray-900">{{ $item['name'] }}</span>
                             </div>
                         </td>
@@ -250,24 +224,7 @@
                         </td>
 
                         <td class="relative px-2 py-4 text-right">
-                            <button type="button" class="staff-action-toggle rounded-md p-2 text-gray-700 hover:bg-gray-100">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-
-                            <div class="staff-action-menu absolute right-2 top-12 z-40 hidden w-44 rounded-xl border border-gray-200 bg-white p-1.5 text-left shadow-xl shadow-gray-200/70">
-                                <button type="button" class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">
-                                    <i class="fa-solid fa-print text-[#1C274C]"></i>
-                                    <span>Print</span>
-                                </button>
-                                <button type="button" class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">
-                                    <i class="fa-regular fa-pen-to-square text-[#1C274C]"></i>
-                                    <span>Edit</span>
-                                </button>
-                                <button type="button" class="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">
-                                    <i class="fa-regular fa-trash-can text-[#1C274C]"></i>
-                                    <span>Delete</span>
-                                </button>
-                            </div>
+                            @include('AdminDashboard.partials.staff-action-menu')
                         </td>
                     </tr>
                 @endforeach
@@ -279,10 +236,7 @@
         @foreach ($records as $item)
             <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
                 <div class="mb-3 flex items-center justify-between">
-                    <div class="flex min-w-0 items-center gap-3">
-                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#A8D1FF] text-sm font-bold text-gray-950">
-                            {{ strtoupper(substr($item['name'], 0, 1)) }}
-                        </div>
+                    <div class="flex min-w-0 items-center">
                         <div class="min-w-0">
                             <p class="truncate font-medium text-gray-950">{{ $item['name'] }}</p>
                             <p class="truncate text-sm text-gray-500">{{ $item['position'] }}</p>
@@ -319,101 +273,11 @@
         <span>0 of 68 row(s) selected.</span>
 
         <div class="flex flex-wrap items-center gap-3">
-            <label for="attendance-rows-per-page" class="font-medium text-gray-700">Rows per page</label>
-
-            <details id="attendance-rows-per-page" class="staff-select relative">
-                <summary class="flex h-10 min-w-[72px] cursor-pointer list-none items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 text-sm font-semibold text-gray-800 shadow-sm outline-none hover:bg-gray-50">
-                    <span class="staff-select-value">10</span>
-                    <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
-                </summary>
-
-                <div class="staff-select-menu absolute right-0 top-11 z-40 w-24 rounded-xl border border-gray-200 bg-white p-0 text-left shadow-xl shadow-gray-200/70">
-                    <button type="button" data-staff-select-option="10" class="flex w-full items-center px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">10</button>
-                    <button type="button" data-staff-select-option="25" class="flex w-full items-center px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">25</button>
-                    <button type="button" data-staff-select-option="50" class="flex w-full items-center px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">50</button>
-                    <button type="button" data-staff-select-option="100" class="flex w-full items-center px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">100</button>
-                </div>
-            </details>
-
-            <span class="font-medium text-gray-700">Page 1 of 7</span>
-
-            <div class="flex items-center gap-1">
-                <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50"><i class="fa-solid fa-angles-left text-[10px]"></i></button>
-                <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50"><i class="fa-solid fa-chevron-left text-[10px]"></i></button>
-                <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50"><i class="fa-solid fa-chevron-right text-[10px]"></i></button>
-                <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50"><i class="fa-solid fa-angles-right text-[10px]"></i></button>
-            </div>
+            @include('AdminDashboard.partials.staff-pagination', [
+                'id' => 'attendance-rows-per-page',
+                'options' => ['10', '25', '50', '100'],
+            ])
         </div>
     </div>
 </div>
-
-<style>
-    .staff-select-menu [data-staff-select-option] {
-        border-radius: 0;
-    }
-
-    .staff-select-menu [data-staff-select-option].is-active {
-        background: #2563eb;
-        color: #ffffff;
-    }
-
-    .staff-select-menu [data-staff-select-option].is-active:hover {
-        background: #2563eb;
-    }
-</style>
-
-<script>
-function setStaffSelectActive(select, selectedValue) {
-    if (!select) return;
-
-    select.querySelectorAll("[data-staff-select-option]").forEach((option) => {
-        const isActive = option.dataset.staffSelectOption === selectedValue;
-        option.classList.toggle("is-active", isActive);
-        option.setAttribute("aria-selected", isActive ? "true" : "false");
-    });
-}
-
-document.querySelectorAll(".staff-select").forEach((select) => {
-    const value = select.querySelector(".staff-select-value")?.textContent?.trim();
-    setStaffSelectActive(select, value);
-});
-
-document.addEventListener("click", function (event) {
-    const toggle = event.target.closest(".staff-action-toggle");
-    const selectOption = event.target.closest("[data-staff-select-option]");
-
-    document.querySelectorAll(".staff-action-menu").forEach((menu) => {
-        if (!toggle || !toggle.parentElement.contains(menu)) {
-            menu.classList.add("hidden");
-        }
-    });
-
-    document.querySelectorAll(".staff-select[open]").forEach((select) => {
-        if (!select.contains(event.target)) {
-            select.removeAttribute("open");
-        }
-    });
-
-    if (selectOption) {
-        event.stopPropagation();
-
-        const select = selectOption.closest(".staff-select");
-        const value = select?.querySelector(".staff-select-value");
-
-        if (value) {
-            value.textContent = selectOption.dataset.staffSelectOption;
-        }
-
-        setStaffSelectActive(select, selectOption.dataset.staffSelectOption);
-        select?.removeAttribute("open");
-        return;
-    }
-
-    if (toggle) {
-        event.stopPropagation();
-        const menu = toggle.parentElement.querySelector(".staff-action-menu");
-        menu?.classList.toggle("hidden");
-    }
-});
-</script>
 </div>

@@ -1,4 +1,4 @@
-<div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+<div class="overflow-visible rounded-lg border border-gray-200 bg-white">
     <table class="min-w-full text-left text-sm">
         <thead class="bg-gray-100 text-gray-800">
             <tr>
@@ -26,13 +26,17 @@
                     <td class="px-4 py-4"><span class="rounded px-2 py-1 text-xs ring-1 {{ $statusClass }}">{{ $row[1] }}</span></td>
                     <td class="px-4 py-4">{{ $row[2] }}</td>
                     <td class="px-4 py-4">{{ $row[3] }}</td>
-                    <td class="px-4 py-4 text-right"><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <td class="relative px-4 py-4 text-right">
+                        @include('AdminDashboard.partials.staff-action-menu')
+                    </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
     <div class="flex flex-col gap-3 border-t border-gray-200 px-4 py-4 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
         <span>0 of 68 row(s) selected.</span>
-        <span>Rows per page <b class="mx-2 rounded border border-gray-200 px-3 py-2 text-gray-900">10</b> Page 1 of 7</span>
+        <div class="flex flex-wrap items-center gap-3">
+            @include('AdminDashboard.partials.staff-pagination', ['id' => 'shared-table-rows-per-page'])
+        </div>
     </div>
 </div>

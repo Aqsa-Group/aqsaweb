@@ -70,12 +70,9 @@
                         <details class="staff-select relative">
                             <summary class="flex h-11 cursor-pointer list-none items-center justify-between rounded-xl border border-gray-200 bg-white px-3 text-sm font-medium text-gray-800 shadow-sm outline-none hover:bg-gray-50">
                                 <span class="staff-select-value">Logistic Manager</span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.8332 7.5L9.99984 12.5L8.5415 11.25M4.1665 7.5L6.11095 9.16667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+                                <i class="fa-solid fa-chevron-down text-[11px] text-gray-500"></i>
                             </summary>
-                            <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-0 shadow-xl shadow-gray-200/70">
+                            <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-1.5 shadow-xl shadow-gray-200/70">
                                 <button type="button" data-staff-select-option="Logistic Manager" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Logistic Manager</button>
                                 <button type="button" data-staff-select-option="HR Manager" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">HR Manager</button>
                                 <button type="button" data-staff-select-option="Finance Officer" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Finance Officer</button>
@@ -88,12 +85,9 @@
                         <details class="staff-select relative">
                             <summary class="flex h-11 cursor-pointer list-none items-center justify-between rounded-xl border border-gray-200 bg-white px-3 text-sm font-medium text-gray-800 shadow-sm outline-none hover:bg-gray-50">
                                 <span class="staff-select-value">Full Time</span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.8332 7.5L9.99984 12.5L8.5415 11.25M4.1665 7.5L6.11095 9.16667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+                                <i class="fa-solid fa-chevron-down text-[11px] text-gray-500"></i>
                             </summary>
-                            <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-0 shadow-xl shadow-gray-200/70">
+                            <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-1.5 shadow-xl shadow-gray-200/70">
                                 <button type="button" data-staff-select-option="Full Time" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Full Time</button>
                                 <button type="button" data-staff-select-option="Part Time" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Part Time</button>
                                 <button type="button" data-staff-select-option="Contract" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Contract</button>
@@ -106,12 +100,9 @@
                         <details class="staff-select relative">
                             <summary class="flex h-11 cursor-pointer list-none items-center justify-between rounded-xl border border-gray-200 bg-white px-3 text-sm font-medium text-gray-800 shadow-sm outline-none hover:bg-gray-50">
                                 <span class="staff-select-value">Logistic</span>
-                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.8332 7.5L9.99984 12.5L8.5415 11.25M4.1665 7.5L6.11095 9.16667" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+                                <i class="fa-solid fa-chevron-down text-[11px] text-gray-500"></i>
                             </summary>
-                            <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-0 shadow-xl shadow-gray-200/70">
+                            <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-1.5 shadow-xl shadow-gray-200/70">
                                 <button type="button" data-staff-select-option="Logistic" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Logistic</button>
                                 <button type="button" data-staff-select-option="ICT" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">ICT</button>
                                 <button type="button" data-staff-select-option="Both" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Both</button>
@@ -272,12 +263,9 @@
                                 <details class="staff-select relative shrink-0">
                                     <summary class="flex h-full min-w-[76px] cursor-pointer list-none items-center justify-between gap-2 border-l border-gray-200 px-3 text-xs font-medium text-gray-800 outline-none hover:bg-gray-50">
                                         <span class="staff-select-value">USD</span>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.8332 7.5L9.99984 12.5L8.5415 11.25M4.1665 7.5L6.11095 9.16667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+                                        <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
                                     </summary>
-                                    <div class="staff-select-menu absolute right-0 top-12 z-40 w-24 rounded-xl border border-gray-200 bg-white p-0 text-left shadow-xl shadow-gray-200/70">
+                                    <div class="staff-select-menu absolute right-0 top-12 z-40 w-24 rounded-xl border border-gray-200 bg-white p-1.5 text-left shadow-xl shadow-gray-200/70">
                                         <button type="button" data-staff-select-option="USD" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">USD</button>
                                         <button type="button" data-staff-select-option="AFN" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">AFN</button>
                                         <button type="button" data-staff-select-option="EUR" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">EUR</button>
@@ -522,109 +510,23 @@
         <div class="mt-5 flex flex-col gap-3 text-sm text-gray-500 lg:flex-row lg:items-center lg:justify-between">
             <span>0 of 68 row(s) selected.</span>
             <div class="flex flex-wrap items-center gap-3">
-                <label for="staff-rows-per-page" class="font-medium text-gray-700">Rows per page</label>
-                <details id="staff-rows-per-page" class="staff-select relative">
-                    <summary class="flex h-10 min-w-[72px] cursor-pointer list-none items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 text-sm font-semibold text-gray-800 shadow-sm outline-none hover:bg-gray-50">
-                        <span class="staff-select-value">10</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.8332 7.5L9.99984 12.5L8.5415 11.25M4.1665 7.5L6.11095 9.16667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                    </summary>
-                    <div class="staff-select-menu absolute right-0 top-11 z-40 w-24 rounded-xl border border-gray-200 bg-white p-0 text-left shadow-xl shadow-gray-200/70">
-                        <button type="button" data-staff-select-option="10" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">10</button>
-                        <button type="button" data-staff-select-option="25" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">25</button>
-                        <button type="button" data-staff-select-option="50" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">50</button>
-                        <button type="button" data-staff-select-option="100" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">100</button>
-                    </div>
-                </details>
-                <span class="font-medium text-gray-700">Page 1 of 7</span>
-                <div class="flex items-center gap-1">
-                    <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50">
-                        <i class="fa-solid fa-angles-left text-[10px]"></i>
-                    </button>
-                    <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50">
-                        <i class="fa-solid fa-chevron-left text-[10px]"></i>
-                    </button>
-                    <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50">
-                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                    </button>
-                    <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50">
-                        <i class="fa-solid fa-angles-right text-[10px]"></i>
-                    </button>
-                </div>
+                @include('AdminDashboard.partials.staff-pagination', [
+                    'id' => 'staff-rows-per-page',
+                    'options' => ['10', '25', '50', '100'],
+                ])
             </div>
         </div>
     </div>
-<style>
-    .staff-select-menu [data-staff-select-option] {
-        border-radius: 0;
-    }
-
-    .staff-select-menu [data-staff-select-option].is-active {
-        background: #2563eb;
-        color: #ffffff;
-    }
-
-    .staff-select-menu [data-staff-select-option].is-active:hover {
-        background: #2563eb;
-    }
-</style>
 <script>
-function setStaffSelectActive(select, selectedValue) {
-    if (!select) {
-        return;
-    }
-
-    select.querySelectorAll("[data-staff-select-option]").forEach((option) => {
-        const isActive = option.dataset.staffSelectOption === selectedValue;
-        option.classList.toggle("is-active", isActive);
-        option.setAttribute("aria-selected", isActive ? "true" : "false");
-    });
-}
-
-document.querySelectorAll(".staff-select").forEach((select) => {
-    const value = select.querySelector(".staff-select-value")?.textContent?.trim();
-    setStaffSelectActive(select, value);
-});
-
 document.addEventListener("click", function (event) {
-    const toggle = event.target.closest(".staff-action-toggle");
-    const selectOption = event.target.closest("[data-staff-select-option]");
     const dateOption = event.target.closest("[data-staff-date]");
     const dateClear = event.target.closest("[data-staff-date-clear]");
-
-    document.querySelectorAll(".staff-action-menu").forEach((menu) => {
-        if (!toggle || !toggle.parentElement.contains(menu)) {
-            menu.classList.add("hidden");
-        }
-    });
-
-    document.querySelectorAll(".staff-select[open]").forEach((select) => {
-        if (!select.contains(event.target)) {
-            select.removeAttribute("open");
-        }
-    });
 
     document.querySelectorAll(".staff-date-picker[open]").forEach((picker) => {
         if (!picker.contains(event.target)) {
             picker.removeAttribute("open");
         }
     });
-
-    if (selectOption) {
-        event.stopPropagation();
-        const select = selectOption.closest(".staff-select");
-        const value = select?.querySelector(".staff-select-value");
-
-        if (value) {
-            value.textContent = selectOption.dataset.staffSelectOption;
-        }
-
-        setStaffSelectActive(select, selectOption.dataset.staffSelectOption);
-        select?.removeAttribute("open");
-        return;
-    }
 
     if (dateOption || dateClear) {
         event.stopPropagation();
@@ -644,12 +546,6 @@ document.addEventListener("click", function (event) {
 
         return;
     }
-
-    if (toggle) {
-        event.stopPropagation();
-        const menu = toggle.parentElement.querySelector(".staff-action-menu");
-        menu?.classList.toggle("hidden");
-    }
 });
 
 document.addEventListener("change", function (event) {
@@ -664,7 +560,7 @@ document.addEventListener("change", function (event) {
         return;
     }
 
-preview.src = URL.createObjectURL(file);
+    preview.src = URL.createObjectURL(file);
 });
 </script>
 </div>

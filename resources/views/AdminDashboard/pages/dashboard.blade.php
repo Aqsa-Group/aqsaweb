@@ -157,7 +157,7 @@
     <a href="{{ route('admin.module', ['clients', 'clients']) }}" class="text-sm text-gray-600">More</a>
 </div>
 
-        <div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+        <div class="overflow-visible rounded-lg border border-gray-200 bg-white">
             <div id="contractsCardList" class="space-y-3 p-3 md:hidden">
                 @foreach ($contractRows as $index => $row)
                     @php
@@ -342,35 +342,11 @@
                 <span>0 of 68 row(s) selected.</span>
 
                 <div class="flex flex-wrap items-center gap-3">
-                    <span class="font-medium text-gray-700">Rows per page</span>
-                    <details id="rowsPerPageSelect" class="contract-rows-select relative">
-                        <summary class="flex h-10 min-w-[72px] cursor-pointer list-none items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 text-sm font-semibold text-gray-800 shadow-sm outline-none hover:bg-gray-50">
-                            <span class="contract-rows-value">10</span>
-                            <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
-                        </summary>
-                        <div class="absolute bottom-11 right-0 z-40 w-24 rounded-xl border border-gray-200 bg-white p-1.5 text-left shadow-xl shadow-gray-200/70">
-                            <button type="button" data-contract-rows-option="5" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">5</button>
-                            <button type="button" data-contract-rows-option="10" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">10</button>
-                            <button type="button" data-contract-rows-option="15" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">15</button>
-                            <button type="button" data-contract-rows-option="20" class="flex w-full items-center rounded-lg px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50">20</button>
-                        </div>
-                    </details>
-                    <span id="pageCountText" class="font-medium text-gray-700">Page 1 of 2</span>
-
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50">
-                            <i class="fa-solid fa-angles-left text-[10px]"></i>
-                        </button>
-                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-400 hover:bg-gray-50">
-                            <i class="fa-solid fa-chevron-left text-[10px]"></i>
-                        </button>
-                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50">
-                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </button>
-                        <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50">
-                            <i class="fa-solid fa-angles-right text-[10px]"></i>
-                        </button>
-                    </div>
+                    @include('AdminDashboard.partials.staff-pagination', [
+                        'id' => 'dashboard-contract-rows-per-page',
+                        'pages' => 'Page 1 of 2',
+                        'options' => ['5', '10', '15', '20'],
+                    ])
                 </div>
             </div>
         </div>

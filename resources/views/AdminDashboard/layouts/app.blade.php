@@ -48,6 +48,30 @@
         .mobile-nav-dropdown { position: fixed; left: 8px; right: 8px; bottom: 72px; z-index: 60; display: grid; gap: 6px; border-radius: 18px; border: 1px solid rgba(255,255,255,.14); background: #0d2545; padding: 10px; box-shadow: 0 -10px 28px rgba(15, 23, 42, .25); }
         .mobile-nav-dropdown a { display: flex; align-items: center; justify-content: center; min-height: 36px; border-radius: 12px; background: rgba(255,255,255,.08); color: #ffffff; font-size: 12px; }
         .mobile-nav-dropdown a.is-active { background: #2563eb; }
+        .staff-select summary { list-style: none; }
+        .staff-select summary::-webkit-details-marker { display: none; }
+        .staff-action-menu.staff-action-menu-up {
+            top: auto !important;
+            bottom: 3rem;
+        }
+        .staff-select-option-active {
+            background: #0d2545 !important;
+            color: #ffffff !important;
+        }
+        .staff-select-option-active:hover {
+            background: #0d2545 !important;
+        }
+        main select {
+            appearance: none;
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-position: right .85rem center;
+            background-repeat: no-repeat;
+            background-size: .75rem;
+            border-radius: .75rem !important;
+            padding-right: 2.35rem !important;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+        }
         @media (max-width: 1024px) {
             .admin-shell { grid-template-columns: 1fr; }
             .admin-sidebar { position: sticky; top: 0; z-index: 40; }
@@ -121,6 +145,69 @@
             });
 
             document.addEventListener('click', function (event) {
+                const actionToggle = event.target.closest('.staff-action-toggle');
+                const selectOption = event.target.closest('[data-staff-select-option]');
+
+                document.querySelectorAll('.staff-action-menu').forEach(function (menu) {
+                    if (!actionToggle || !actionToggle.parentElement.contains(menu)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+
+                document.querySelectorAll('.staff-select[open]').forEach(function (select) {
+                    if (!select.contains(event.target)) {
+                        select.removeAttribute('open');
+                    }
+                });
+
+                if (selectOption) {
+                    const select = selectOption.closest('.staff-select');
+                    const value = select?.querySelector('.staff-select-value');
+
+                    if (value) {
+                        value.textContent = selectOption.dataset.staffSelectOption;
+                    }
+
+                    select?.querySelectorAll('[data-staff-select-option]').forEach(function (option) {
+                        const isActive = option === selectOption;
+
+                        option.classList.toggle('staff-select-option-active', isActive);
+                        option.classList.toggle('bg-gray-900', false);
+                        option.classList.toggle('text-white', isActive);
+                        option.classList.toggle('hover:bg-gray-800', false);
+                        option.classList.toggle('text-gray-800', !isActive);
+                        option.classList.toggle('hover:bg-gray-50', !isActive);
+                    });
+
+                    select?.removeAttribute('open');
+                    return;
+                }
+
+                if (actionToggle) {
+                    const menu = actionToggle.parentElement.querySelector('.staff-action-menu');
+                    if (!menu) {
+                        return;
+                    }
+
+                    const isHidden = menu.classList.contains('hidden');
+                    menu.classList.toggle('hidden');
+
+                    if (isHidden) {
+                        menu.classList.remove('staff-action-menu-up');
+
+                        requestAnimationFrame(function () {
+                            const menuRect = menu.getBoundingClientRect();
+                            const availableBottomSpace = window.innerHeight - actionToggle.getBoundingClientRect().bottom;
+
+                            if (availableBottomSpace < menuRect.height + 16) {
+                                menu.classList.add('staff-action-menu-up');
+                            }
+                        });
+                    }
+
+                    return;
+                }
+
                 menus.forEach(function (menu) {
                     if (!menu.contains(event.target)) {
                         menu.open = false;
