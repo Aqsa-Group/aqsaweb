@@ -281,7 +281,7 @@
                     <th class="px-2 py-3 font-semibold text-gray-950">Status</th>
                     <th class="px-2 py-3 font-semibold text-gray-950">Check in /Out or Leave</th>
                     <th class="px-2 py-3 font-semibold text-gray-950">Date</th>
-                    <th class="px-2 py-3 text-right font-semibold text-gray-950">Actions</th>
+                    <th class="px-2 py-3 text-right font-semibold text-gray-950"></th>
                 </tr>
             </thead>
 

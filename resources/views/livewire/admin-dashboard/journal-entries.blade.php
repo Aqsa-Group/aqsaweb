@@ -7,10 +7,16 @@
             <div class="grid gap-x-8 gap-y-5 md:grid-cols-2">
                 <div>
                     <label class="mb-2 block text-sm font-medium">Company</label>
-                    <select class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
-                        <option>Logistic</option>
-                        <option>ICT</option>
-                    </select>
+                    <details class="staff-select relative">
+                        <summary class="flex h-11 cursor-pointer list-none items-center justify-between rounded-xl border border-gray-200 bg-white px-3 text-sm font-medium text-gray-800 shadow-sm outline-none hover:bg-gray-50">
+                            <span class="staff-select-value">Logistic</span>
+                            <i class="fa-solid fa-chevron-down text-[11px] text-gray-400"></i>
+                        </summary>
+                        <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-1.5 shadow-xl shadow-gray-200/70">
+                            <button type="button" data-staff-select-option="Logistic" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Logistic</button>
+                            <button type="button" data-staff-select-option="ICT" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">ICT</button>
+                        </div>
+                    </details>
                 </div>
 
                 <div>
@@ -20,11 +26,17 @@
 
                 <div>
                     <label class="mb-2 block text-sm font-medium">Ref Type</label>
-                    <select class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
-                        <option>Manual</option>
-                        <option>Invoice</option>
-                        <option>Payment</option>
-                    </select>
+                    <details class="staff-select relative">
+                        <summary class="flex h-11 cursor-pointer list-none items-center justify-between rounded-xl border border-gray-200 bg-white px-3 text-sm font-medium text-gray-800 shadow-sm outline-none hover:bg-gray-50">
+                            <span class="staff-select-value">Manual</span>
+                            <i class="fa-solid fa-chevron-down text-[11px] text-gray-400"></i>
+                        </summary>
+                        <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-1.5 shadow-xl shadow-gray-200/70">
+                            <button type="button" data-staff-select-option="Manual" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Manual</button>
+                            <button type="button" data-staff-select-option="Invoice" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Invoice</button>
+                            <button type="button" data-staff-select-option="Payment" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Payment</button>
+                        </div>
+                    </details>
                 </div>
 
                 <div>
@@ -54,11 +66,17 @@
 
                 <div>
                     <label class="mb-2 block text-sm font-medium">Type</label>
-                    <select class="h-11 w-full rounded-md border border-gray-200 px-3 text-sm outline-none focus:border-blue-600">
-                        <option>Assets</option>
-                        <option>Liability</option>
-                        <option>Equity</option>
-                    </select>
+                    <details class="staff-select relative">
+                        <summary class="flex h-11 cursor-pointer list-none items-center justify-between rounded-xl border border-gray-200 bg-white px-3 text-sm font-medium text-gray-800 shadow-sm outline-none hover:bg-gray-50">
+                            <span class="staff-select-value">Assets</span>
+                            <i class="fa-solid fa-chevron-down text-[11px] text-gray-400"></i>
+                        </summary>
+                        <div class="staff-select-menu absolute left-0 right-0 top-12 z-40 rounded-xl border border-gray-200 bg-white p-1.5 shadow-xl shadow-gray-200/70">
+                            <button type="button" data-staff-select-option="Assets" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Assets</button>
+                            <button type="button" data-staff-select-option="Liability" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Liability</button>
+                            <button type="button" data-staff-select-option="Equity" class="flex w-full items-center rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-800 hover:bg-gray-50">Equity</button>
+                        </div>
+                    </details>
                 </div>
 
                 <div>

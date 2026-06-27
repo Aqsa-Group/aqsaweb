@@ -275,7 +275,7 @@
                         <th class="whitespace-nowrap px-2 py-3 font-semibold text-gray-950">Status</th>
                         <th class="whitespace-nowrap px-2 py-3 font-semibold text-gray-950">Total</th>
                         <th class="whitespace-nowrap px-2 py-3 font-semibold text-gray-950">Date</th>
-                        <th class="whitespace-nowrap px-2 py-3 text-center font-semibold text-gray-950">Actions</th>
+                        <th class="whitespace-nowrap px-2 py-3 text-center font-semibold text-gray-950"></th>
                     </tr>
                 </thead>
 

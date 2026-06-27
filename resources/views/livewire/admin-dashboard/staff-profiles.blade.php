@@ -204,7 +204,7 @@
                                 <tr>
                                     <th class="px-4 py-3 text-left">Company</th>
                                     <th class="px-4 py-3 text-left">Allocation Percentage</th>
-                                    <th class="px-4 py-3 text-right">Actions</th>
+                                    <th class="px-4 py-3 text-right"></th>
                                 </tr>
                             </thead>
                             <tbody>
