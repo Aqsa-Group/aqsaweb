@@ -111,6 +111,13 @@ class AdminDashboardController extends Controller
                     ['label' => 'System Colors', 'route' => route('admin.module', ['setting', 'system-colors'])],
                 ],
             ],
+            [
+                'label' => 'Support',
+                'icon' => 'fa-headset',
+                'items' => [
+                    ['label' => 'Support Tickets', 'route' => route('admin.module', ['support', 'support-tickets'])],
+                ],
+            ],
         ];
     }
 
@@ -156,6 +163,7 @@ class AdminDashboardController extends Controller
             'Contacts', 'Vendors', 'Tickets', 'Customer Interaction' => ['Draft', 'Under review', 'Approved', 'Active', 'Closed'],
             'Finance Reports', 'HR Reports', 'Audit Reports' => ['Paid', 'Pending'],
             'Roles & Permissions', 'Audit Log', 'System Colors' => ['Inclusive', 'Exclusive'],
+            'Support Tickets' => ['Open', 'Pending', 'Closed'],
             default => ['Active', 'Pending', 'Closed'],
         };
     }

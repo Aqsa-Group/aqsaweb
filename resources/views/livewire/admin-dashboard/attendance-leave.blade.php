@@ -31,8 +31,9 @@
     <label class="mb-2 block text-sm font-medium">Check Out</label>
 
     <div class="relative">
-        <input wire:model="checkOut" type="text" inputmode="text" placeholder="08:08 --"
-            class="h-11 w-full rounded-md border border-gray-200 px-3 pr-10 text-sm outline-none focus:border-blue-600">
+        <input wire:model="checkOut" type="text" inputmode="numeric" maxlength="8" autocomplete="off"
+            data-attendance-time-mask placeholder="08:08:00"
+            class="h-11 w-full rounded-md border border-gray-200 px-3 pr-10 text-sm outline-none placeholder:text-gray-400 focus:border-blue-600">
 
         <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
             <i class="fa-regular fa-clock text-[18px] text-[#1C274C]"></i>
@@ -70,8 +71,9 @@
     <label class="mb-2 block text-sm font-medium">Check In</label>
 
     <div class="relative">
-        <input wire:model="checkIn" type="text" inputmode="text" placeholder="05:56 --"
-            class="h-11 w-full rounded-md border border-gray-200 px-3 pr-10 text-sm outline-none focus:border-blue-600">
+        <input wire:model="checkIn" type="text" inputmode="numeric" maxlength="8" autocomplete="off"
+            data-attendance-time-mask placeholder="05:56:00"
+            class="h-11 w-full rounded-md border border-gray-200 px-3 pr-10 text-sm outline-none placeholder:text-gray-400 focus:border-blue-600">
 
         <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
             <i class="fa-regular fa-clock text-[18px] text-[#1C274C]"></i>
@@ -439,4 +441,60 @@
         </div>
     </div>
 </div>
+<script>
+(() => {
+    if (window.__attendanceTimeMaskBound) {
+        return;
+    }
+
+    window.__attendanceTimeMaskBound = true;
+
+    const formatAttendanceTime = (value) => {
+        const digits = value.replace(/\D/g, '').slice(0, 6);
+
+        if (digits.length <= 2) {
+            return digits;
+        }
+
+        if (digits.length <= 4) {
+            return `${digits.slice(0, 2)}:${digits.slice(2)}`;
+        }
+
+        return `${digits.slice(0, 2)}:${digits.slice(2, 4)}:${digits.slice(4)}`;
+    };
+
+    document.addEventListener('keydown', (event) => {
+        const input = event.target.closest('[data-attendance-time-mask]');
+
+        if (!input) {
+            return;
+        }
+
+        const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Home', 'End'];
+
+        if (allowedKeys.includes(event.key) || event.ctrlKey || event.metaKey) {
+            return;
+        }
+
+        if (!/^\d$/.test(event.key)) {
+            event.preventDefault();
+        }
+    });
+
+    document.addEventListener('input', (event) => {
+        const input = event.target.closest('[data-attendance-time-mask]');
+
+        if (!input) {
+            return;
+        }
+
+        const nextValue = formatAttendanceTime(input.value);
+
+        if (input.value !== nextValue) {
+            input.value = nextValue;
+            input.setSelectionRange(nextValue.length, nextValue.length);
+        }
+    }, true);
+})();
+</script>
 </div>

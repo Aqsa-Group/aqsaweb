@@ -54,7 +54,6 @@
     <div class="ml-8 mt-1 space-y-1 pb-1">
         <a href="{{ route('admin.module', ['hr', 'staff-profiles']) }}" class="{{ request()->is('admin-dashboard/hr/staff-profiles') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Staff Profiles</a>
         <a href="{{ route('admin.module', ['hr', 'attendance-leave']) }}" class="{{ request()->is('admin-dashboard/hr/attendance-leave') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Attendance & Leave</a>
-        <a href="{{ route('admin.module', ['hr', 'payroll']) }}" class="{{ request()->is('admin-dashboard/hr/payroll') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Payroll</a>
     </div>
 </details>
 
@@ -95,44 +94,7 @@
     </summary>
     <div class="ml-8 mt-1 space-y-1 pb-1">
         <a href="{{ route('admin.module', ['ict', 'projects']) }}" class="{{ request()->is('admin-dashboard/ict/projects') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Projects</a>
-        <a href="{{ route('admin.module', ['ict', 'tasks']) }}" class="{{ request()->is('admin-dashboard/ict/tasks') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Tasks</a>
         <a href="{{ route('admin.module', ['ict', 'time-tracking']) }}" class="{{ request()->is('admin-dashboard/ict/time-tracking') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Time Tracking</a>
-        <a href="{{ route('admin.module', ['ict', 'infrastructure']) }}" class="{{ request()->is('admin-dashboard/ict/infrastructure') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Infrastructure</a>
-    </div>
-</details>
-
-
-<details class="group" {{ request()->is('admin-dashboard/logistic/*') ? 'open' : '' }}>
-    <summary class="{{ request()->is('admin-dashboard/logistic/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm">
-       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1969_1324)">
-<path d="M8.3335 1.67395C6.26719 1.70384 5.09571 1.85711 4.30981 2.64302C3.3335 3.61933 3.3335 5.19068 3.3335 8.33337V10C3.3335 13.1427 3.3335 14.7141 4.30981 15.6904C5.28612 16.6667 6.85747 16.6667 10.0002 16.6667C13.1429 16.6667 14.7142 16.6667 15.6905 15.6904C16.6668 14.7141 16.6668 13.1427 16.6668 10V8.33338C16.6668 5.19068 16.6668 3.61933 15.6905 2.64302C14.9046 1.85711 13.7331 1.70384 11.6668 1.67395" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M16.6665 10.8334H13.3332M3.33317 10.8334H9.99984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.9165 13.3334H14.1665" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.8335 13.3334H7.0835" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 16.25V17.5C5 17.9602 5.3731 18.3333 5.83333 18.3333H7.08333C7.54357 18.3333 7.91667 17.9602 7.91667 17.5V16.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.0002 16.25V17.5C15.0002 17.9602 14.6271 18.3333 14.1668 18.3333H12.9168C12.4566 18.3333 12.0835 17.9602 12.0835 17.5V16.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.6665 7.5H17.4998C17.9601 7.5 18.3332 7.8731 18.3332 8.33333V9.16667C18.3332 9.42896 18.2097 9.67595 17.9998 9.83333L16.6665 10.8333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.33317 7.5H2.49984C2.0396 7.5 1.6665 7.8731 1.6665 8.33333V9.16667C1.6665 9.42896 1.79 9.67595 1.99984 9.83333L3.33317 10.8333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.75 4.16663H6.875M16.25 4.16663H10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-</g>
-<defs>
-<clipPath id="clip0_1969_1324">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-        <span class="flex-1">Logistic</span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.8332 7.5L9.99984 12.5L8.5415 11.25M4.1665 7.5L6.11095 9.16667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-    </summary>
-    <div class="ml-8 mt-1 space-y-1 pb-1">
-        <a href="{{ route('admin.module', ['logistic', 'contracts']) }}" class="{{ request()->is('admin-dashboard/logistic/contracts') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Contracts</a>
-        <a href="{{ route('admin.module', ['logistic', 'vehicles']) }}" class="{{ request()->is('admin-dashboard/logistic/vehicles') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Vehicles</a>
-        <a href="{{ route('admin.module', ['logistic', 'fuel']) }}" class="{{ request()->is('admin-dashboard/logistic/fuel') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Fuel</a>
     </div>
 </details>
 
@@ -165,9 +127,6 @@
     </summary>
     <div class="ml-8 mt-1 space-y-1 pb-1">
         <a href="{{ route('admin.module', ['clients', 'clients']) }}" class="{{ request()->is('admin-dashboard/clients/clients') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Clients</a>
-        <a href="{{ route('admin.module', ['clients', 'ngo']) }}" class="{{ request()->is('admin-dashboard/clients/ngo') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">NGO</a>
-        <a href="{{ route('admin.module', ['clients', 'government']) }}" class="{{ request()->is('admin-dashboard/clients/government') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Government</a>
-        <a href="{{ route('admin.module', ['clients', 'private']) }}" class="{{ request()->is('admin-dashboard/clients/private') ? 'bg-blue-600 text-white' : 'text-blue-100 hover:bg-white/10 hover:text-white' }} block rounded-md px-3 py-2 text-xs">Private</a>
     </div>
 </details>
 
@@ -227,38 +186,17 @@
     </div>
 </details>
 
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1397_9083)">
-<path d="M5.8335 15L5.8335 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M10 15V10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M14.1665 15V7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M18.3332 9.99996C18.3332 13.9283 18.3332 15.8925 17.1128 17.1129C15.8924 18.3333 13.9282 18.3333 9.99984 18.3333C6.07147 18.3333 4.10728 18.3333 2.88689 17.1129C1.6665 15.8925 1.6665 13.9283 1.6665 9.99996C1.6665 6.07159 1.6665 4.1074 2.88689 2.88701C4.10728 1.66663 6.07147 1.66663 9.99984 1.66663C13.9282 1.66663 15.8924 1.66663 17.1128 2.88701C17.9242 3.69846 18.1961 4.83875 18.2873 6.66663" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-</g>
-<defs>
-<clipPath id="clip0_1397_9083">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-        <span class="flex-1">Reports</span>
-
-    </summary>
-</details>
-
-<details class="group">
-    <summary class="flex cursor-pointer list-none items-center gap-3 rounded-md px-3 py-2.5 text-sm  hover:bg-white/10">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="10" cy="10" r="2.5" stroke="white" stroke-width="1.5"/>
-<path d="M3.05094 8.86593C3.44472 9.11335 3.6981 9.53485 3.6981 9.99991C3.6981 10.465 3.44472 10.8865 3.05094 11.1339C2.78297 11.3022 2.61032 11.4368 2.48748 11.5969C2.21839 11.9476 2.09964 12.3908 2.15733 12.829C2.2006 13.1577 2.39475 13.494 2.78303 14.1665C3.17132 14.8391 3.36546 15.1753 3.62847 15.3771C3.97916 15.6462 4.42237 15.765 4.86062 15.7073C5.06065 15.681 5.26349 15.5987 5.54322 15.4509C5.95445 15.2336 6.44624 15.2249 6.84905 15.4575C7.25181 15.69 7.49014 16.1202 7.50752 16.585C7.51935 16.9012 7.54957 17.118 7.62679 17.3044C7.79594 17.7128 8.1204 18.0373 8.52878 18.2064C8.83506 18.3333 9.22335 18.3333 9.99992 18.3333C10.7765 18.3333 11.1648 18.3333 11.4711 18.2064C11.8794 18.0373 12.2039 17.7128 12.3731 17.3044C12.4503 17.118 12.4805 16.9012 12.4923 16.585C12.5097 16.1202 12.748 15.69 13.1508 15.4575C13.5536 15.2249 14.0453 15.2336 14.4565 15.451C14.7363 15.5988 14.9392 15.6811 15.1392 15.7074C15.5775 15.7651 16.0207 15.6463 16.3714 15.3772C16.6344 15.1754 16.8285 14.8392 17.2168 14.1666C17.3897 13.8672 17.524 13.6344 17.6238 13.4393M16.9489 11.134C16.5551 10.8866 16.3017 10.4651 16.3017 10C16.3017 9.53492 16.5551 9.11338 16.9489 8.86594C17.2168 8.69759 17.3894 8.56303 17.5123 8.40296C17.7813 8.05227 17.9001 7.60906 17.8424 7.17081C17.7991 6.84213 17.605 6.50586 17.2167 5.83333C16.8284 5.1608 16.6343 4.82454 16.3713 4.62272C16.0206 4.35363 15.5774 4.23488 15.1391 4.29257C14.9391 4.31891 14.7362 4.40113 14.4565 4.54899C14.0453 4.76632 13.5535 4.775 13.1507 4.54242C12.748 4.30988 12.5097 3.87971 12.4923 3.41498C12.4805 3.09872 12.4503 2.88192 12.3731 2.69549C12.2039 2.28711 11.8794 1.96265 11.4711 1.79349C11.1648 1.66663 10.7765 1.66663 9.99992 1.66663C9.22335 1.66663 8.83506 1.66663 8.52878 1.79349C8.1204 1.96265 7.79594 2.28711 7.62678 2.69549C7.54957 2.8819 7.51935 3.09869 7.50752 3.41491C7.49014 3.87968 7.25179 4.30988 6.84901 4.54243C6.44623 4.77497 5.95449 4.76629 5.54329 4.54896C5.26353 4.40109 5.06067 4.31887 4.86063 4.29253C4.42238 4.23483 3.97916 4.35359 3.62848 4.62268C3.36547 4.8245 3.17132 5.16076 2.78304 5.83329C2.61018 6.1327 2.47579 6.36545 2.37607 6.56057" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-</svg>
-
-        <span class="flex-1">Setting</span>
-
-    </summary>
-</details>
+<a href="{{ route('admin.module', ['support', 'support-tickets']) }}"
+    class="{{ request()->is('admin-dashboard/support/*') ? 'sidebar-active' : 'hover:bg-white/10' }} flex items-center gap-3 rounded-md px-3 py-2.5 text-sm">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.3335 10.8333V9.16667C3.3335 5.48477 6.31826 2.5 10.0002 2.5C13.6821 2.5 16.6668 5.48477 16.6668 9.16667V10.8333" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M3.3335 10.8333C3.3335 9.91286 4.07969 9.16667 5.00016 9.16667C5.92064 9.16667 6.66683 9.91286 6.66683 10.8333V12.5C6.66683 13.4205 5.92064 14.1667 5.00016 14.1667C4.07969 14.1667 3.3335 13.4205 3.3335 12.5V10.8333Z" stroke="white" stroke-width="1.5"/>
+        <path d="M13.3335 10.8333C13.3335 9.91286 14.0797 9.16667 15.0002 9.16667C15.9206 9.16667 16.6668 9.91286 16.6668 10.8333V12.5C16.6668 13.4205 15.9206 14.1667 15.0002 14.1667C14.0797 14.1667 13.3335 13.4205 13.3335 12.5V10.8333Z" stroke="white" stroke-width="1.5"/>
+        <path d="M15.0002 14.1667C15.0002 15.5474 13.8809 16.6667 12.5002 16.6667H10.8335" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M9.1665 16.6667C9.1665 16.2064 9.5396 15.8333 9.99984 15.8333H10.8332C11.2934 15.8333 11.6665 16.2064 11.6665 16.6667C11.6665 17.1269 11.2934 17.5 10.8332 17.5H9.99984C9.5396 17.5 9.1665 17.1269 9.1665 16.6667Z" fill="white"/>
+    </svg>
+    <span class="flex-1">Support</span>
+</a>
     </nav>
 
     <div class="mt-5 flex items-center gap-3  pt-4">
@@ -322,26 +260,17 @@
                          alt="Admin profile" class="h-9 w-9 rounded-full">
                 </summary>
                 <div class="mobile-profile-dropdown">
-                    <a href="{{ route('admin.module', ['clients', 'clients']) }}" class="{{ request()->is('admin-dashboard/clients/*') ? 'is-active' : '' }}">
-                        <i class="fa-solid fa-building"></i>
-                        Clients / NGO
+                    <a href="{{ route('admin.module', ['support', 'support-tickets']) }}" class="{{ request()->is('admin-dashboard/support/*') ? 'is-active' : '' }}">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.3335 10.8333V9.16667C3.3335 5.48477 6.31826 2.5 10.0002 2.5C13.6821 2.5 16.6668 5.48477 16.6668 9.16667V10.8333" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M3.3335 10.8333C3.3335 9.91286 4.07969 9.16667 5.00016 9.16667C5.92064 9.16667 6.66683 9.91286 6.66683 10.8333V12.5C6.66683 13.4205 5.92064 14.1667 5.00016 14.1667C4.07969 14.1667 3.3335 13.4205 3.3335 12.5V10.8333Z" stroke="white" stroke-width="1.5"/>
+                            <path d="M13.3335 10.8333C13.3335 9.91286 14.0797 9.16667 15.0002 9.16667C15.9206 9.16667 16.6668 9.91286 16.6668 10.8333V12.5C16.6668 13.4205 15.9206 14.1667 15.0002 14.1667C14.0797 14.1667 13.3335 13.4205 13.3335 12.5V10.8333Z" stroke="white" stroke-width="1.5"/>
+                            <path d="M15.0002 14.1667C15.0002 15.5474 13.8809 16.6667 12.5002 16.6667H10.8335" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M9.1665 16.6667C9.1665 16.2064 9.5396 15.8333 9.99984 15.8333H10.8332C11.2934 15.8333 11.6665 16.2064 11.6665 16.6667C11.6665 17.1269 11.2934 17.5 10.8332 17.5H9.99984C9.5396 17.5 9.1665 17.1269 9.1665 16.6667Z" fill="white"/>
+                        </svg>
+                        Support
                     </a>
-                    <a href="{{ route('admin.module', ['reports', 'finance']) }}" class="{{ request()->is('admin-dashboard/reports/*') ? 'is-active' : '' }}">
-                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1397_9083)">
-<path d="M5.8335 15L5.8335 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M10 15V10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M14.1665 15V7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M18.3332 9.99996C18.3332 13.9283 18.3332 15.8925 17.1128 17.1129C15.8924 18.3333 13.9282 18.3333 9.99984 18.3333C6.07147 18.3333 4.10728 18.3333 2.88689 17.1129C1.6665 15.8925 1.6665 13.9283 1.6665 9.99996C1.6665 6.07159 1.6665 4.1074 2.88689 2.88701C4.10728 1.66663 6.07147 1.66663 9.99984 1.66663C13.9282 1.66663 15.8924 1.66663 17.1128 2.88701C17.9242 3.69846 18.1961 4.83875 18.2873 6.66663" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-</g>
-<defs>
-<clipPath id="clip0_1397_9083">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-                        Reports
-                    </a>
+
                     <a href="{{ route('admin.module', ['setting', 'roles-permissions']) }}" class="{{ request()->is('admin-dashboard/setting/*') ? 'is-active' : '' }}">
                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="10" cy="10" r="2.5" stroke="white" stroke-width="1.5"/>
@@ -426,34 +355,20 @@
                 <span>Dashboard</span>
             </a>
 
-            <details class="mobile-nav-menu">
-                <summary class="mobile-nav-item {{ request()->is('admin-dashboard/logistic/*') ? 'is-active' : '' }}">
-                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1969_1324)">
-<path d="M8.3335 1.67395C6.26719 1.70384 5.09571 1.85711 4.30981 2.64302C3.3335 3.61933 3.3335 5.19068 3.3335 8.33337V10C3.3335 13.1427 3.3335 14.7141 4.30981 15.6904C5.28612 16.6667 6.85747 16.6667 10.0002 16.6667C13.1429 16.6667 14.7142 16.6667 15.6905 15.6904C16.6668 14.7141 16.6668 13.1427 16.6668 10V8.33338C16.6668 5.19068 16.6668 3.61933 15.6905 2.64302C14.9046 1.85711 13.7331 1.70384 11.6668 1.67395" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M16.6665 10.8334H13.3332M3.33317 10.8334H9.99984" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.9165 13.3334H14.1665" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5.8335 13.3334H7.0835" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 16.25V17.5C5 17.9602 5.3731 18.3333 5.83333 18.3333H7.08333C7.54357 18.3333 7.91667 17.9602 7.91667 17.5V16.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.0002 16.25V17.5C15.0002 17.9602 14.6271 18.3333 14.1668 18.3333H12.9168C12.4566 18.3333 12.0835 17.9602 12.0835 17.5V16.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.6665 7.5H17.4998C17.9601 7.5 18.3332 7.8731 18.3332 8.33333V9.16667C18.3332 9.42896 18.2097 9.67595 17.9998 9.83333L16.6665 10.8333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.33317 7.5H2.49984C2.0396 7.5 1.6665 7.8731 1.6665 8.33333V9.16667C1.6665 9.42896 1.79 9.67595 1.99984 9.83333L3.33317 10.8333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.75 4.16663H6.875M16.25 4.16663H10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-</g>
-<defs>
-<clipPath id="clip0_1969_1324">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+            <a href="{{ route('admin.module', ['clients', 'clients']) }}" class="mobile-nav-item {{ request()->is('admin-dashboard/clients/*') ? 'is-active' : '' }}">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.3334 18.3334L1.66675 18.3334" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M14.1666 18.3333V4.99996C14.1666 3.42861 14.1666 2.64294 13.6784 2.15478C13.1903 1.66663 12.4046 1.66663 10.8333 1.66663H9.16659C7.59524 1.66663 6.80956 1.66663 6.32141 2.15478C5.83325 2.64294 5.83325 3.42861 5.83325 4.99996V18.3333" stroke="white" stroke-width="1.5"/>
+<path d="M16.7499 9.58329C16.7499 9.99751 17.0857 10.3333 17.4999 10.3333C17.9141 10.3333 18.2499 9.99751 18.2499 9.58329H17.4999H16.7499ZM16.7592 6.94751L16.3425 7.57111L16.3425 7.57111L16.7592 6.94751ZM17.219 7.40734L16.5954 7.82402L16.5954 7.82402L17.219 7.40734ZM18.2499 12.9166C18.2499 12.5024 17.9141 12.1666 17.4999 12.1666C17.0857 12.1666 16.7499 12.5024 16.7499 12.9166H17.4999H18.2499ZM14.5833 6.66663V7.41663C15.1841 7.41663 15.5782 7.41753 15.8766 7.44789C16.1624 7.47696 16.2761 7.52674 16.3425 7.57111L16.7592 6.94751L17.1759 6.32391C16.8219 6.0874 16.4328 5.99673 16.0284 5.95559C15.6365 5.91572 15.1528 5.91663 14.5833 5.91663V6.66663ZM17.4999 9.58329H18.2499C18.2499 9.01371 18.2508 8.53007 18.211 8.13816C18.1698 7.73371 18.0791 7.34462 17.8426 6.99066L17.219 7.40734L16.5954 7.82402C16.6398 7.89043 16.6896 8.00413 16.7187 8.28997C16.749 8.58834 16.7499 8.98249 16.7499 9.58329H17.4999ZM16.7592 6.94751L16.3425 7.57111C16.4426 7.63799 16.5286 7.72393 16.5954 7.82402L17.219 7.40734L17.8426 6.99066C17.6663 6.72679 17.4398 6.50022 17.1759 6.32391L16.7592 6.94751ZM17.4999 12.9166H16.7499V18.3333H17.4999H18.2499V12.9166H17.4999Z" fill="white"/>
+<path d="M3.24072 6.94751L3.65739 7.57111L3.65739 7.57111L3.24072 6.94751ZM2.78088 7.40734L3.40449 7.82402L3.40449 7.82402L2.78088 7.40734ZM3.25 16.6666C3.25 16.2524 2.91421 15.9166 2.5 15.9166C2.08579 15.9166 1.75 16.2524 1.75 16.6666H2.5H3.25ZM1.75 13.3333C1.75 13.7475 2.08579 14.0833 2.5 14.0833C2.91421 14.0833 3.25 13.7475 3.25 13.3333H2.5H1.75ZM5.41667 6.66663V5.91663C4.84708 5.91663 4.36344 5.91572 3.97153 5.95559C3.56709 5.99673 3.178 6.0874 2.82404 6.32391L3.24072 6.94751L3.65739 7.57111C3.72381 7.52674 3.8375 7.47696 4.12334 7.44789C4.42172 7.41753 4.81586 7.41663 5.41667 7.41663V6.66663ZM2.5 9.58329H3.25C3.25 8.98249 3.25091 8.58834 3.28126 8.28997C3.31034 8.00413 3.36011 7.89043 3.40449 7.82402L2.78088 7.40734L2.15728 6.99066C1.92077 7.34462 1.8301 7.73371 1.78896 8.13816C1.74909 8.53007 1.75 9.01371 1.75 9.58329H2.5ZM3.24072 6.94751L2.82404 6.32391C2.56016 6.50022 2.3336 6.72679 2.15728 6.99066L2.78088 7.40734L3.40449 7.82402C3.47136 7.72393 3.5573 7.63799 3.65739 7.57111L3.24072 6.94751ZM2.5 16.6666H1.75V18.3333H2.5H3.25V16.6666H2.5ZM2.5 9.58329H1.75V13.3333H2.5H3.25V9.58329H2.5Z" fill="white"/>
+<path d="M10 18.3334V15.8334" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M8.33325 4.16663H11.6666" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M8.33325 11.6666H8.74992M11.6666 11.6666H10.4166" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M11.6667 6.66663H11.2501M8.33341 6.66663H9.58341" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M8.33325 9.16663H11.6666" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
-<span>Logistic</span>
-                </summary>
-                <div class="mobile-nav-dropdown">
-                    <a href="{{ route('admin.module', ['logistic', 'contracts']) }}" class="{{ request()->is('admin-dashboard/logistic/contracts') ? 'is-active' : '' }}">Contracts</a>
-                    <a href="{{ route('admin.module', ['logistic', 'vehicles']) }}" class="{{ request()->is('admin-dashboard/logistic/vehicles') ? 'is-active' : '' }}">Vehicles</a>
-                    <a href="{{ route('admin.module', ['logistic', 'fuel']) }}" class="{{ request()->is('admin-dashboard/logistic/fuel') ? 'is-active' : '' }}">Fuel</a>
-                </div>
-            </details>
+                <span>Clients</span>
+            </a>
 
             <details class="mobile-nav-menu">
                 <summary class="mobile-nav-item {{ request()->is('admin-dashboard/accounting/*') ? 'is-active' : '' }}">
