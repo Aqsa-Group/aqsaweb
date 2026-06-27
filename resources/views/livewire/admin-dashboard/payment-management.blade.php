@@ -1,4 +1,5 @@
 <div class="space-y-8">
+    @include('livewire.admin-dashboard._shared-ui')
     <div class="grid gap-6 md:grid-cols-2">
         <div class="flex h-[92px] flex-col justify-center rounded-md bg-[#A8D1FF] px-5">
             <p class="text-sm font-medium text-gray-950">Total Incoming</p>

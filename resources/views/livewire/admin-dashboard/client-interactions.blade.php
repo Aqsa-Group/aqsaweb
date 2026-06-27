@@ -1,4 +1,5 @@
 <div class="space-y-8">
+    @include('livewire.admin-dashboard._shared-ui')
     <div class="flex items-start justify-between gap-4">
         <div>
             <h2 class="text-lg font-semibold text-gray-950">Client Interactions</h2>

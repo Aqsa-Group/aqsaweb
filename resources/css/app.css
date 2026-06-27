@@ -56,3 +56,9 @@
         box-shadow: 0 10px 25px rgba(49, 90, 137, 0.35);
     }
 }
+
+main select.no-select-arrow {
+    background-image: none !important;
+}
+
+

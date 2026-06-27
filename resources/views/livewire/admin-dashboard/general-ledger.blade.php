@@ -1,4 +1,5 @@
 <div class="space-y-8">
+    @include('livewire.admin-dashboard._shared-ui')
     <div>
         <h2 class="text-lg font-semibold text-gray-950">General Ledger</h2>
         <p class="mt-1 text-sm text-gray-500">Account Balances and trail balance</p>

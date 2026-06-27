@@ -1,4 +1,5 @@
 <div class="space-y-8">
+    @include('livewire.admin-dashboard._shared-ui')
     @if ($showForm)
         <div class="space-y-5">
             <h2 class="text-[15px] font-semibold text-gray-950">Add New Client</h2>
@@ -279,73 +280,4 @@
         </div>
     </div>
 
-    <style>
-        .staff-select-menu [data-staff-select-option] {
-            border-radius: 0;
-        }
-
-        .staff-select-menu [data-staff-select-option].is-active {
-            background: #2563eb;
-            color: #ffffff;
-        }
-
-        .staff-select-menu [data-staff-select-option].is-active:hover {
-            background: #2563eb;
-        }
-    </style>
-
-    <script>
-        function setStaffSelectActive(select, selectedValue) {
-            if (!select) return;
-
-            select.querySelectorAll("[data-staff-select-option]").forEach((option) => {
-                const isActive = option.dataset.staffSelectOption === selectedValue;
-                option.classList.toggle("is-active", isActive);
-                option.setAttribute("aria-selected", isActive ? "true" : "false");
-            });
-        }
-
-        document.querySelectorAll(".staff-select").forEach((select) => {
-            const value = select.querySelector(".staff-select-value")?.textContent?.trim();
-            setStaffSelectActive(select, value);
-        });
-
-        document.addEventListener("click", function (event) {
-            const toggle = event.target.closest(".staff-action-toggle");
-            const selectOption = event.target.closest("[data-staff-select-option]");
-
-            document.querySelectorAll(".staff-action-menu").forEach((menu) => {
-                if (!toggle || !toggle.parentElement.contains(menu)) {
-                    menu.classList.add("hidden");
-                }
-            });
-
-            document.querySelectorAll(".staff-select[open]").forEach((select) => {
-                if (!select.contains(event.target)) {
-                    select.removeAttribute("open");
-                }
-            });
-
-            if (selectOption) {
-                event.stopPropagation();
-
-                const select = selectOption.closest(".staff-select");
-                const value = select?.querySelector(".staff-select-value");
-
-                if (value) {
-                    value.textContent = selectOption.dataset.staffSelectOption;
-                }
-
-                setStaffSelectActive(select, selectOption.dataset.staffSelectOption);
-                select?.removeAttribute("open");
-                return;
-            }
-
-            if (toggle) {
-                event.stopPropagation();
-                const menu = toggle.parentElement.querySelector(".staff-action-menu");
-                menu?.classList.toggle("hidden");
-            }
-        });
-    </script>
 </div>

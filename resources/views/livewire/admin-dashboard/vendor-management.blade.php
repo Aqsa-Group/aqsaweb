@@ -1,4 +1,5 @@
 <div class="space-y-8">
+    @include('livewire.admin-dashboard._shared-ui')
     @if ($showForm)
         <div class="space-y-5">
             <h2 class="text-[15px] font-semibold text-gray-950">Add Vendor</h2>

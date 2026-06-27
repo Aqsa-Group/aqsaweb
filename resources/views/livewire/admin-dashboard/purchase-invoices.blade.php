@@ -1,4 +1,5 @@
 <div class="space-y-8">
+    @include('livewire.admin-dashboard._shared-ui')
     @if ($showForm)
         <div class="space-y-6">
             <h2 class="text-lg font-semibold text-gray-950">New Purchase Invoices</h2>

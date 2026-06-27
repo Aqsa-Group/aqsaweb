@@ -72,6 +72,12 @@
             padding-right: 2.35rem !important;
             box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
         }
+        main select.no-select-arrow {
+    background-image: none !important;
+    background-size: 0 !important;
+    background-position: unset !important;
+    background-repeat: no-repeat !important;
+}
         @media (max-width: 1024px) {
             .admin-shell { grid-template-columns: 1fr; }
             .admin-sidebar { position: sticky; top: 0; z-index: 40; }
