@@ -16,6 +16,10 @@ class AuthController extends Controller
         return redirect()->route($request->routeIs('admin.*') ? 'admin.dashboard' : 'management.home');
     }
 
+    if ($request->routeIs('admin.*')) {
+        return view('AdminDashboard.pages.login');
+    }
+
     return view('Management.Auth.login');
 }
 

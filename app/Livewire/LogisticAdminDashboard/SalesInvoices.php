@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Livewire\LogisticAdminDashboard;
+
+use Livewire\Component;
+
+class SalesInvoices extends Component
+{
+    public bool $showForm = false;
+
+    public array $invoices = [
+        ['invoice' => 'INV-ICT-001', 'client' => 'Ministry of Communication', 'project' => 'Government Network infrastructure', 'company' => 'ICT', 'status' => 'Paid', 'total' => '45,000 USD', 'date' => '1 Feb, 2026'],
+        ['invoice' => 'INV-ICT-001', 'client' => 'Ministry of Communication', 'project' => 'Government Network infrastructure', 'company' => 'Logistic', 'status' => 'Paid', 'total' => '45,000 USD', 'date' => '1 Feb, 2026'],
+        ['invoice' => 'INV-2024-001', 'client' => 'WFP Afghanistan', 'project' => 'Food Distribution Logistic', 'company' => 'Logistic', 'status' => 'Sent', 'total' => '50,000 USD', 'date' => '3 Mar, 2024'],
+    ];
+
+    public function toggleForm(): void
+    {
+        $this->showForm = ! $this->showForm;
+    }
+
+    public function cancelForm(): void
+    {
+        $this->showForm = false;
+    }
+
+    public function render()
+    {
+        return view('livewire.logistic-admin-dashboard.sales-invoices');
+    }
+}

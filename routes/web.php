@@ -139,6 +139,62 @@ Route::post('/ads', [AdController::class, 'store'])->name('ads.store');
 
 // Management Panel
 
+Route::prefix('logistic-dashboard')->name('logistic.')->group(function () {
+    Route::get('/', function () {
+        return view('LogisticAdminDashboard.pages.dashboard');
+    })->name('dashboard');
+
+    Route::get('/dashboard', function () {
+        return redirect()->route('logistic.dashboard');
+    })->name('home');
+
+    Route::post('/logout', function () {
+        return redirect()->route('logistic.dashboard');
+    })->name('logout');
+
+    Route::get('/{section}/{page}', function (string $section, string $page) {
+        $modules = [
+            'hr.staff-profiles' => ['title' => 'Staff Profiles', 'section' => 'HR Management'],
+            'hr.attendance-leave' => ['title' => 'Attendance & Leave', 'section' => 'HR Management'],
+            'hr.payroll' => ['title' => 'Payroll', 'section' => 'HR Management'],
+            'finance.sales-invoices' => ['title' => 'Sales Invoices', 'section' => 'Finance'],
+            'finance.purchase-invoices' => ['title' => 'Purchase Invoices', 'section' => 'Finance'],
+            'finance.expenses' => ['title' => 'Expenses', 'section' => 'Finance'],
+            'finance.payments' => ['title' => 'Payments', 'section' => 'Finance'],
+            'ict.projects' => ['title' => 'Projects', 'section' => 'ICT'],
+            'ict.tasks' => ['title' => 'Tasks', 'section' => 'ICT'],
+            'ict.time-tracking' => ['title' => 'Time Tracking', 'section' => 'ICT'],
+            'ict.infrastructure' => ['title' => 'Infrastructure', 'section' => 'ICT'],
+            'logistic.contracts' => ['title' => 'Contracts', 'section' => 'Logistic'],
+            'logistic.vehicles' => ['title' => 'Vehicles', 'section' => 'Logistic'],
+            'logistic.fuel' => ['title' => 'Fuel', 'section' => 'Logistic'],
+            'clients.clients' => ['title' => 'Clients', 'section' => 'Clients / NGO'],
+            'clients.client-interaction' => ['title' => 'Client Interaction', 'section' => 'Clients / NGO'],
+            'accounting.journal-entries' => ['title' => 'Journal Entries', 'section' => 'Accounting'],
+            'accounting.general-ledger' => ['title' => 'General Ledger', 'section' => 'Accounting'],
+            'crm.contacts' => ['title' => 'Contacts', 'section' => 'CRM'],
+            'crm.vendors' => ['title' => 'Vendors', 'section' => 'CRM'],
+            'crm.tickets' => ['title' => 'Tickets', 'section' => 'CRM'],
+            'crm.customer-interaction' => ['title' => 'Customer Interaction', 'section' => 'CRM'],
+            'reports.finance' => ['title' => 'Finance Reports', 'section' => 'Reports'],
+            'reports.logistic' => ['title' => 'Logistic Reports', 'section' => 'Reports'],
+            'reports.audit' => ['title' => 'Audit Reports', 'section' => 'Reports'],
+            'support.support-tickets' => ['title' => 'Support Tickets', 'section' => 'Support'],
+            'setting.roles-permissions' => ['title' => 'Roles & Permissions', 'section' => 'Setting'],
+            'setting.audit-log' => ['title' => 'Audit Log', 'section' => 'Setting'],
+            'setting.system-colors' => ['title' => 'System Colors', 'section' => 'Setting'],
+        ];
+
+        $key = $section.'.'.$page;
+
+        abort_unless(isset($modules[$key]), 404);
+
+        return view('LogisticAdminDashboard.pages.module', [
+            'module' => $modules[$key],
+        ]);
+    })->name('module');
+});
+
 Route::prefix('admin-dashboard')->name('admin.')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
@@ -258,7 +314,3 @@ Route::get('/employee-report-file/{path}', function ($path) {
 Route::get('/userinformation', function () {
     return view('userinformation');
 })-> name('userinformation');; 
-
-
-
-

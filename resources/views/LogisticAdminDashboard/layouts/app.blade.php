@@ -34,22 +34,22 @@
         .mobile-profile-dropdown svg { width: 18px; height: 18px; flex: 0 0 auto; color: currentColor; }
         .mobile-profile-dropdown svg * { stroke: currentColor !important; }
         .mobile-profile-dropdown svg [fill]:not([fill="none"]) { fill: currentColor !important; }
-        .mobile-nav-grid { display: grid; width: 100%; grid-template-columns: repeat(7, minmax(0, 1fr)); align-items: end; gap: 1px; }
+        .mobile-nav-grid { display: grid; width: 100%; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: end; gap: 0; }
         .mobile-nav-menu { position: relative; min-width: 0; }
         .mobile-nav-menu summary { list-style: none; }
         .mobile-nav-menu summary::-webkit-details-marker { display: none; }
-        .mobile-nav-item { width: 100%; min-width: 0; height: 58px; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border-radius: 13px; color: #dbeafe; font-size: 8px; line-height: 1; white-space: nowrap; overflow: hidden; cursor: pointer; }
+        .mobile-nav-item { width: 100%; min-width: 0; height: 54px; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border-radius: 12px; color: #dbeafe; font-size: 8px; line-height: 1; white-space: nowrap; overflow: hidden; cursor: pointer; padding: 0 2px; }
         .mobile-nav-item span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
         .mobile-nav-item i { font-size: 15px; color: currentColor; }
-        .mobile-nav-item svg { width: 20px; height: 20px; flex: 0 0 auto; color: currentColor; }
+        .mobile-nav-item svg { width: 18px; height: 18px; flex: 0 0 auto; color: currentColor; }
         .mobile-nav-item svg * { stroke: currentColor !important; }
         .mobile-nav-item svg [fill]:not([fill="none"]) { fill: currentColor !important; }
-        .mobile-dashboard-item { width: min(64px, 100%); height: 64px; justify-self: center; transform: translateY(-16px); border-radius: 22px; background: #2563eb; color: #ffffff; font-weight: 700; box-shadow: 0 12px 24px rgba(37, 99, 235, .36); }
-        .mobile-dashboard-item i { color: #ffffff; font-size: 18px; }
+        .mobile-dashboard-item { width: 100%; height: 54px; justify-self: stretch; transform: none; border-radius: 12px; background: #2563eb; color: #ffffff; font-weight: 700; box-shadow: none; }
+        .mobile-dashboard-item i { color: #ffffff; font-size: 17px; }
         .mobile-nav-item.is-active { background: #2563eb; color: #ffffff; }
         .mobile-nav-item.is-active i,
         .mobile-nav-item.is-active svg { color: #ffffff; }
-        .mobile-nav-dropdown { position: fixed; left: 8px; right: 8px; bottom: 72px; z-index: 60; display: grid; gap: 6px; border-radius: 18px; border: 1px solid rgba(255,255,255,.14); background: #0d2545; padding: 10px; box-shadow: 0 -10px 28px rgba(15, 23, 42, .25); }
+        .mobile-nav-dropdown { position: fixed; left: 8px; right: 8px; bottom: 66px; z-index: 60; display: grid; gap: 6px; border-radius: 18px; border: 1px solid rgba(255,255,255,.14); background: #0d2545; padding: 10px; box-shadow: 0 -10px 28px rgba(15, 23, 42, .25); }
         .mobile-nav-dropdown a { display: flex; align-items: center; justify-content: center; min-height: 36px; border-radius: 12px; background: rgba(255,255,255,.08); color: #ffffff; font-size: 12px; }
         .mobile-nav-dropdown a.is-active { background: #2563eb; }
         .staff-select summary { list-style: none; }
@@ -97,7 +97,7 @@
 
 <body>
     <div class="admin-shell">
-        @include('AdminDashboard.partials.sidebar')
+        @include('LogisticAdminDashboard.partials.sidebar')
 
         <div class="min-w-0 overflow-x-hidden">
             <header class="hidden h-[68px] border-b border-gray-200 bg-white px-6 lg:px-9 lg:flex items-center justify-between">
